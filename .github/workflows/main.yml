@@ -14,9 +14,8 @@ jobs:
 
       - name: Install and Build
         run: |
-          ls -al
-          npm install
-          npm run build
+          yarn install
+          yarn run export
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
