@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env DEBUG=yosume:* next",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider next build",
+    "build": "next build",
     "prebuild": "npm install && npm run lint",
     "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider next start",
     "export:with-typedoc": "npm run export && npm run typedoc",
@@ -18,25 +18,17 @@
     "lint": "eslint \"component/**/*\" \"pages/**/*\" \"payload/**/*\" \"*.ts\" --fix",
     "typedoc": "typedoc --excludeExternals"
   },
-  "homepage": "https://uyu423.github.io/resume-nextjs",
+  "homepage": "https://sapcy.github.io",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/uyu423/resume-nextjs.git"
+    "url": "git+https://github.com/sapcy/sapcy.github.io.git"
   },
   "keywords": [
     "resume",
     "next"
   ],
-  "author": {
-    "name": "Yowu Yu",
-    "email": "me@yowu.dev",
-    "url": "https://yowu.dev"
-  },
   "contributors": [],
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/uyu423/resume-nextjs/issues"
-  },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
