@@ -16,7 +16,7 @@ jobs:
         run: |
           ls -al
           npm install
-          npm run export
+          npm run build
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
