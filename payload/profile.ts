@@ -3,7 +3,6 @@ import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
 import { faBell } from '@fortawesome/free-regular-svg-icons';
 import { IProfile } from '../component/profile/IProfile';
-// @ts-ignore
 import image from '../asset/profile_main.jpeg';
 
 const profile: IProfile.Payload = {
