@@ -7,9 +7,6 @@ const programmingLanguages: ISkill.Skill = {
       title: 'Java',
     },
     {
-      title: 'C++',
-    },
-    {
       title: 'Golang',
     },
     {
@@ -72,9 +69,9 @@ const infrastructure: ISkill.Skill = {
     {
       title: 'OpenStack',
     },
-    {
-      title: 'AWS',
-    },
+    // {
+    //   title: 'AWS',
+    // },
   ],
 };
 
@@ -121,7 +118,7 @@ const toolsIde: ISkill.Skill = {
       title: 'Github',
     },
     {
-      title: 'Gitlab',
+      title: 'GitLab',
     },
     {
       title: 'Bitbucket',

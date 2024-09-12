@@ -14,7 +14,7 @@ const experience: IExperience.Payload = {
         'Java',
         'Spring',
         'MariaDB',
-        'Redis',
+        'Jenkins',
         'Automation',
         'OpenStack',
       ],

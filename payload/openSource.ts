@@ -11,12 +11,12 @@ const openSource: IOpenSource.Payload = {
         },
         {
           content:
-            '원인: bitnami/argo-cd:2.6.7-debian-11-r8 컨테이너 이미지에 설치된 git은 2.30.2 이었는데, ' +
-            "ArgoCD repo-server에서 사용하는 git 옵션 '--config-env'은 git 2.31.0 버전부터 가능하므로 에러 발생",
+            '원인: bitnami/argo-cd:2.6.7-debian-11-r8 컨테이너 베이스 이미지(debian-11-r8)에 설치된 git은 2.30.2 버전이었으나, ' +
+            "ArgoCD repository 설정에서 \"Force basic auth\" 옵션은 repo-server 소스 코드에서 사용하는 git 명령어의 '--config-env'이며 git 2.31.0 버전부터 옵션을 제공하므로 에러 발생",
         },
         {
           content:
-            '결과: ArgoCD의 Force basic auth 옵션을 사용하지 않고 기능 구현하여 내 문제는 해결되었으며. base 이미지의 git 버전 이슈는 추후 debian 이미지 업데이트를 통해 해결되었음을 확인.',
+            '결과: ArgoCD의 \"Force basic auth\" 옵션을 사용하지 않고 기능 구현하여 내 문제는 해결되었으며. Base 이미지의 git 버전 이슈는 추후 debian 이미지 업데이트를 통해 해결되었음을 확인.',
         },
         {
           content: 'https://github.com/bitnami/containers/issues/34541',
