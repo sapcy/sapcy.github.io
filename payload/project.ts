@@ -72,7 +72,7 @@ const project: IProject.Payload = {
           content: 'Prometheus, Grafana를 이용해 모니터링 시스템 구축',
           descriptions: [{ content: '클러스터 통합 대시보드 커스텀 개발' }],
         },
-        { content: 'Flutent-bit로 클러스터 통합 로그 시스템 구축' },
+        { content: 'Fluent-bit로 클러스터 통합 로그 시스템 구축' },
         { content: 'Maxscale을 사용하여 MariaDB 3대에 대한 R/W Split 및 Auto failover 환경 구성' },
         {
           content: 'DR 시스템 구축',
@@ -153,7 +153,7 @@ const project: IProject.Payload = {
           content: '운영/검증/DR K8s 클러스터 구축 및 검증',
           descriptions: [
             { content: '무중단 배포' },
-            { content: 'VM Up/Down시 복구 자동화 테스트' },
+            { content: 'VM Hard shutdown 복구 자동화 테스트' },
           ],
         },
         { content: 'Jenkins로 개발 소스 빌드/배포 파이프라인 구축' },
@@ -193,7 +193,7 @@ const project: IProject.Payload = {
       descriptions: [
         {
           content:
-            '행정안전부 주관하에 인프라, 서비스, 개발프레임워크 등을 서비스 형태로 제공하는 클라우드 플랫폼의 포털 개발로 참여',
+            '행정안전부 주관하에 인프라, 서비스, 개발프레임워크 등을 서비스 형태로 제공하는 클라우드 플랫폼 포털 풀스택 개발 담당',
           weight: 'MEDIUM',
         },
         {

@@ -16,7 +16,7 @@ const openSource: IOpenSource.Payload = {
         },
         {
           content:
-            '결과: ArgoCD의 \"Force basic auth\" 옵션을 사용하지 않고 기능 구현하여 내 문제는 해결되었으며. Base 이미지의 git 버전 이슈는 추후 debian 이미지 업데이트를 통해 해결되었음을 확인.',
+            '결과: ArgoCD의 \"Force basic auth\" 옵션 없이 기능 구현하여 문제는 해결되었으며. Base 이미지의 git 버전 이슈는 추후 debian 이미지 업데이트를 통해 해결되었음을 확인.',
         },
         {
           content: 'https://github.com/bitnami/containers/issues/34541',

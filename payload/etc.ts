@@ -11,7 +11,7 @@ const etc: IEtc.Payload = {
     },
     {
       title: 'Getting Started with Google Kubernetes Engine',
-      subTitle: '수료증(https://www.coursera.org/account/accomplishments/certificate/UPTJNB3M4DSJ)',
+      subTitle: 'https://www.coursera.org/account/accomplishments/certificate/UPTJNB3M4DSJ',
       startedAt: '2022-08',
     },
     {
@@ -29,7 +29,7 @@ const etc: IEtc.Payload = {
     {
       title: '서울게임아카데미',
       subTitle:
-        'C++ 기반 게임 개발 1년 과정을 수료' +
+        'C++기반 게임 개발 1년 과정 수료' +
         ' (https://youtu.be/25I9nkNoyXA, https://youtu.be/idmeobH_S78)',
       startedAt: '2018-05',
       endedAt: '2019-05',
