@@ -40,7 +40,7 @@ const project: IProject.Payload = {
         },
         { content: 'K8s API를 이용한 Istio 기반 서비스 메시 API 서버 개발' },
         { content: 'Kiali를 이용한 서비스 메시 대시보드 개발' },
-        { content: '클러스터 생성 시 Istio 구성 배포 자동화 Helm chart 및 스크립트 개발' },
+        { content: 'cluster-api를 이용해 클러스터 생성 시 Istio 구성 배포 자동화 Helm chart 및 스크립트 개발' },
       ],
     },
     {
