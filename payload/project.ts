@@ -29,7 +29,7 @@ const project: IProject.Payload = {
       ],
     },
     {
-      title: '오케스트로 PaaS Viola 개발',
+      title: 'PaaS Viola 개발',
       startedAt: '2024-04',
       endedAt: '2024-05',
       where: '오케스트로(주)',
