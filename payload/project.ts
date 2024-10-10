@@ -14,7 +14,7 @@ const project: IProject.Payload = {
           weight: 'MEDIUM',
         },
         {
-          content: '대구센터 PPP 클라우드존으로 시스템 이전을 고려한 MSA 아키텍처 설계',
+          content: 'MSA 아키텍처 설계',
           descriptions: [{ content: '이벤트스토밍 과정을 통해 이벤트 기준 마이크로서비스 분류' }],
         },
         {
