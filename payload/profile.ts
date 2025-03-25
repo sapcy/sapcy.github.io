@@ -7,8 +7,6 @@ import image from '../asset/profile_main.jpeg';
 
 const profile: IProfile.Payload = {
   disable: false,
-
-  // image: 'https://resume.yowu.dev/static/image/profile_2019.png',
   image,
   name: {
     title: '최시영',
@@ -35,7 +33,7 @@ const profile: IProfile.Payload = {
     },
   ],
   notice: {
-    title: '휴대전화나 페이스북 메시지 아닌 이메일로 연락 부탁드립니다.',
+    title: '휴대전화나 이메일로 연락 부탁드립니다.',
     icon: faBell,
   },
 };
