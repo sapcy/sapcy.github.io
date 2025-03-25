@@ -6,9 +6,9 @@ const programmingLanguages: ISkill.Skill = {
     {
       title: 'Java',
     },
-    {
-      title: 'Golang',
-    },
+    // {
+    //   title: 'Golang',
+    // },
     {
       title: 'Shell Scripting',
     },
@@ -105,9 +105,9 @@ const toolsIde: ISkill.Skill = {
     {
       title: 'VS Code',
     },
-    {
-      title: 'Vim',
-    },
+    // {
+    //   title: 'Vim',
+    // },
     {
       title: 'Jira',
     },
