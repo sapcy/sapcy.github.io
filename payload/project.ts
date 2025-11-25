@@ -4,21 +4,53 @@ const project: IProject.Payload = {
   disable: false,
   list: [
     {
-      title: '미래에셋증권 CI/CD 플랫폼 구축',
-      startedAt: '2025-01',
+      title: '건강보험공단 클라우드 표준 플랫폼 구축',
+      startedAt: '2025-08',
+      endedAt: '2025-12',
       where: '오케스트로(주)',
       descriptions: [
         {
           content:
-              '미래에셋증권의 업무 및 프레임워크 영역 빌드/배포를 통합하여 제공하는 CI/CD 플랫폼을 구축하는 프로젝트이며, 파이프라인 엔지니어로 참여',
+              '건강보험공단의 클라우드 표준 플랫폼을 구축하는 프로젝트이며, DevOps 엔지니어로 참여',
+          weight: 'MEDIUM',
+        },
+        {
+          content: '각각 다른 업무 시스템의 개발 소스를 SVN에서 Git으로 전환하여 플랫폼을 이용한 CI/CD 파이프라인 설계',
+        },
+        {
+          content: 'WEB, WAS, DB 상용/공개 솔루션별 Helm chart 템플릿 작성',
+        },
+        {
+          content: '기술스택',
+          descriptions: [
+            {
+              content:
+                  'K8s, OpenStack, ArgoCD, Jenkins, Nexus, Harbor'
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: '미래에셋증권 CI/CD 플랫폼 구축',
+      startedAt: '2025-01',
+      endedAt: '2025-08',
+      where: '오케스트로(주)',
+      descriptions: [
+        {
+          content:
+              '미래에셋증권의 업무 및 프레임워크 영역 빌드/배포를 통합하여 제공하는 CI/CD 플랫폼을 구축하는 프로젝트이며, DevOps 엔지니어로 참여',
           weight: 'MEDIUM',
         },
         {
           content: '각각 다른 업무 시스템의 AS-IS 파이프라인 구성(Gitlab CI/CD, Argo workflow, Nexus)에서 ' +
-              'CI/CD 플랫폼(자체 개발 애플리케이션, Jenkins, Gitlab, Nexus, ArgoCD 등으로 구성)으로 전환',
+              'CI/CD 플랫폼(애플리케이션, Jenkins, Gitlab, Nexus, ArgoCD 등) 구성으로 전환',
         },
         {
           content: 'Harbor, Nexus, Gitlab 데이터 마이그레이션'
+        },
+        {
+          content: '프라이빗 클라우드(Openshift)에서 빌드하고 ECS로 배포하는 하이브리드 클라우드 CI/CD 설계'
         },
       ],
     },
