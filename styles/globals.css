@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+}
+
+body {
+  font-family: 'Noto Sans KR', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Material-like elevation */
+.elevation-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.elevation-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.15), 0 2px 4px rgba(0,0,0,0.12);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a1a1a1;
+}
+
+/* Code block */
+.code-block {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Material input */
+.material-input {
+  background: white;
+  border: 1px solid #e2e8f0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.material-input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
+  outline: none;
+}
+
+/* Material button */
+.material-btn {
+  background: #1f2937;
+  color: white;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.material-btn:hover {
+  background: #111827;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.material-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+.material-btn-text {
+  background: transparent;
+  color: #1f2937;
+  font-weight: 500;
+}
+
+.material-btn-text:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+/* Tab styles */
+.tab-active {
+  border-bottom: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
