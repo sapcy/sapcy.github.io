@@ -1,4 +1,5 @@
 import { NextSeoProps } from 'next-seo';
+import { StaticImageData } from 'next/image';
 
 export declare namespace IGlobal {
   export interface Payload {
@@ -12,7 +13,7 @@ export declare namespace IGlobal {
     /**
      * ### favicon 이미지
      */
-    favicon: string;
+    favicon: string | StaticImageData;
 
     /**
      * ### SEO Properties

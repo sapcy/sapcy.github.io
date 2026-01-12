@@ -1,4 +1,5 @@
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
+import { StaticImageData } from 'next/image';
 import { ICommon } from '../common/ICommon';
 
 export declare namespace IProfile {
@@ -13,7 +14,7 @@ export declare namespace IProfile {
     /**
      * ### 프로필 이미지
      */
-    image: string;
+    image: string | StaticImageData;
     /** ### 이름 Object */
     name: {
       /** ### 이름 */

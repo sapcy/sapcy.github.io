@@ -1,10 +1,77 @@
 'use client'
 
-import { useWebSeal, WebSealForm, WebSealOutput } from '@sapcy/web-sealedsecret/components'
+import { useState, useCallback } from 'react'
+import { sealSecrets } from '@sapcy/web-sealedsecret/api'
+import { WebSealForm, WebSealOutput } from '@sapcy/web-sealedsecret/components'
+import type { SealResponse, KeyValuePair } from '@sapcy/web-sealedsecret'
 import { ProjectHeader } from './project-header'
 
 export function WebSealProject() {
-  const webseal = useWebSeal({ apiEndpoint: '/api/seal' })
+  const [publicKey, setPublicKey] = useState('')
+  const [keyValues, setKeyValues] = useState<KeyValuePair[]>([
+    { id: crypto.randomUUID(), key: '', value: '' }
+  ])
+  const [namespace, setNamespace] = useState('default')
+  const [secretName, setSecretName] = useState('my-secret')
+  const [result, setResult] = useState<SealResponse | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [copied, setCopied] = useState(false)
+
+  const addKeyValue = useCallback(() => {
+    setKeyValues(prev => [...prev, { id: crypto.randomUUID(), key: '', value: '' }])
+  }, [])
+
+  const removeKeyValue = useCallback((id: string) => {
+    setKeyValues(prev => prev.length > 1 ? prev.filter(kv => kv.id !== id) : prev)
+  }, [])
+
+  const updateKeyValue = useCallback((id: string, field: 'key' | 'value', value: string) => {
+    setKeyValues(prev => prev.map(kv => kv.id === id ? { ...kv, [field]: value } : kv))
+  }, [])
+
+  const handleSubmit = useCallback(async (e: React.FormEvent) => {
+    e.preventDefault()
+    setError(null)
+    setResult(null)
+    setLoading(true)
+
+    const data: Record<string, string> = {}
+    keyValues.forEach(kv => {
+      if (kv.key.trim()) {
+        data[kv.key.trim()] = kv.value
+      }
+    })
+
+    if (Object.keys(data).length === 0) {
+      setError('최소 하나의 key-value 쌍이 필요합니다')
+      setLoading(false)
+      return
+    }
+
+    try {
+      // 클라이언트에서 직접 sealSecrets 호출 (API Route 없이)
+      const sealResult = sealSecrets({
+        publicKey,
+        data,
+        namespace,
+        name: secretName,
+      })
+      setResult(sealResult)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : '알 수 없는 오류가 발생했습니다')
+    } finally {
+      setLoading(false)
+    }
+  }, [publicKey, keyValues, namespace, secretName])
+
+  const copyToClipboard = useCallback(async () => {
+    if (result?.resourceYAML) {
+      await navigator.clipboard.writeText(result.resourceYAML)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }, [result])
 
   return (
     <div>
@@ -16,24 +83,24 @@ export function WebSealProject() {
 
       <div className="grid lg:grid-cols-2 gap-6">
         <WebSealForm
-          publicKey={webseal.publicKey}
-          keyValues={webseal.keyValues}
-          namespace={webseal.namespace}
-          secretName={webseal.secretName}
-          loading={webseal.loading}
-          onPublicKeyChange={webseal.setPublicKey}
-          onNamespaceChange={webseal.setNamespace}
-          onSecretNameChange={webseal.setSecretName}
-          onAddKeyValue={webseal.addKeyValue}
-          onRemoveKeyValue={webseal.removeKeyValue}
-          onUpdateKeyValue={webseal.updateKeyValue}
-          onSubmit={webseal.handleSubmit}
+          publicKey={publicKey}
+          keyValues={keyValues}
+          namespace={namespace}
+          secretName={secretName}
+          loading={loading}
+          onPublicKeyChange={setPublicKey}
+          onNamespaceChange={setNamespace}
+          onSecretNameChange={setSecretName}
+          onAddKeyValue={addKeyValue}
+          onRemoveKeyValue={removeKeyValue}
+          onUpdateKeyValue={updateKeyValue}
+          onSubmit={handleSubmit}
         />
         <WebSealOutput
-          result={webseal.result}
-          error={webseal.error}
-          copied={webseal.copied}
-          onCopy={webseal.copyToClipboard}
+          result={result}
+          error={error}
+          copied={copied}
+          onCopy={copyToClipboard}
         />
       </div>
     </div>

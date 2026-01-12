@@ -1,5 +1,4 @@
 import favicon from '../asset/favicon_globe.png';
-import previewImage from '../asset/preview.jpg';
 import { IGlobal } from '../component/common/IGlobal';
 
 const title = 'Resume - 최시영';
@@ -16,10 +15,10 @@ export const _global: IGlobal.Payload = {
       description,
       images: [
         {
-          url: previewImage,
+          url: '/preview.jpg',
           width: 800,
           height: 600,
-          alt: 'OpenGraph Image Sample.png',
+          alt: 'OpenGraph Image Sample',
         },
       ],
       type: 'profile',
