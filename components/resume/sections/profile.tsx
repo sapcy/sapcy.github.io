@@ -1,14 +1,23 @@
 'use client'
 
+import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone, faBlog } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import profileImage from '@/asset/profile_main.jpeg'
 
 export function Profile() {
   return (
     <section className="flex flex-col md:flex-row items-center gap-8 pb-8 border-b border-gray-200">
-      <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white text-4xl font-bold shadow-lg">
-        S
+      <div className="w-36 h-44 rounded-lg overflow-hidden shadow-lg flex-shrink-0">
+        <Image
+          src={profileImage}
+          alt="프로필 사진"
+          width={144}
+          height={176}
+          className="object-cover w-full h-full"
+          priority
+        />
       </div>
       <div className="text-center md:text-left">
         <h1 className="text-3xl font-bold text-gray-900 mb-1">
@@ -51,4 +60,3 @@ export function Profile() {
     </section>
   )
 }
-

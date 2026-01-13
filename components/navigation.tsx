@@ -4,8 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/resume', label: '이력서' },
+  { href: '/', label: '이력서' },
   { href: '/projects', label: '프로젝트' },
 ]
 
@@ -22,6 +21,7 @@ export function Navigation() {
           <div className="flex items-center gap-1">
             {navItems.map((item) => {
               const isActive = pathname === item.href || 
+                (item.href === '/' && pathname === '/resume') ||
                 (item.href !== '/' && pathname.startsWith(item.href))
               return (
                 <Link

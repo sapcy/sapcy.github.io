@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     default: 'Sapcy - DevOps Engineer',
     template: '%s | Sapcy',
   },
-  description: 'DevOps Engineer Portfolio - 최시영 (Sapcy)',
+  description: 'DevOps Engineer Portfolio - 최시영',
   openGraph: {
     title: 'Sapcy - DevOps Engineer',
     description: 'DevOps Engineer Portfolio',
