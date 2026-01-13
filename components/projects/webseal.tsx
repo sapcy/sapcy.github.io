@@ -51,11 +51,12 @@ export function WebSealProject() {
 
     try {
       // 클라이언트에서 직접 sealSecrets 호출 (API Route 없이)
-      const sealResult = sealSecrets({
+      const sealResult = await sealSecrets({
         publicKey,
         data,
         namespace,
         name: secretName,
+        scope: 'strict',
       })
       setResult(sealResult)
     } catch (err) {
