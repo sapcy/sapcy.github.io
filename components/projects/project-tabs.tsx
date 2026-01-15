@@ -2,9 +2,11 @@
 
 import { useState } from 'react'
 import { WebSealProject } from './webseal'
+import { KubeCertProject } from './kube-cert'
 
 const tabs = [
   { id: 'webseal', label: 'WebSeal', component: WebSealProject },
+  { id: 'kubecert', label: 'Kube Cert', component: KubeCertProject },
 ]
 
 export function ProjectTabs() {

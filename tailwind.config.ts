@@ -6,6 +6,8 @@ const config: Config = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './node_modules/@sapcy/web-sealedsecret/dist/**/*.{js,ts,jsx,tsx}',
     './node_modules/@sapcy/web-sealedsecret/src/**/*.{js,ts,jsx,tsx}',
+    './node_modules/@sapcy/web-kube-cert/dist/**/*.{js,ts,jsx,tsx}',
+    '../web-kube-cert/src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {
