@@ -1,29 +1,9 @@
 'use client'
 
 import { useState, useCallback } from 'react'
+import { generateKubeCerts } from '@sapcy/web-kube-cert/api'
+import type { KubeCertRequest, KubeCertResult } from '@sapcy/web-kube-cert'
 import { ProjectHeader } from './project-header'
-
-interface KubeCertRequest {
-  clusterName: string
-  apiServerAddress: string
-  additionalSANs: string
-  serviceCIDR: string
-  etcdServers: string
-  certDays: number
-  caDays: number
-  includeEtcd: boolean
-}
-
-interface CertFile {
-  path: string
-  content: string
-  type: string
-}
-
-interface KubeCertResult {
-  files: CertFile[]
-  zipBlob: Blob
-}
 
 const defaultRequest: KubeCertRequest = {
   clusterName: 'kubernetes',
@@ -34,6 +14,7 @@ const defaultRequest: KubeCertRequest = {
   certDays: 3650,
   caDays: 36500,
   includeEtcd: true,
+  includeKubeconfig: false,
 }
 
 export function KubeCertProject() {
@@ -52,11 +33,7 @@ export function KubeCertProject() {
     await new Promise(resolve => setTimeout(resolve, 100))
 
     try {
-      const { generateKubeCerts } = await import('@sapcy/web-kube-cert/api')
-      const certResult = await generateKubeCerts({
-        ...request,
-        includeKubeconfig: false,
-      })
+      const certResult = await generateKubeCerts(request)
       setResult(certResult)
     } catch (err) {
       setError(err instanceof Error ? err.message : '알 수 없는 오류가 발생했습니다')
