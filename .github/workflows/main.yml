@@ -27,12 +27,6 @@ jobs:
           npm install
           npm run build
 
-      - name: Build web-kube-cert
-        run: |
-          cd node_modules/@sapcy/web-kube-cert
-          npm install
-          npm run build
-
       - name: Build Next.js
         run: npm run build
 
