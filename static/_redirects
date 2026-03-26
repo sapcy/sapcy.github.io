@@ -1,0 +1,40 @@
+# 예전 post-N 문서 id → 제목 기반 slug (북마크 호환)
+/docs/cloud/aws/post-19 /docs/cloud/aws/aws-cloud-concepts 301
+/docs/cloud/aws/post-23 /docs/cloud/aws/argocd-external-eks 301
+/docs/cloud/aws/post-24 /docs/cloud/aws/eks-cost-overview 301
+/docs/cloud/kubernetes/post-20 /docs/cloud/kubernetes/k8s-api-tls-external-request 301
+/docs/cloud/kubernetes/post-25 /docs/cloud/kubernetes/kyaml-kubernetes-yaml 301
+/docs/cs/post-21 /docs/cs/http-cache-headers 301
+/docs/backend/coding/post-11 /docs/backend/coding/pccp-1-lonely-alphabet 301
+/docs/backend/coding/post-12 /docs/backend/coding/pccp-2-sports-day 301
+/docs/backend/coding/post-13 /docs/backend/coding/pccp-3-genetics-law 301
+/docs/backend/coding/post-14 /docs/backend/coding/pccp-4-operating-system 301
+/docs/backend/coding/post-15 /docs/backend/coding/boj-13458-exam-supervisor 301
+/docs/backend/coding/post-16 /docs/backend/coding/boj-14501-resignation 301
+/docs/backend/coding/post-17 /docs/backend/coding/boj-14888-insert-operators 301
+/docs/backend/coding/post-18 /docs/backend/coding/boj-14502-laboratory 301
+/docs/backend/java/post-2 /docs/backend/java/java-introduction 301
+/docs/backend/java/post-3 /docs/backend/java/jvm 301
+/docs/backend/java/post-4 /docs/backend/java/jit-compiler 301
+/docs/backend/java/post-5 /docs/backend/java/variables 301
+/docs/backend/java/post-6 /docs/backend/java/operators 301
+/docs/backend/java/post-7 /docs/backend/java/conditionals-and-loops 301
+/docs/backend/java/post-10 /docs/backend/java/arrays 301
+/docs/backend/spring/post-9 /docs/backend/spring/ioc-container-intro 301
+
+# Netlify 등: 예전 코딩 문서 경로 → 백엔드/코딩 하위로 이동
+/docs/coding/* /docs/backend/coding/:splat 301
+/en/docs/coding/* /docs/backend/coding/:splat 301
+/zh/docs/coding/* /docs/backend/coding/:splat 301
+
+# 예전 다국어 URL → 한국어(접두사 없음) 경로로 이동
+/en/docs/* /docs/:splat 301
+/zh/docs/* /docs/:splat 301
+/en/blog/* /blog/:splat 301
+/zh/blog/* /blog/:splat 301
+/en/project /project 301
+/zh/project /project 301
+/en/info /info 301
+/zh/info /info 301
+/en / 301
+/zh / 301

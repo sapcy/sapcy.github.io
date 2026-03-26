@@ -1,50 +1,71 @@
 {
-  "name": "sapcy-portfolio",
-  "version": "3.0.0",
+  "name": "sapcy-blog",
+  "version": "0.0.0",
   "private": true,
-  "description": "Sapcy's Portfolio - Resume & Projects",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "export": "next build && next export"
+    "docusaurus": "docusaurus",
+    "prestart": "node scripts/build-sapcy-packages.mjs",
+    "start": "docusaurus start",
+    "prebuild": "node scripts/build-sapcy-packages.mjs",
+    "build": "docusaurus build",
+    "postinstall": "node scripts/build-sapcy-packages.mjs",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc",
+    "scrape:tistory": "node scripts/scrape-tistory.mjs && node scripts/strip-html-attrs.mjs",
+    "fix:bold-spacing": "node scripts/fix-bold-spacing.mjs",
+    "fix:code-fences": "node scripts/infer-code-fence-lang.mjs"
   },
-  "homepage": "https://sapcy.github.io",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sapcy/sapcy.github.io.git"
-  },
-  "license": "MIT",
-  "lastestUpdatedAt": "2026-01-12",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.5.1",
-    "@fortawesome/free-brands-svg-icons": "^6.5.1",
-    "@fortawesome/free-regular-svg-icons": "^6.5.1",
-    "@fortawesome/free-solid-svg-icons": "^6.5.1",
-    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@docusaurus/core": "3.9.2",
+    "@docusaurus/plugin-ideal-image": "^3.9.2",
+    "@docusaurus/plugin-pwa": "^3.9.2",
+    "@docusaurus/preset-classic": "3.9.2",
+    "@docusaurus/theme-mermaid": "^3.9.2",
+    "@docusaurus/theme-search-algolia": "^3.9.2",
+    "@easyops-cn/docusaurus-search-local": "^0.52.3",
+    "@mdx-js/react": "^3.0.0",
     "@sapcy/web-kube-cert": "github:sapcy/web-kube-cert",
     "@sapcy/web-sealedsecret": "github:sapcy/web-sealedsecret",
-    "debug": "^4.3.4",
-    "luxon": "^3.4.4",
-    "next": "14.1.0",
-    "next-seo": "^6.4.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "reactstrap": "^9.2.2"
+    "buffer": "^6.0.3",
+    "clsx": "^2.0.0",
+    "crypto-browserify": "^3.12.1",
+    "docusaurus-plugin-name": "^0.0.1-security.6",
+    "prism-react-renderer": "^2.3.0",
+    "process": "^0.11.10",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "stream-browserify": "^3.0.0"
   },
   "devDependencies": {
-    "@types/debug": "^4.1.12",
-    "@types/luxon": "^3.4.2",
-    "@types/node": "^20.11.0",
-    "@types/node-forge": "^1.3.11",
-    "@types/react": "^18.2.48",
-    "@types/react-dom": "^18.2.18",
-    "autoprefixer": "^10.4.17",
-    "eslint": "^8.57.1",
-    "eslint-config-next": "^16.1.1",
-    "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5.3.3"
+    "@docusaurus/module-type-aliases": "3.9.2",
+    "@docusaurus/tsconfig": "3.9.2",
+    "@docusaurus/types": "3.9.2",
+    "autoprefixer": "^10.4.27",
+    "cheerio": "^1.2.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.19",
+    "turndown": "^7.2.2",
+    "turndown-plugin-gfm": "^1.0.2",
+    "typescript": "~5.6.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=20.0"
   }
 }

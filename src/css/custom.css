@@ -1,0 +1,391 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* @sapcy/* 패키지(WebSeal 등)의 Tailwind 유틸 - preflight 비활성화로 Infima와 충돌 최소화 */
+@tailwind utilities;
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Homepage design tokens (Engineering Playbook style) */
+  --ep-surface: #F7F9FF;
+  --ep-surface-container-low: #F1F4F9;
+  --ep-surface-container: #EBEEF3;
+  --ep-surface-container-high: #E5E8EE;
+  --ep-surface-container-highest: #E0E3E8;
+  --ep-surface-container-lowest: #FFFFFF;
+  --ep-surface-bright: #F7F9FF;
+  --ep-on-surface: #181C20;
+  --ep-on-surface-variant: #414752;
+  --ep-outline: #717783;
+  --ep-outline-variant: #C1C6D4;
+  --ep-shadow-ambient: 0 20px 40px rgba(0, 28, 58, 0.06);
+  --ep-shadow-sm: 0 4px 12px rgba(0, 28, 58, 0.04);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  /* Homepage design tokens (dark) */
+  --ep-surface: #14171C;
+  --ep-surface-container-low: #1B1F25;
+  --ep-surface-container: #22262D;
+  --ep-surface-container-high: #2C3038;
+  --ep-surface-container-highest: #363B44;
+  --ep-surface-container-lowest: #0F1115;
+  --ep-surface-bright: #2C3038;
+  --ep-on-surface: #ECEEF4;
+  --ep-on-surface-variant: #B4BAC8;
+  --ep-outline: #9AA0AD;
+  --ep-outline-variant: #4A5060;
+  --ep-shadow-ambient: 0 20px 40px rgba(0, 0, 0, 0.2);
+  --ep-shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* /info 이력서 페이지: 테마 main 래퍼를 풀폭으로 (원본 sapcy.github.io 레이아웃과 유사) */
+.theme-layout-main.resume-page-wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* /project - sapcy.github.io/projects 와 동일 도구 UI */
+.theme-layout-main.project-page-wrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* sapcy.github.io globals.css 와 동일: Material + @sapcy 컴포넌트 보조 */
+:root {
+  --sapcy-primary: #005dac;
+  --sapcy-primary-ring: rgba(0, 93, 172, 0.2);
+}
+
+.elevation-1 {
+  box-shadow: var(--ep-shadow-sm);
+}
+
+.code-block {
+  background: var(--ep-surface-container-low);
+  border: 1px solid var(--ep-outline-variant);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.material-input {
+  background: var(--ep-surface-container-lowest);
+  border: 1px solid var(--ep-outline-variant);
+  color: var(--ep-on-surface);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.material-input:focus {
+  border-color: var(--sapcy-primary);
+  box-shadow: 0 0 0 2px var(--sapcy-primary-ring);
+  outline: none;
+}
+
+.material-btn {
+  background: linear-gradient(135deg, #005dac 0%, #1976d2 100%);
+  color: #fff;
+  font-weight: 600;
+  transition: opacity 0.2s ease, box-shadow 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.material-btn:hover:not(:disabled) {
+  opacity: 0.95;
+  box-shadow: var(--ep-shadow-sm);
+}
+
+.material-btn:disabled {
+  background: var(--ep-outline);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.material-btn-text {
+  background: transparent;
+  color: var(--ep-on-surface);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.material-btn-text:hover {
+  background: rgba(0, 93, 172, 0.08);
+}
+
+[data-theme='dark'] .material-btn-text:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@keyframes sapcy-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: sapcy-fade-in 0.3s ease-out;
+}
+
+/* 다크 모드에서 Tailwind gray/white 유틸을 쓰는 @sapcy 패키지 영역 보정 */
+[data-theme='dark'] .sapcy-tools-scope .bg-white {
+  background-color: var(--ep-surface-container) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .border-gray-200 {
+  border-color: var(--ep-outline-variant) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .border-gray-300 {
+  border-color: var(--ep-outline) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .text-gray-900 {
+  color: var(--ep-on-surface) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .text-gray-800 {
+  color: var(--ep-on-surface) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .text-gray-700 {
+  color: var(--ep-on-surface-variant) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .text-gray-600 {
+  color: var(--ep-on-surface-variant) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .text-gray-500 {
+  color: var(--ep-outline) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .text-gray-400 {
+  color: var(--ep-outline) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .bg-gray-50 {
+  background-color: var(--ep-surface-container-low) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .bg-gray-100 {
+  background-color: var(--ep-surface-container-high) !important;
+}
+
+[data-theme='dark'] .sapcy-tools-scope .hover\:bg-gray-100:hover {
+  background-color: var(--ep-surface-container-high) !important;
+}
+
+/* 네비바: 정보 - 사람 아이콘만 표시 (라벨 텍스트는 숨김, aria-label 유지) */
+.header-info-link {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0.4rem !important;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  overflow: hidden;
+}
+
+.header-info-link::before {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  flex-shrink: 0;
+  /* 텍스트를 font-size:0으로 숨겨도 currentColor가 깨지지 않도록 명시 */
+  background-color: var(--ifm-navbar-link-color);
+  opacity: 0.92;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M12%2012c2.21%200%204-1.79%204-4s-1.79-4-4-4-4%201.79-4%204%201.79%204%204%204zm0%202c-2.67%200-8%201.34-8%204v2h16v-2c0-2.66-5.33-4-8-4z%22%2F%3E%3C%2Fsvg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22white%22%20d%3D%22M12%2012c2.21%200%204-1.79%204-4s-1.79-4-4-4-4%201.79-4%204%201.79%204%204%204zm0%202c-2.67%200-8%201.34-8%204v2h16v-2c0-2.66-5.33-4-8-4z%22%2F%3E%3C%2Fsvg%3E");
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+.navbar__link.header-info-link:hover::before {
+  background-color: var(--ifm-navbar-link-hover-color);
+}
+
+/* --------------------------------------------------------------------------
+   문서 오른쪽 인라인 목차(TOC) - 제목 단계(h2→h3→h4) 시각적 구분
+   (기본 minHeadingLevel=2 이면 최상단 ≈ h2, 중첩 ul 깊이로 구분)
+   -------------------------------------------------------------------------- */
+:root {
+  --sapcy-toc-l1-size: 0.875rem;
+  --sapcy-toc-l1-weight: 650;
+  --sapcy-toc-l2-size: 0.8125rem;
+  --sapcy-toc-l2-weight: 550;
+  --sapcy-toc-l3-size: 0.78rem;
+  --sapcy-toc-l3-weight: 450;
+  --sapcy-toc-accent: var(--sapcy-primary, var(--ifm-color-primary));
+  --sapcy-toc-border-2: rgba(0, 93, 172, 0.35);
+  --sapcy-toc-border-3: rgba(0, 93, 172, 0.2);
+}
+
+[data-theme='dark'] {
+  --sapcy-toc-border-2: rgba(37, 194, 160, 0.45);
+  --sapcy-toc-border-3: rgba(37, 194, 160, 0.22);
+}
+
+/* 공통: 링크는 블록으로 두어 왼쪽 보더·패딩 정렬 */
+.theme-doc-toc-desktop .tableOfContents .table-of-contents__link,
+.theme-doc-toc-mobile .table-of-contents .table-of-contents__link {
+  display: block;
+  line-height: 1.45;
+  border-radius: 0 4px 4px 0;
+  transition:
+    color 0.15s ease,
+    background-color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.theme-doc-toc-desktop .tableOfContents .table-of-contents > li,
+.theme-doc-toc-mobile .table-of-contents > li {
+  margin-bottom: 0.2rem;
+}
+
+/* 깊이 1 - 본문에서 보통 h2 (TOC 최상위) */
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents > li > a.table-of-contents__link,
+.theme-doc-toc-mobile ul.table-of-contents > li > a.table-of-contents__link {
+  font-size: var(--sapcy-toc-l1-size);
+  font-weight: var(--sapcy-toc-l1-weight);
+  letter-spacing: -0.02em;
+  color: var(--ep-on-surface, var(--ifm-font-color-base));
+  padding: 0.35rem 0.4rem 0.35rem 0.25rem;
+}
+
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents > li > a.table-of-contents__link:hover,
+.theme-doc-toc-mobile ul.table-of-contents > li > a.table-of-contents__link:hover {
+  background: rgba(0, 93, 172, 0.06);
+  color: var(--sapcy-primary);
+}
+
+[data-theme='dark'] .theme-doc-toc-desktop .tableOfContents ul.table-of-contents > li > a.table-of-contents__link:hover,
+[data-theme='dark'] .theme-doc-toc-mobile ul.table-of-contents > li > a.table-of-contents__link:hover {
+  background: rgba(37, 194, 160, 0.08);
+  color: var(--ifm-color-primary);
+}
+
+/* 깊이 2 - 보통 h3 */
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul > li > a.table-of-contents__link,
+.theme-doc-toc-mobile ul.table-of-contents ul > li > a.table-of-contents__link {
+  font-size: var(--sapcy-toc-l2-size);
+  font-weight: var(--sapcy-toc-l2-weight);
+  letter-spacing: -0.015em;
+  color: var(--ep-on-surface-variant, var(--ifm-color-emphasis-800));
+  padding: 0.28rem 0.45rem 0.28rem 0.6rem;
+  margin-left: 0.15rem;
+  border-left: 3px solid var(--sapcy-toc-border-2);
+}
+
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul > li > a.table-of-contents__link:hover,
+.theme-doc-toc-mobile ul.table-of-contents ul > li > a.table-of-contents__link:hover {
+  background: rgba(0, 93, 172, 0.05);
+  border-left-color: var(--sapcy-toc-accent);
+  color: var(--sapcy-primary);
+}
+
+[data-theme='dark'] .theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul > li > a.table-of-contents__link:hover,
+[data-theme='dark'] .theme-doc-toc-mobile ul.table-of-contents ul > li > a.table-of-contents__link:hover {
+  background: rgba(37, 194, 160, 0.06);
+  color: var(--ifm-color-primary);
+}
+
+/* 깊이 3 - 보통 h4 */
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul ul > li > a.table-of-contents__link,
+.theme-doc-toc-mobile ul.table-of-contents ul ul > li > a.table-of-contents__link {
+  font-size: var(--sapcy-toc-l3-size);
+  font-weight: var(--sapcy-toc-l3-weight);
+  letter-spacing: -0.01em;
+  color: var(--ep-on-surface-variant, var(--ifm-color-emphasis-700));
+  opacity: 0.96;
+  padding: 0.22rem 0.4rem 0.22rem 0.85rem;
+  margin-left: 0.35rem;
+  border-left: 2px solid var(--sapcy-toc-border-3);
+}
+
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul ul > li > a.table-of-contents__link:hover,
+.theme-doc-toc-mobile ul.table-of-contents ul ul > li > a.table-of-contents__link:hover {
+  opacity: 1;
+  background: rgba(0, 93, 172, 0.04);
+  border-left-color: var(--ifm-color-emphasis-400);
+  color: var(--ep-on-surface, var(--ifm-font-color-base));
+}
+
+[data-theme='dark'] .theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul ul > li > a.table-of-contents__link:hover,
+[data-theme='dark'] .theme-doc-toc-mobile ul.table-of-contents ul ul > li > a.table-of-contents__link:hover {
+  background: rgba(37, 194, 160, 0.05);
+  color: var(--ifm-font-color-base);
+}
+
+/* 현재 섹션 강조 - 단계별로 동일 규칙 유지 */
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents > li > a.table-of-contents__link--active,
+.theme-doc-toc-mobile ul.table-of-contents > li > a.table-of-contents__link--active {
+  color: var(--sapcy-toc-accent);
+  background: rgba(0, 93, 172, 0.1);
+  font-weight: 700;
+}
+
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul > li > a.table-of-contents__link--active,
+.theme-doc-toc-mobile ul.table-of-contents ul > li > a.table-of-contents__link--active {
+  color: var(--sapcy-toc-accent);
+  background: rgba(0, 93, 172, 0.08);
+  border-left-color: var(--sapcy-toc-accent);
+  font-weight: 650;
+}
+
+.theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul ul > li > a.table-of-contents__link--active,
+.theme-doc-toc-mobile ul.table-of-contents ul ul > li > a.table-of-contents__link--active {
+  color: var(--ifm-color-primary);
+  background: rgba(0, 93, 172, 0.07);
+  border-left-color: var(--ifm-color-primary);
+  font-weight: 600;
+  opacity: 1;
+}
+
+[data-theme='dark'] .theme-doc-toc-desktop .tableOfContents ul.table-of-contents > li > a.table-of-contents__link--active,
+[data-theme='dark'] .theme-doc-toc-mobile ul.table-of-contents > li > a.table-of-contents__link--active,
+[data-theme='dark'] .theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul > li > a.table-of-contents__link--active,
+[data-theme='dark'] .theme-doc-toc-mobile ul.table-of-contents ul > li > a.table-of-contents__link--active,
+[data-theme='dark'] .theme-doc-toc-desktop .tableOfContents ul.table-of-contents ul ul > li > a.table-of-contents__link--active,
+[data-theme='dark'] .theme-doc-toc-mobile ul.table-of-contents ul ul > li > a.table-of-contents__link--active {
+  background: rgba(37, 194, 160, 0.12);
+}

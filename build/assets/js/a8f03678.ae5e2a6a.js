@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunksapcy_blog=globalThis.webpackChunksapcy_blog||[]).push([[9064],{90491(s,a,c){c.r(a),c.d(a,{default:()=>r});c(96540);var o=c(98180),t=c(56347),l=c(74848);function r(){const s=(0,o.Ay)("/project");return(0,l.jsx)(t.rd,{to:s})}}}]);

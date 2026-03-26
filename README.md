@@ -1,72 +1,41 @@
-# Sapcy Portfolio
+# Website
 
-개인 포트폴리오 및 프로젝트 데모 사이트입니다.
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-## 주요 기능
-
-- **Home**: 간단한 소개 및 GitHub 프로젝트 목록
-- **이력서**: 경력, 프로젝트, 기술 스택 등 상세 이력서
-- **프로젝트**: 개인 프로젝트 데모
-  - WebSeal: Kubernetes Sealed Secrets Generator (SSR API 내장)
-
-## 기술 스택
-
-- Next.js 14 (App Router)
-- TypeScript
-- Tailwind CSS
-- node-forge (RSA 암호화)
-
-## 실행 방법
+## Installation
 
 ```bash
-# 의존성 설치
-npm install
-
-# 개발 서버 실행
-npm run dev
-
-# 빌드
-npm run build
-
-# 프로덕션 실행
-npm start
+yarn
 ```
 
-## 프로젝트 구조
-
-```
-sapcy.github.io/
-├── app/
-│   ├── api/
-│   │   └── seal/          # WebSeal API (SSR)
-│   ├── projects/          # 프로젝트 페이지
-│   ├── resume/            # 이력서 페이지
-│   ├── layout.tsx
-│   └── page.tsx           # Home
-├── components/
-│   ├── navigation.tsx
-│   ├── projects/
-│   │   ├── project-tabs.tsx
-│   │   └── webseal.tsx
-│   └── resume/
-│       └── sections/
-├── styles/
-│   └── globals.css
-└── package.json
-```
-
-## 배포
-
-GitHub Pages 또는 Vercel로 배포할 수 있습니다.
+## Local Development
 
 ```bash
-# Vercel 배포
-npx vercel
-
-# 또는 GitHub Pages (정적 export 필요)
-npm run build
+yarn start
 ```
 
-## 라이선스
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
 
-MIT
+## Build
+
+```bash
+yarn build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Deployment
+
+Using SSH:
+
+```bash
+USE_SSH=true yarn deploy
+```
+
+Not using SSH:
+
+```bash
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.

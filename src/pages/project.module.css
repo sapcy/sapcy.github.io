@@ -1,0 +1,128 @@
+.page {
+  min-height: calc(100vh - var(--ifm-navbar-height));
+  background: var(--ep-surface);
+  padding: 3rem 1rem 4rem;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.inner {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.title {
+  font-family:
+    'Plus Jakarta Sans',
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--ep-on-surface);
+  margin: 0 0 2rem;
+}
+
+/* ProjectHeader (블로그 톤) */
+.projectHeader {
+  margin-bottom: 2rem;
+  padding: 1rem 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--ep-outline-variant);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 93, 172, 0.06) 0%,
+    var(--ep-surface-container-low) 100%
+  );
+  box-shadow: var(--ep-shadow-sm);
+}
+
+.projectHeaderInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.projectHeaderTitle {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--ep-on-surface);
+}
+
+.projectHeaderDesc {
+  margin: 0;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--ep-on-surface-variant);
+}
+
+.githubLink {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  color: var(--ep-on-surface-variant);
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.githubLink:hover {
+  color: var(--ep-on-surface);
+  background: rgba(0, 93, 172, 0.1);
+}
+
+/* 탭 - 네비 스타일 */
+.tabsWrap {
+  margin-bottom: 0;
+}
+
+.tabsNav {
+  display: flex;
+  gap: 0;
+  border-bottom: 1px solid var(--ep-outline-variant);
+  margin-bottom: 1.5rem;
+}
+
+.tabBtn {
+  appearance: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--ep-on-surface-variant);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition:
+    color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.tabBtn:hover {
+  color: var(--ep-on-surface);
+}
+
+.tabBtnActive {
+  color: #005dac;
+  border-bottom-color: #005dac;
+}
+
+[data-theme='dark'] .tabBtnActive {
+  color: #5eb8ff;
+  border-bottom-color: #5eb8ff;
+}
+
+.tabPanel {
+  animation: sapcy-fade-in 0.3s ease-out;
+}

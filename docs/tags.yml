@@ -1,0 +1,74 @@
+# 문서 태그 정의 (permalink 기본값: /docs/tags/<키>)
+# https://docusaurus.io/docs/sidebar/tags
+
+intro:
+  label: 시작하기
+  description: Playbook 소개
+
+cloud:
+  label: 클라우드
+  description: 클라우드·인프라 일반
+
+aws:
+  label: AWS
+  description: Amazon Web Services
+
+kubernetes:
+  label: Kubernetes
+  description: 쿠버네티스
+
+yaml:
+  label: YAML
+  description: YAML / KYAML
+
+kyaml:
+  label: KYAML
+  description: Kubernetes YAML
+
+argocd:
+  label: Argo CD
+  description: Argo CD GitOps
+
+eks:
+  label: EKS
+  description: Amazon EKS
+
+cs:
+  label: CS
+  description: 컴퓨터 과학 기초
+
+http:
+  label: HTTP
+  description: HTTP·네트워크
+
+security:
+  label: 보안
+  description: SSH·서버 하드닝·인증
+
+backend:
+  label: 백엔드
+  description: 백엔드 개발
+
+algorithm:
+  label: 알고리즘
+  description: 코딩 테스트·알고리즘
+
+java:
+  label: Java
+  description: Java 언어·JVM
+
+spring:
+  label: Spring
+  description: Spring Framework
+
+container:
+  label: 컨테이너
+  description: OCI·Docker·containerd·runc 런타임 스택
+
+opensource:
+  label: 오픈소스
+  description: 관측성·CI 등 오픈소스 도구 정리
+
+cloud-native:
+  label: 클라우드 네이티브
+  description: Envoy·서비스 메시·동적 설정
