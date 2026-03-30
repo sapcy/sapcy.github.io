@@ -485,7 +485,7 @@ function main() {
     
     let urlPath;
     if (isDoc) {
-      urlPath = '/docs/' + file.relativePath.replace(/\.mdx?$/, '').replace(/\/README$/, '');
+      urlPath = '/blog/' + file.relativePath.replace(/\.mdx?$/, '').replace(/\/README$/, '');
     } else if (isBlog) {
       urlPath = '/blog/' + file.relativePath.replace(/\.mdx?$/, '');
     } else {

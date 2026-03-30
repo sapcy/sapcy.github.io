@@ -61,7 +61,7 @@ export default function TagPage() {
           <h1>#{tag}</h1>
           <p className="text--secondary">
             <code>{tag}</code> 태그가 포함된 문서는{' '}
-            <Link to="/docs/tags">문서 태그 허브</Link>에서도 필터할 수 있습니다.
+            <Link to="/blog/tags">문서 태그 허브</Link>에서도 필터할 수 있습니다.
           </p>
         </header>
         <section>

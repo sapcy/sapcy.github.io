@@ -5,7 +5,7 @@
   "source": "@site/docs/cs/ssh-server-hardening.md",
   "sourceDirName": "cs",
   "slug": "/cs/ssh-server-hardening",
-  "permalink": "/docs/cs/ssh-server-hardening",
+  "permalink": "/blog/cs/ssh-server-hardening",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cs/ssh-server-hardening.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "CS",
-      "permalink": "/docs/tags/cs",
+      "permalink": "/blog/tags/cs",
       "description": "컴퓨터 과학 기초"
     },
     {
       "inline": false,
       "label": "보안",
-      "permalink": "/docs/tags/security",
+      "permalink": "/blog/tags/security",
       "description": "SSH·서버 하드닝·인증"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "HTTP Cache 뽀개기",
-    "permalink": "/docs/cs/http-cache-headers"
+    "permalink": "/blog/cs/http-cache-headers"
   },
   "next": {
     "title": "OCI(Open Container Initiative) 개요",
-    "permalink": "/docs/container/oci-spec"
+    "permalink": "/blog/container/oci-spec"
   }
 }

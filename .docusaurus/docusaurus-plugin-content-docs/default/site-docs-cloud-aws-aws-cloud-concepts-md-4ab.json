@@ -5,7 +5,7 @@
   "source": "@site/docs/cloud/aws/aws-cloud-concepts.md",
   "sourceDirName": "cloud/aws",
   "slug": "/cloud/aws/aws-cloud-concepts",
-  "permalink": "/docs/cloud/aws/aws-cloud-concepts",
+  "permalink": "/blog/cloud/aws/aws-cloud-concepts",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/aws/aws-cloud-concepts.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "클라우드",
-      "permalink": "/docs/tags/cloud",
+      "permalink": "/blog/tags/cloud",
       "description": "클라우드·인프라 일반"
     },
     {
       "inline": false,
       "label": "AWS",
-      "permalink": "/docs/tags/aws",
+      "permalink": "/blog/tags/aws",
       "description": "Amazon Web Services"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "ArgoCD에서 External EKS 클러스터 연동 방법",
-    "permalink": "/docs/cloud/aws/argocd-external-eks"
+    "permalink": "/blog/cloud/aws/argocd-external-eks"
   },
   "next": {
     "title": "쿠버네티스 작동 방식 정리",
-    "permalink": "/docs/cloud/kubernetes/concept-kubernetes-overview"
+    "permalink": "/blog/cloud/kubernetes/concept-kubernetes-overview"
   }
 }

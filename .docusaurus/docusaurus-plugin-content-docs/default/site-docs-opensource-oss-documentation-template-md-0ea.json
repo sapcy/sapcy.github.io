@@ -5,7 +5,7 @@
   "source": "@site/docs/opensource/oss-documentation-template.md",
   "sourceDirName": "opensource",
   "slug": "/opensource/oss-documentation-template",
-  "permalink": "/docs/opensource/oss-documentation-template",
+  "permalink": "/blog/opensource/oss-documentation-template",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/oss-documentation-template.md",
@@ -13,7 +13,7 @@
     {
       "inline": false,
       "label": "오픈소스",
-      "permalink": "/docs/tags/opensource",
+      "permalink": "/blog/tags/opensource",
       "description": "관측성·CI 등 오픈소스 도구 정리"
     }
   ],
@@ -29,10 +29,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Docker 컨테이너 생성 흐름",
-    "permalink": "/docs/container/docker-container-creation-flow"
+    "permalink": "/blog/container/docker-container-creation-flow"
   },
   "next": {
     "title": "Grafana Loki 개요 - 읽기·쓰기 경로",
-    "permalink": "/docs/opensource/loki-overview"
+    "permalink": "/blog/opensource/loki-overview"
   }
 }

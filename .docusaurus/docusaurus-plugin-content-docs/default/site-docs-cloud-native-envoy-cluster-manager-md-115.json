@@ -5,7 +5,7 @@
   "source": "@site/docs/cloud-native/envoy/cluster-manager.md",
   "sourceDirName": "cloud-native/envoy",
   "slug": "/cloud-native/envoy/cluster-manager",
-  "permalink": "/docs/cloud-native/envoy/cluster-manager",
+  "permalink": "/blog/cloud-native/envoy/cluster-manager",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud-native/envoy/cluster-manager.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "클라우드 네이티브",
-      "permalink": "/docs/tags/cloud-native",
+      "permalink": "/blog/tags/cloud-native",
       "description": "Envoy·서비스 메시·동적 설정"
     },
     {
       "inline": false,
       "label": "Kubernetes",
-      "permalink": "/docs/tags/kubernetes",
+      "permalink": "/blog/tags/kubernetes",
       "description": "쿠버네티스"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Envoy 쓰레딩 모델과 데이터 공유",
-    "permalink": "/docs/cloud-native/envoy/threading-model"
+    "permalink": "/blog/cloud-native/envoy/threading-model"
   },
   "next": {
     "title": "HTTP Cache 뽀개기",
-    "permalink": "/docs/cs/http-cache-headers"
+    "permalink": "/blog/cs/http-cache-headers"
   }
 }

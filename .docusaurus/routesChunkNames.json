@@ -173,320 +173,320 @@
     },
     "config": "5e9f5e1a"
   },
-  "/docs-769": {
+  "/blog-aab": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/docs-c6c": {
+  "/blog-d68": {
     "__comp": "a7bd4aaa",
-    "__props": "0058b4c6"
+    "__props": "2d850da0"
   },
-  "/docs/tags-fce": {
+  "/blog/tags-c79": {
     "__comp": "3720c009",
-    "__props": "898514b1"
+    "__props": "530c3219"
   },
-  "/docs/tags/algorithm-34f": {
+  "/blog/tags/algorithm-d99": {
     "__comp": "df203c0f",
-    "__props": "cd966668"
+    "__props": "068688fc"
   },
-  "/docs/tags/argocd-e5d": {
+  "/blog/tags/argocd-f6a": {
     "__comp": "df203c0f",
-    "__props": "7f6935e6"
+    "__props": "7d1f68fe"
   },
-  "/docs/tags/aws-e55": {
+  "/blog/tags/aws-fd3": {
     "__comp": "df203c0f",
-    "__props": "b9a0a472"
+    "__props": "1dda1713"
   },
-  "/docs/tags/backend-d24": {
+  "/blog/tags/backend-664": {
     "__comp": "df203c0f",
-    "__props": "2ac556c4"
+    "__props": "e3f42e90"
   },
-  "/docs/tags/cloud-ed2": {
+  "/blog/tags/cloud-b13": {
     "__comp": "df203c0f",
-    "__props": "843596de"
+    "__props": "f4cc60cf"
   },
-  "/docs/tags/cloud-native-723": {
+  "/blog/tags/cloud-native-c05": {
     "__comp": "df203c0f",
-    "__props": "9d4de7ea"
+    "__props": "3db0ea16"
   },
-  "/docs/tags/container-1bb": {
+  "/blog/tags/container-f10": {
     "__comp": "df203c0f",
-    "__props": "73d9353e"
+    "__props": "7e295c4b"
   },
-  "/docs/tags/cs-d6c": {
+  "/blog/tags/cs-86e": {
     "__comp": "df203c0f",
-    "__props": "f9533001"
+    "__props": "fad34747"
   },
-  "/docs/tags/docker-0d0": {
+  "/blog/tags/docker-4f5": {
     "__comp": "df203c0f",
-    "__props": "7144043e"
+    "__props": "ee273c03"
   },
-  "/docs/tags/eks-62a": {
+  "/blog/tags/eks-3af": {
     "__comp": "df203c0f",
-    "__props": "0ae8b527"
+    "__props": "2b25efdf"
   },
-  "/docs/tags/http-aa0": {
+  "/blog/tags/http-6b7": {
     "__comp": "df203c0f",
-    "__props": "7c393145"
+    "__props": "401a0ecb"
   },
-  "/docs/tags/intro-3af": {
+  "/blog/tags/intro-727": {
     "__comp": "df203c0f",
-    "__props": "7b5a7d49"
+    "__props": "2b45bdfe"
   },
-  "/docs/tags/java-908": {
+  "/blog/tags/java-673": {
     "__comp": "df203c0f",
-    "__props": "408f320f"
+    "__props": "373ada1a"
   },
-  "/docs/tags/kubernetes-a8b": {
+  "/blog/tags/kubernetes-efc": {
     "__comp": "df203c0f",
-    "__props": "10091836"
+    "__props": "80ae6cc3"
   },
-  "/docs/tags/kyaml-f31": {
+  "/blog/tags/kyaml-95f": {
     "__comp": "df203c0f",
-    "__props": "150d60e1"
+    "__props": "34a3dae3"
   },
-  "/docs/tags/opensource-228": {
+  "/blog/tags/opensource-1de": {
     "__comp": "df203c0f",
-    "__props": "03bfd381"
+    "__props": "6c374edd"
   },
-  "/docs/tags/security-056": {
+  "/blog/tags/security-71d": {
     "__comp": "df203c0f",
-    "__props": "1d1fd8a7"
+    "__props": "c81ed2e5"
   },
-  "/docs/tags/spring-401": {
+  "/blog/tags/spring-184": {
     "__comp": "df203c0f",
-    "__props": "f4766f15"
+    "__props": "b653f775"
   },
-  "/docs/tags/yaml-4ba": {
+  "/blog/tags/yaml-b87": {
     "__comp": "df203c0f",
-    "__props": "9ec278f4"
+    "__props": "028f0b30"
   },
-  "/docs-e5b": {
+  "/blog-a1b": {
     "__comp": "a94703ab"
   },
-  "/docs/backend/coding/boj-13458-exam-supervisor-d4a": {
-    "__comp": "17896441",
-    "content": "55afb346"
-  },
-  "/docs/backend/coding/boj-14501-resignation-231": {
-    "__comp": "17896441",
-    "content": "6a257a6f"
-  },
-  "/docs/backend/coding/boj-14502-laboratory-a33": {
-    "__comp": "17896441",
-    "content": "c1ac2daa"
-  },
-  "/docs/backend/coding/boj-14888-insert-operators-47a": {
-    "__comp": "17896441",
-    "content": "e6ac35f5"
-  },
-  "/docs/backend/coding/pccp-1-lonely-alphabet-707": {
-    "__comp": "17896441",
-    "content": "3e5c4bc4"
-  },
-  "/docs/backend/coding/pccp-2-sports-day-b11": {
-    "__comp": "17896441",
-    "content": "5ceb0c27"
-  },
-  "/docs/backend/coding/pccp-3-genetics-law-345": {
-    "__comp": "17896441",
-    "content": "7f27f27e"
-  },
-  "/docs/backend/coding/pccp-4-operating-system-8f9": {
-    "__comp": "17896441",
-    "content": "cc0e0150"
-  },
-  "/docs/backend/java/arrays-4e4": {
-    "__comp": "17896441",
-    "content": "babc388b"
-  },
-  "/docs/backend/java/conditionals-and-loops-2ae": {
-    "__comp": "17896441",
-    "content": "47e7814d"
-  },
-  "/docs/backend/java/java-introduction-1c1": {
-    "__comp": "17896441",
-    "content": "ab1193f3"
-  },
-  "/docs/backend/java/jit-compiler-fa7": {
-    "__comp": "17896441",
-    "content": "3eef79da"
-  },
-  "/docs/backend/java/jvm-17e": {
-    "__comp": "17896441",
-    "content": "1ab6c9df"
-  },
-  "/docs/backend/java/operators-03f": {
-    "__comp": "17896441",
-    "content": "15e44ad6"
-  },
-  "/docs/backend/java/variables-c9b": {
-    "__comp": "17896441",
-    "content": "1e8b0cba"
-  },
-  "/docs/backend/spring/ioc-container-intro-09b": {
-    "__comp": "17896441",
-    "content": "974cf40a"
-  },
-  "/docs/cloud-native/envoy/architecture-overview-b45": {
-    "__comp": "17896441",
-    "content": "ec243bc7"
-  },
-  "/docs/cloud-native/envoy/cluster-manager-41f": {
-    "__comp": "17896441",
-    "content": "115326d6"
-  },
-  "/docs/cloud-native/envoy/grpc-communication-85d": {
-    "__comp": "17896441",
-    "content": "23ff7939"
-  },
-  "/docs/cloud-native/envoy/threading-model-844": {
-    "__comp": "17896441",
-    "content": "93491ecb"
-  },
-  "/docs/cloud/aws/argocd-external-eks-0d0": {
-    "__comp": "17896441",
-    "content": "1ef0b84b"
-  },
-  "/docs/cloud/aws/aws-cloud-concepts-540": {
-    "__comp": "17896441",
-    "content": "4ab94b2f"
-  },
-  "/docs/cloud/aws/eks-cost-overview-2fb": {
-    "__comp": "17896441",
-    "content": "e970ccae"
-  },
-  "/docs/cloud/kubernetes/concept-containerd-cri-dc3": {
-    "__comp": "17896441",
-    "content": "51d2ae9d"
-  },
-  "/docs/cloud/kubernetes/concept-kube-controller-manager-7c7": {
-    "__comp": "17896441",
-    "content": "f8a3a1c3"
-  },
-  "/docs/cloud/kubernetes/concept-kube-scheduler-81b": {
-    "__comp": "17896441",
-    "content": "5558e903"
-  },
-  "/docs/cloud/kubernetes/concept-kubernetes-overview-f24": {
-    "__comp": "17896441",
-    "content": "11499f0e"
-  },
-  "/docs/cloud/kubernetes/concept-pod-88e": {
-    "__comp": "17896441",
-    "content": "047c8cee"
-  },
-  "/docs/cloud/kubernetes/k3s-x86-orbstack-apple-silicon-055": {
-    "__comp": "17896441",
-    "content": "d17a6a24"
-  },
-  "/docs/cloud/kubernetes/k8s-api-tls-external-request-2bd": {
-    "__comp": "17896441",
-    "content": "03d9e242"
-  },
-  "/docs/cloud/kubernetes/kubectl-top-vs-free-memory-98d": {
-    "__comp": "17896441",
-    "content": "71c4d226"
-  },
-  "/docs/cloud/kubernetes/kyaml-kubernetes-yaml-244": {
-    "__comp": "17896441",
-    "content": "7f25bca8"
-  },
-  "/docs/cloud/kubernetes/network-calico-cni-2cd": {
-    "__comp": "17896441",
-    "content": "7995da9b"
-  },
-  "/docs/cloud/kubernetes/network-cilium-cni-b3d": {
-    "__comp": "17896441",
-    "content": "c1f14992"
-  },
-  "/docs/cloud/kubernetes/network-cilium-components-390": {
-    "__comp": "17896441",
-    "content": "0bda6860"
-  },
-  "/docs/cloud/kubernetes/network-cilium-pod-to-pod-619": {
-    "__comp": "17896441",
-    "content": "b08f9cd5"
-  },
-  "/docs/cloud/kubernetes/network-coredns-multiple-dns-3a5": {
-    "__comp": "17896441",
-    "content": "04c5b66d"
-  },
-  "/docs/cloud/kubernetes/network-kernel-tuning-090": {
-    "__comp": "17896441",
-    "content": "660a7302"
-  },
-  "/docs/cloud/kubernetes/network-router-vs-gateway-ef3": {
-    "__comp": "17896441",
-    "content": "10905677"
-  },
-  "/docs/cloud/kubernetes/sealed-secrets-gitops-5b4": {
-    "__comp": "17896441",
-    "content": "057f0707"
-  },
-  "/docs/container/containerd-shim-728": {
-    "__comp": "17896441",
-    "content": "281f8319"
-  },
-  "/docs/container/docker-container-creation-flow-922": {
-    "__comp": "17896441",
-    "content": "5ec90ae3"
-  },
-  "/docs/container/docker-cri-oci-runc-stack-7af": {
-    "__comp": "17896441",
-    "content": "41f9a87d"
-  },
-  "/docs/container/docker-vs-containerd-daemon-575": {
-    "__comp": "17896441",
-    "content": "8be1d483"
-  },
-  "/docs/container/oci-spec-d61": {
-    "__comp": "17896441",
-    "content": "ad20123b"
-  },
-  "/docs/container/runc-bfb": {
-    "__comp": "17896441",
-    "content": "58d5b83d"
-  },
-  "/docs/cs/http-cache-headers-edc": {
-    "__comp": "17896441",
-    "content": "df08a3cf"
-  },
-  "/docs/cs/ssh-server-hardening-cab": {
-    "__comp": "17896441",
-    "content": "c7eac26a"
-  },
-  "/docs/intro-61d": {
+  "/blog-a08": {
     "__comp": "17896441",
     "content": "0e384e19"
   },
-  "/docs/opensource/jenkins-core-architecture-18b": {
+  "/blog/backend/coding/boj-13458-exam-supervisor-a24": {
+    "__comp": "17896441",
+    "content": "55afb346"
+  },
+  "/blog/backend/coding/boj-14501-resignation-3d9": {
+    "__comp": "17896441",
+    "content": "6a257a6f"
+  },
+  "/blog/backend/coding/boj-14502-laboratory-d10": {
+    "__comp": "17896441",
+    "content": "c1ac2daa"
+  },
+  "/blog/backend/coding/boj-14888-insert-operators-cb3": {
+    "__comp": "17896441",
+    "content": "e6ac35f5"
+  },
+  "/blog/backend/coding/pccp-1-lonely-alphabet-da0": {
+    "__comp": "17896441",
+    "content": "3e5c4bc4"
+  },
+  "/blog/backend/coding/pccp-2-sports-day-13a": {
+    "__comp": "17896441",
+    "content": "5ceb0c27"
+  },
+  "/blog/backend/coding/pccp-3-genetics-law-7d0": {
+    "__comp": "17896441",
+    "content": "7f27f27e"
+  },
+  "/blog/backend/coding/pccp-4-operating-system-c4b": {
+    "__comp": "17896441",
+    "content": "cc0e0150"
+  },
+  "/blog/backend/java/arrays-6f8": {
+    "__comp": "17896441",
+    "content": "babc388b"
+  },
+  "/blog/backend/java/conditionals-and-loops-ce7": {
+    "__comp": "17896441",
+    "content": "47e7814d"
+  },
+  "/blog/backend/java/java-introduction-4ca": {
+    "__comp": "17896441",
+    "content": "ab1193f3"
+  },
+  "/blog/backend/java/jit-compiler-989": {
+    "__comp": "17896441",
+    "content": "3eef79da"
+  },
+  "/blog/backend/java/jvm-617": {
+    "__comp": "17896441",
+    "content": "1ab6c9df"
+  },
+  "/blog/backend/java/operators-567": {
+    "__comp": "17896441",
+    "content": "15e44ad6"
+  },
+  "/blog/backend/java/variables-123": {
+    "__comp": "17896441",
+    "content": "1e8b0cba"
+  },
+  "/blog/backend/spring/ioc-container-intro-5fb": {
+    "__comp": "17896441",
+    "content": "974cf40a"
+  },
+  "/blog/cloud-native/envoy/architecture-overview-c6f": {
+    "__comp": "17896441",
+    "content": "ec243bc7"
+  },
+  "/blog/cloud-native/envoy/cluster-manager-fd2": {
+    "__comp": "17896441",
+    "content": "115326d6"
+  },
+  "/blog/cloud-native/envoy/grpc-communication-f6f": {
+    "__comp": "17896441",
+    "content": "23ff7939"
+  },
+  "/blog/cloud-native/envoy/threading-model-390": {
+    "__comp": "17896441",
+    "content": "93491ecb"
+  },
+  "/blog/cloud/aws/argocd-external-eks-4f1": {
+    "__comp": "17896441",
+    "content": "1ef0b84b"
+  },
+  "/blog/cloud/aws/aws-cloud-concepts-d79": {
+    "__comp": "17896441",
+    "content": "4ab94b2f"
+  },
+  "/blog/cloud/aws/eks-cost-overview-49c": {
+    "__comp": "17896441",
+    "content": "e970ccae"
+  },
+  "/blog/cloud/kubernetes/concept-containerd-cri-dfc": {
+    "__comp": "17896441",
+    "content": "51d2ae9d"
+  },
+  "/blog/cloud/kubernetes/concept-kube-controller-manager-08b": {
+    "__comp": "17896441",
+    "content": "f8a3a1c3"
+  },
+  "/blog/cloud/kubernetes/concept-kube-scheduler-ed8": {
+    "__comp": "17896441",
+    "content": "5558e903"
+  },
+  "/blog/cloud/kubernetes/concept-kubernetes-overview-4ba": {
+    "__comp": "17896441",
+    "content": "11499f0e"
+  },
+  "/blog/cloud/kubernetes/concept-pod-ee7": {
+    "__comp": "17896441",
+    "content": "047c8cee"
+  },
+  "/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon-fad": {
+    "__comp": "17896441",
+    "content": "d17a6a24"
+  },
+  "/blog/cloud/kubernetes/k8s-api-tls-external-request-021": {
+    "__comp": "17896441",
+    "content": "03d9e242"
+  },
+  "/blog/cloud/kubernetes/kubectl-top-vs-free-memory-f38": {
+    "__comp": "17896441",
+    "content": "71c4d226"
+  },
+  "/blog/cloud/kubernetes/kyaml-kubernetes-yaml-7c8": {
+    "__comp": "17896441",
+    "content": "7f25bca8"
+  },
+  "/blog/cloud/kubernetes/network-calico-cni-559": {
+    "__comp": "17896441",
+    "content": "7995da9b"
+  },
+  "/blog/cloud/kubernetes/network-cilium-cni-16b": {
+    "__comp": "17896441",
+    "content": "c1f14992"
+  },
+  "/blog/cloud/kubernetes/network-cilium-components-471": {
+    "__comp": "17896441",
+    "content": "0bda6860"
+  },
+  "/blog/cloud/kubernetes/network-cilium-pod-to-pod-12f": {
+    "__comp": "17896441",
+    "content": "b08f9cd5"
+  },
+  "/blog/cloud/kubernetes/network-coredns-multiple-dns-394": {
+    "__comp": "17896441",
+    "content": "04c5b66d"
+  },
+  "/blog/cloud/kubernetes/network-kernel-tuning-bdd": {
+    "__comp": "17896441",
+    "content": "660a7302"
+  },
+  "/blog/cloud/kubernetes/network-router-vs-gateway-d26": {
+    "__comp": "17896441",
+    "content": "10905677"
+  },
+  "/blog/cloud/kubernetes/sealed-secrets-gitops-f9f": {
+    "__comp": "17896441",
+    "content": "057f0707"
+  },
+  "/blog/container/containerd-shim-13b": {
+    "__comp": "17896441",
+    "content": "281f8319"
+  },
+  "/blog/container/docker-container-creation-flow-2b6": {
+    "__comp": "17896441",
+    "content": "5ec90ae3"
+  },
+  "/blog/container/docker-cri-oci-runc-stack-a6a": {
+    "__comp": "17896441",
+    "content": "41f9a87d"
+  },
+  "/blog/container/docker-vs-containerd-daemon-cd7": {
+    "__comp": "17896441",
+    "content": "8be1d483"
+  },
+  "/blog/container/oci-spec-e3d": {
+    "__comp": "17896441",
+    "content": "ad20123b"
+  },
+  "/blog/container/runc-418": {
+    "__comp": "17896441",
+    "content": "58d5b83d"
+  },
+  "/blog/cs/http-cache-headers-661": {
+    "__comp": "17896441",
+    "content": "df08a3cf"
+  },
+  "/blog/cs/ssh-server-hardening-97c": {
+    "__comp": "17896441",
+    "content": "c7eac26a"
+  },
+  "/blog/opensource/jenkins-core-architecture-457": {
     "__comp": "17896441",
     "content": "27fb71f3"
   },
-  "/docs/opensource/loki-overview-312": {
+  "/blog/opensource/loki-overview-e69": {
     "__comp": "17896441",
     "content": "c0bae6b9"
   },
-  "/docs/opensource/mimir-architecture-393": {
+  "/blog/opensource/mimir-architecture-e03": {
     "__comp": "17896441",
     "content": "9c3801de"
   },
-  "/docs/opensource/opentelemetry-lgtm-architecture-115": {
+  "/blog/opensource/opentelemetry-lgtm-architecture-078": {
     "__comp": "17896441",
     "content": "7feccfe8"
   },
-  "/docs/opensource/oss-documentation-template-b9f": {
+  "/blog/opensource/oss-documentation-template-45e": {
     "__comp": "17896441",
     "content": "0eab78c4"
   },
-  "/docs/opensource/tempo-architecture-d2b": {
+  "/blog/opensource/tempo-architecture-4d2": {
     "__comp": "17896441",
     "content": "2decd72f"
   },
-  "/docs/opensource/tempo-overview-12f": {
+  "/blog/opensource/tempo-overview-868": {
     "__comp": "17896441",
     "content": "43cce03a"
   },

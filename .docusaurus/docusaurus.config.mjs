@@ -53,7 +53,7 @@ export default {
         "hashed": true,
         "highlightSearchTermsOnTargetPage": true,
         "explicitSearchResultPath": true,
-        "docsRouteBasePath": "/docs",
+        "docsRouteBasePath": "/blog",
         "indexBlog": false,
         "searchBarShortcutHint": true,
         "searchBarPosition": "left"
@@ -86,24 +86,12 @@ export default {
       "classic",
       {
         "docs": {
+          "routeBasePath": "blog",
           "sidebarPath": "./sidebars.ts",
           "tags": "tags.yml",
           "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/"
         },
-        "blog": {
-          "showReadingTime": true,
-          "feedOptions": {
-            "type": [
-              "rss",
-              "atom"
-            ],
-            "xslt": true
-          },
-          "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
-          "onInlineTags": "warn",
-          "onInlineAuthors": "warn",
-          "onUntruncatedBlogPosts": "warn"
-        },
+        "blog": false,
         "theme": {
           "customCss": "./src/css/custom.css"
         }
@@ -111,6 +99,10 @@ export default {
     ]
   ],
   "plugins": [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {}
+    ],
     [
       "@docusaurus/plugin-ideal-image",
       {
@@ -164,10 +156,9 @@ export default {
       },
       "items": [
         {
-          "type": "docSidebar",
-          "sidebarId": "tutorialSidebar",
+          "to": "/blog",
           "position": "left",
-          "label": "문서"
+          "label": "블로그"
         },
         {
           "to": "/project",
@@ -175,7 +166,7 @@ export default {
           "position": "left"
         },
         {
-          "to": "/docs/tags",
+          "to": "/blog/tags",
           "label": "태그",
           "position": "left"
         },
@@ -199,15 +190,15 @@ export default {
       "style": "dark",
       "links": [
         {
-          "title": "문서",
+          "title": "블로그",
           "items": [
             {
-              "label": "시작하기",
-              "to": "/docs/intro"
+              "label": "글 목록",
+              "to": "/blog"
             },
             {
-              "label": "태그로 보기",
-              "to": "/docs/tags"
+              "label": "태그",
+              "to": "/blog/tags"
             }
           ]
         },

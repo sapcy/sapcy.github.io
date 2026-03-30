@@ -1,4 +1,4 @@
-# 문서 태그 정의 (permalink 기본값: /docs/tags/<키>)
+# 문서 태그 정의 (permalink 기본값: /blog/tags/<키>)
 # https://docusaurus.io/docs/sidebar/tags
 
 intro:

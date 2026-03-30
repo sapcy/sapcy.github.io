@@ -5,7 +5,7 @@
   "source": "@site/docs/backend/java/variables.md",
   "sourceDirName": "backend/java",
   "slug": "/backend/java/variables",
-  "permalink": "/docs/backend/java/variables",
+  "permalink": "/blog/backend/java/variables",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/variables.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "백엔드",
-      "permalink": "/docs/tags/backend",
+      "permalink": "/blog/tags/backend",
       "description": "백엔드 개발"
     },
     {
       "inline": false,
       "label": "Java",
-      "permalink": "/docs/tags/java",
+      "permalink": "/blog/tags/java",
       "description": "Java 언어·JVM"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "연산자",
-    "permalink": "/docs/backend/java/operators"
+    "permalink": "/blog/backend/java/operators"
   },
   "next": {
     "title": "JIT 컴파일러 (Just-In-Time Compiler)",
-    "permalink": "/docs/backend/java/jit-compiler"
+    "permalink": "/blog/backend/java/jit-compiler"
   }
 }

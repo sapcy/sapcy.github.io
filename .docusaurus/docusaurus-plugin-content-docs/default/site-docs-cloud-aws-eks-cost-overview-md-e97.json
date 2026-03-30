@@ -5,7 +5,7 @@
   "source": "@site/docs/cloud/aws/eks-cost-overview.md",
   "sourceDirName": "cloud/aws",
   "slug": "/cloud/aws/eks-cost-overview",
-  "permalink": "/docs/cloud/aws/eks-cost-overview",
+  "permalink": "/blog/cloud/aws/eks-cost-overview",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/aws/eks-cost-overview.md",
@@ -13,19 +13,19 @@
     {
       "inline": false,
       "label": "클라우드",
-      "permalink": "/docs/tags/cloud",
+      "permalink": "/blog/tags/cloud",
       "description": "클라우드·인프라 일반"
     },
     {
       "inline": false,
       "label": "AWS",
-      "permalink": "/docs/tags/aws",
+      "permalink": "/blog/tags/aws",
       "description": "Amazon Web Services"
     },
     {
       "inline": false,
       "label": "EKS",
-      "permalink": "/docs/tags/eks",
+      "permalink": "/blog/tags/eks",
       "description": "Amazon EKS"
     }
   ],
@@ -43,10 +43,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "시작하기",
-    "permalink": "/docs/intro"
+    "permalink": "/blog/"
   },
   "next": {
     "title": "ArgoCD에서 External EKS 클러스터 연동 방법",
-    "permalink": "/docs/cloud/aws/argocd-external-eks"
+    "permalink": "/blog/cloud/aws/argocd-external-eks"
   }
 }

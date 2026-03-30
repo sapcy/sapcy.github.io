@@ -5,7 +5,7 @@
   "source": "@site/docs/cloud/kubernetes/network-kernel-tuning.md",
   "sourceDirName": "cloud/kubernetes",
   "slug": "/cloud/kubernetes/network-kernel-tuning",
-  "permalink": "/docs/cloud/kubernetes/network-kernel-tuning",
+  "permalink": "/blog/cloud/kubernetes/network-kernel-tuning",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/network-kernel-tuning.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "클라우드",
-      "permalink": "/docs/tags/cloud",
+      "permalink": "/blog/tags/cloud",
       "description": "클라우드·인프라 일반"
     },
     {
       "inline": false,
       "label": "Kubernetes",
-      "permalink": "/docs/tags/kubernetes",
+      "permalink": "/blog/tags/kubernetes",
       "description": "쿠버네티스"
     }
   ],
@@ -35,10 +35,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "CoreDNS - Multiple DNS server forwarding",
-    "permalink": "/docs/cloud/kubernetes/network-coredns-multiple-dns"
+    "permalink": "/blog/cloud/kubernetes/network-coredns-multiple-dns"
   },
   "next": {
     "title": "Router vs Gateway",
-    "permalink": "/docs/cloud/kubernetes/network-router-vs-gateway"
+    "permalink": "/blog/cloud/kubernetes/network-router-vs-gateway"
   }
 }

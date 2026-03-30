@@ -5,7 +5,7 @@
   "source": "@site/docs/opensource/jenkins-core-architecture.md",
   "sourceDirName": "opensource",
   "slug": "/opensource/jenkins-core-architecture",
-  "permalink": "/docs/opensource/jenkins-core-architecture",
+  "permalink": "/blog/opensource/jenkins-core-architecture",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/jenkins-core-architecture.md",
@@ -13,7 +13,7 @@
     {
       "inline": false,
       "label": "오픈소스",
-      "permalink": "/docs/tags/opensource",
+      "permalink": "/blog/tags/opensource",
       "description": "관측성·CI 등 오픈소스 도구 정리"
     }
   ],
@@ -29,10 +29,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "OpenTelemetry·LGTM 스택 실습 아키텍처 개요",
-    "permalink": "/docs/opensource/opentelemetry-lgtm-architecture"
+    "permalink": "/blog/opensource/opentelemetry-lgtm-architecture"
   },
   "next": {
     "title": "14502. 연구소",
-    "permalink": "/docs/backend/coding/boj-14502-laboratory"
+    "permalink": "/blog/backend/coding/boj-14502-laboratory"
   }
 }

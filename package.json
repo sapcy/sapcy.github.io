@@ -17,7 +17,6 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "generate-summary": "node scripts/generate-summary.js",
     "new-post": "node scripts/new-post.js",
-    "validate-metadata": "node scripts/validate-metadata-new.js",
     "validate-links": "node scripts/validate-links.js",
     "generate-tags": "node scripts/generate-tag-pages.js",
     "auto-categorize": "node scripts/auto-categorize.js",
@@ -25,6 +24,7 @@
     "sync": "npm run generate-summary && git add . && git commit -m 'Update SUMMARY.md' && git push"
   },
   "dependencies": {
+    "@docusaurus/plugin-client-redirects": "3.9.2",
     "@docusaurus/core": "3.9.2",
     "@docusaurus/plugin-ideal-image": "^3.9.2",
     "@docusaurus/plugin-pwa": "^3.9.2",

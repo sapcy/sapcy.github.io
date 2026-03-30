@@ -5,7 +5,7 @@
   "source": "@site/docs/backend/coding/pccp-4-operating-system.md",
   "sourceDirName": "backend/coding",
   "slug": "/backend/coding/pccp-4-operating-system",
-  "permalink": "/docs/backend/coding/pccp-4-operating-system",
+  "permalink": "/blog/backend/coding/pccp-4-operating-system",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/coding/pccp-4-operating-system.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "백엔드",
-      "permalink": "/docs/tags/backend",
+      "permalink": "/blog/tags/backend",
       "description": "백엔드 개발"
     },
     {
       "inline": false,
       "label": "알고리즘",
-      "permalink": "/docs/tags/algorithm",
+      "permalink": "/blog/tags/algorithm",
       "description": "코딩 테스트·알고리즘"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "13458. 시험감독 (Java)",
-    "permalink": "/docs/backend/coding/boj-13458-exam-supervisor"
+    "permalink": "/blog/backend/coding/boj-13458-exam-supervisor"
   },
   "next": {
     "title": "#3 - 유전 법칙",
-    "permalink": "/docs/backend/coding/pccp-3-genetics-law"
+    "permalink": "/blog/backend/coding/pccp-3-genetics-law"
   }
 }

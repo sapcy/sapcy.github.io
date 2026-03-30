@@ -5,7 +5,7 @@
   "source": "@site/docs/cloud/kubernetes/network-calico-cni.md",
   "sourceDirName": "cloud/kubernetes",
   "slug": "/cloud/kubernetes/network-calico-cni",
-  "permalink": "/docs/cloud/kubernetes/network-calico-cni",
+  "permalink": "/blog/cloud/kubernetes/network-calico-cni",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/network-calico-cni.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "클라우드",
-      "permalink": "/docs/tags/cloud",
+      "permalink": "/blog/tags/cloud",
       "description": "클라우드·인프라 일반"
     },
     {
       "inline": false,
       "label": "Kubernetes",
-      "permalink": "/docs/tags/kubernetes",
+      "permalink": "/blog/tags/kubernetes",
       "description": "쿠버네티스"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Sealed Secrets - GitOps로 Secret 안전하게 관리하기",
-    "permalink": "/docs/cloud/kubernetes/sealed-secrets-gitops"
+    "permalink": "/blog/cloud/kubernetes/sealed-secrets-gitops"
   },
   "next": {
     "title": "Cilium CNI",
-    "permalink": "/docs/cloud/kubernetes/network-cilium-cni"
+    "permalink": "/blog/cloud/kubernetes/network-cilium-cni"
   }
 }

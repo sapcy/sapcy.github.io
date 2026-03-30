@@ -5,7 +5,7 @@
   "source": "@site/docs/opensource/loki-overview.md",
   "sourceDirName": "opensource",
   "slug": "/opensource/loki-overview",
-  "permalink": "/docs/opensource/loki-overview",
+  "permalink": "/blog/opensource/loki-overview",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/loki-overview.md",
@@ -13,7 +13,7 @@
     {
       "inline": false,
       "label": "오픈소스",
-      "permalink": "/docs/tags/opensource",
+      "permalink": "/blog/tags/opensource",
       "description": "관측성·CI 등 오픈소스 도구 정리"
     }
   ],
@@ -29,10 +29,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "오픈소스 문서화 체크리스트",
-    "permalink": "/docs/opensource/oss-documentation-template"
+    "permalink": "/blog/opensource/oss-documentation-template"
   },
   "next": {
     "title": "Grafana Tempo 개요",
-    "permalink": "/docs/opensource/tempo-overview"
+    "permalink": "/blog/opensource/tempo-overview"
   }
 }

@@ -5,7 +5,7 @@
   "source": "@site/docs/container/oci-spec.md",
   "sourceDirName": "container",
   "slug": "/container/oci-spec",
-  "permalink": "/docs/container/oci-spec",
+  "permalink": "/blog/container/oci-spec",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/container/oci-spec.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "컨테이너",
-      "permalink": "/docs/tags/container",
+      "permalink": "/blog/tags/container",
       "description": "OCI·Docker·containerd·runc 런타임 스택"
     },
     {
       "inline": true,
       "label": "docker",
-      "permalink": "/docs/tags/docker"
+      "permalink": "/blog/tags/docker"
     }
   ],
   "version": "current",
@@ -35,10 +35,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "SSH 서버 하드닝 - 9가지 설정",
-    "permalink": "/docs/cs/ssh-server-hardening"
+    "permalink": "/blog/cs/ssh-server-hardening"
   },
   "next": {
     "title": "runc - OCI 저수준 런타임",
-    "permalink": "/docs/container/runc"
+    "permalink": "/blog/container/runc"
   }
 }

@@ -62,7 +62,7 @@ function HeroSection() {
             {siteConfig.tagline ?? '블로그와 문서를 한곳에서'}
           </p>
           <div className={styles.heroButtons}>
-            <Link className={styles.btnPrimary} to="/docs/intro">
+            <Link className={styles.btnPrimary} to="/blog">
               Start Reading
               <span>→</span>
             </Link>
@@ -159,7 +159,7 @@ function TopicsSection() {
               블로그와 문서의 핵심 영역
             </p>
           </div>
-          <Link className={styles.viewAll} to="/docs/intro">
+          <Link className={styles.viewAll} to="/blog">
             View all modules ↗
           </Link>
         </div>

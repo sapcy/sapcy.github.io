@@ -128,450 +128,450 @@ export default [
     exact: true
   },
   {
-    path: '/docs',
-    component: ComponentCreator('/docs', '769'),
+    path: '/blog',
+    component: ComponentCreator('/blog', 'aab'),
     routes: [
       {
-        path: '/docs',
-        component: ComponentCreator('/docs', 'c6c'),
+        path: '/blog',
+        component: ComponentCreator('/blog', 'd68'),
         routes: [
           {
-            path: '/docs/tags',
-            component: ComponentCreator('/docs/tags', 'fce'),
+            path: '/blog/tags',
+            component: ComponentCreator('/blog/tags', 'c79'),
             exact: true
           },
           {
-            path: '/docs/tags/algorithm',
-            component: ComponentCreator('/docs/tags/algorithm', '34f'),
+            path: '/blog/tags/algorithm',
+            component: ComponentCreator('/blog/tags/algorithm', 'd99'),
             exact: true
           },
           {
-            path: '/docs/tags/argocd',
-            component: ComponentCreator('/docs/tags/argocd', 'e5d'),
+            path: '/blog/tags/argocd',
+            component: ComponentCreator('/blog/tags/argocd', 'f6a'),
             exact: true
           },
           {
-            path: '/docs/tags/aws',
-            component: ComponentCreator('/docs/tags/aws', 'e55'),
+            path: '/blog/tags/aws',
+            component: ComponentCreator('/blog/tags/aws', 'fd3'),
             exact: true
           },
           {
-            path: '/docs/tags/backend',
-            component: ComponentCreator('/docs/tags/backend', 'd24'),
+            path: '/blog/tags/backend',
+            component: ComponentCreator('/blog/tags/backend', '664'),
             exact: true
           },
           {
-            path: '/docs/tags/cloud',
-            component: ComponentCreator('/docs/tags/cloud', 'ed2'),
+            path: '/blog/tags/cloud',
+            component: ComponentCreator('/blog/tags/cloud', 'b13'),
             exact: true
           },
           {
-            path: '/docs/tags/cloud-native',
-            component: ComponentCreator('/docs/tags/cloud-native', '723'),
+            path: '/blog/tags/cloud-native',
+            component: ComponentCreator('/blog/tags/cloud-native', 'c05'),
             exact: true
           },
           {
-            path: '/docs/tags/container',
-            component: ComponentCreator('/docs/tags/container', '1bb'),
+            path: '/blog/tags/container',
+            component: ComponentCreator('/blog/tags/container', 'f10'),
             exact: true
           },
           {
-            path: '/docs/tags/cs',
-            component: ComponentCreator('/docs/tags/cs', 'd6c'),
+            path: '/blog/tags/cs',
+            component: ComponentCreator('/blog/tags/cs', '86e'),
             exact: true
           },
           {
-            path: '/docs/tags/docker',
-            component: ComponentCreator('/docs/tags/docker', '0d0'),
+            path: '/blog/tags/docker',
+            component: ComponentCreator('/blog/tags/docker', '4f5'),
             exact: true
           },
           {
-            path: '/docs/tags/eks',
-            component: ComponentCreator('/docs/tags/eks', '62a'),
+            path: '/blog/tags/eks',
+            component: ComponentCreator('/blog/tags/eks', '3af'),
             exact: true
           },
           {
-            path: '/docs/tags/http',
-            component: ComponentCreator('/docs/tags/http', 'aa0'),
+            path: '/blog/tags/http',
+            component: ComponentCreator('/blog/tags/http', '6b7'),
             exact: true
           },
           {
-            path: '/docs/tags/intro',
-            component: ComponentCreator('/docs/tags/intro', '3af'),
+            path: '/blog/tags/intro',
+            component: ComponentCreator('/blog/tags/intro', '727'),
             exact: true
           },
           {
-            path: '/docs/tags/java',
-            component: ComponentCreator('/docs/tags/java', '908'),
+            path: '/blog/tags/java',
+            component: ComponentCreator('/blog/tags/java', '673'),
             exact: true
           },
           {
-            path: '/docs/tags/kubernetes',
-            component: ComponentCreator('/docs/tags/kubernetes', 'a8b'),
+            path: '/blog/tags/kubernetes',
+            component: ComponentCreator('/blog/tags/kubernetes', 'efc'),
             exact: true
           },
           {
-            path: '/docs/tags/kyaml',
-            component: ComponentCreator('/docs/tags/kyaml', 'f31'),
+            path: '/blog/tags/kyaml',
+            component: ComponentCreator('/blog/tags/kyaml', '95f'),
             exact: true
           },
           {
-            path: '/docs/tags/opensource',
-            component: ComponentCreator('/docs/tags/opensource', '228'),
+            path: '/blog/tags/opensource',
+            component: ComponentCreator('/blog/tags/opensource', '1de'),
             exact: true
           },
           {
-            path: '/docs/tags/security',
-            component: ComponentCreator('/docs/tags/security', '056'),
+            path: '/blog/tags/security',
+            component: ComponentCreator('/blog/tags/security', '71d'),
             exact: true
           },
           {
-            path: '/docs/tags/spring',
-            component: ComponentCreator('/docs/tags/spring', '401'),
+            path: '/blog/tags/spring',
+            component: ComponentCreator('/blog/tags/spring', '184'),
             exact: true
           },
           {
-            path: '/docs/tags/yaml',
-            component: ComponentCreator('/docs/tags/yaml', '4ba'),
+            path: '/blog/tags/yaml',
+            component: ComponentCreator('/blog/tags/yaml', 'b87'),
             exact: true
           },
           {
-            path: '/docs',
-            component: ComponentCreator('/docs', 'e5b'),
+            path: '/blog',
+            component: ComponentCreator('/blog', 'a1b'),
             routes: [
               {
-                path: '/docs/backend/coding/boj-13458-exam-supervisor',
-                component: ComponentCreator('/docs/backend/coding/boj-13458-exam-supervisor', 'd4a'),
+                path: '/blog',
+                component: ComponentCreator('/blog', 'a08'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/boj-14501-resignation',
-                component: ComponentCreator('/docs/backend/coding/boj-14501-resignation', '231'),
+                path: '/blog/backend/coding/boj-13458-exam-supervisor',
+                component: ComponentCreator('/blog/backend/coding/boj-13458-exam-supervisor', 'a24'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/boj-14502-laboratory',
-                component: ComponentCreator('/docs/backend/coding/boj-14502-laboratory', 'a33'),
+                path: '/blog/backend/coding/boj-14501-resignation',
+                component: ComponentCreator('/blog/backend/coding/boj-14501-resignation', '3d9'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/boj-14888-insert-operators',
-                component: ComponentCreator('/docs/backend/coding/boj-14888-insert-operators', '47a'),
+                path: '/blog/backend/coding/boj-14502-laboratory',
+                component: ComponentCreator('/blog/backend/coding/boj-14502-laboratory', 'd10'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/pccp-1-lonely-alphabet',
-                component: ComponentCreator('/docs/backend/coding/pccp-1-lonely-alphabet', '707'),
+                path: '/blog/backend/coding/boj-14888-insert-operators',
+                component: ComponentCreator('/blog/backend/coding/boj-14888-insert-operators', 'cb3'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/pccp-2-sports-day',
-                component: ComponentCreator('/docs/backend/coding/pccp-2-sports-day', 'b11'),
+                path: '/blog/backend/coding/pccp-1-lonely-alphabet',
+                component: ComponentCreator('/blog/backend/coding/pccp-1-lonely-alphabet', 'da0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/pccp-3-genetics-law',
-                component: ComponentCreator('/docs/backend/coding/pccp-3-genetics-law', '345'),
+                path: '/blog/backend/coding/pccp-2-sports-day',
+                component: ComponentCreator('/blog/backend/coding/pccp-2-sports-day', '13a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/coding/pccp-4-operating-system',
-                component: ComponentCreator('/docs/backend/coding/pccp-4-operating-system', '8f9'),
+                path: '/blog/backend/coding/pccp-3-genetics-law',
+                component: ComponentCreator('/blog/backend/coding/pccp-3-genetics-law', '7d0'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/arrays',
-                component: ComponentCreator('/docs/backend/java/arrays', '4e4'),
+                path: '/blog/backend/coding/pccp-4-operating-system',
+                component: ComponentCreator('/blog/backend/coding/pccp-4-operating-system', 'c4b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/conditionals-and-loops',
-                component: ComponentCreator('/docs/backend/java/conditionals-and-loops', '2ae'),
+                path: '/blog/backend/java/arrays',
+                component: ComponentCreator('/blog/backend/java/arrays', '6f8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/java-introduction',
-                component: ComponentCreator('/docs/backend/java/java-introduction', '1c1'),
+                path: '/blog/backend/java/conditionals-and-loops',
+                component: ComponentCreator('/blog/backend/java/conditionals-and-loops', 'ce7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/jit-compiler',
-                component: ComponentCreator('/docs/backend/java/jit-compiler', 'fa7'),
+                path: '/blog/backend/java/java-introduction',
+                component: ComponentCreator('/blog/backend/java/java-introduction', '4ca'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/jvm',
-                component: ComponentCreator('/docs/backend/java/jvm', '17e'),
+                path: '/blog/backend/java/jit-compiler',
+                component: ComponentCreator('/blog/backend/java/jit-compiler', '989'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/operators',
-                component: ComponentCreator('/docs/backend/java/operators', '03f'),
+                path: '/blog/backend/java/jvm',
+                component: ComponentCreator('/blog/backend/java/jvm', '617'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/java/variables',
-                component: ComponentCreator('/docs/backend/java/variables', 'c9b'),
+                path: '/blog/backend/java/operators',
+                component: ComponentCreator('/blog/backend/java/operators', '567'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/backend/spring/ioc-container-intro',
-                component: ComponentCreator('/docs/backend/spring/ioc-container-intro', '09b'),
+                path: '/blog/backend/java/variables',
+                component: ComponentCreator('/blog/backend/java/variables', '123'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud-native/envoy/architecture-overview',
-                component: ComponentCreator('/docs/cloud-native/envoy/architecture-overview', 'b45'),
+                path: '/blog/backend/spring/ioc-container-intro',
+                component: ComponentCreator('/blog/backend/spring/ioc-container-intro', '5fb'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud-native/envoy/cluster-manager',
-                component: ComponentCreator('/docs/cloud-native/envoy/cluster-manager', '41f'),
+                path: '/blog/cloud-native/envoy/architecture-overview',
+                component: ComponentCreator('/blog/cloud-native/envoy/architecture-overview', 'c6f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud-native/envoy/grpc-communication',
-                component: ComponentCreator('/docs/cloud-native/envoy/grpc-communication', '85d'),
+                path: '/blog/cloud-native/envoy/cluster-manager',
+                component: ComponentCreator('/blog/cloud-native/envoy/cluster-manager', 'fd2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud-native/envoy/threading-model',
-                component: ComponentCreator('/docs/cloud-native/envoy/threading-model', '844'),
+                path: '/blog/cloud-native/envoy/grpc-communication',
+                component: ComponentCreator('/blog/cloud-native/envoy/grpc-communication', 'f6f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/aws/argocd-external-eks',
-                component: ComponentCreator('/docs/cloud/aws/argocd-external-eks', '0d0'),
+                path: '/blog/cloud-native/envoy/threading-model',
+                component: ComponentCreator('/blog/cloud-native/envoy/threading-model', '390'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/aws/aws-cloud-concepts',
-                component: ComponentCreator('/docs/cloud/aws/aws-cloud-concepts', '540'),
+                path: '/blog/cloud/aws/argocd-external-eks',
+                component: ComponentCreator('/blog/cloud/aws/argocd-external-eks', '4f1'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/aws/eks-cost-overview',
-                component: ComponentCreator('/docs/cloud/aws/eks-cost-overview', '2fb'),
+                path: '/blog/cloud/aws/aws-cloud-concepts',
+                component: ComponentCreator('/blog/cloud/aws/aws-cloud-concepts', 'd79'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/concept-containerd-cri',
-                component: ComponentCreator('/docs/cloud/kubernetes/concept-containerd-cri', 'dc3'),
+                path: '/blog/cloud/aws/eks-cost-overview',
+                component: ComponentCreator('/blog/cloud/aws/eks-cost-overview', '49c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/concept-kube-controller-manager',
-                component: ComponentCreator('/docs/cloud/kubernetes/concept-kube-controller-manager', '7c7'),
+                path: '/blog/cloud/kubernetes/concept-containerd-cri',
+                component: ComponentCreator('/blog/cloud/kubernetes/concept-containerd-cri', 'dfc'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/concept-kube-scheduler',
-                component: ComponentCreator('/docs/cloud/kubernetes/concept-kube-scheduler', '81b'),
+                path: '/blog/cloud/kubernetes/concept-kube-controller-manager',
+                component: ComponentCreator('/blog/cloud/kubernetes/concept-kube-controller-manager', '08b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/concept-kubernetes-overview',
-                component: ComponentCreator('/docs/cloud/kubernetes/concept-kubernetes-overview', 'f24'),
+                path: '/blog/cloud/kubernetes/concept-kube-scheduler',
+                component: ComponentCreator('/blog/cloud/kubernetes/concept-kube-scheduler', 'ed8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/concept-pod',
-                component: ComponentCreator('/docs/cloud/kubernetes/concept-pod', '88e'),
+                path: '/blog/cloud/kubernetes/concept-kubernetes-overview',
+                component: ComponentCreator('/blog/cloud/kubernetes/concept-kubernetes-overview', '4ba'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/k3s-x86-orbstack-apple-silicon',
-                component: ComponentCreator('/docs/cloud/kubernetes/k3s-x86-orbstack-apple-silicon', '055'),
+                path: '/blog/cloud/kubernetes/concept-pod',
+                component: ComponentCreator('/blog/cloud/kubernetes/concept-pod', 'ee7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/k8s-api-tls-external-request',
-                component: ComponentCreator('/docs/cloud/kubernetes/k8s-api-tls-external-request', '2bd'),
+                path: '/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon',
+                component: ComponentCreator('/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon', 'fad'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/kubectl-top-vs-free-memory',
-                component: ComponentCreator('/docs/cloud/kubernetes/kubectl-top-vs-free-memory', '98d'),
+                path: '/blog/cloud/kubernetes/k8s-api-tls-external-request',
+                component: ComponentCreator('/blog/cloud/kubernetes/k8s-api-tls-external-request', '021'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/kyaml-kubernetes-yaml',
-                component: ComponentCreator('/docs/cloud/kubernetes/kyaml-kubernetes-yaml', '244'),
+                path: '/blog/cloud/kubernetes/kubectl-top-vs-free-memory',
+                component: ComponentCreator('/blog/cloud/kubernetes/kubectl-top-vs-free-memory', 'f38'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-calico-cni',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-calico-cni', '2cd'),
+                path: '/blog/cloud/kubernetes/kyaml-kubernetes-yaml',
+                component: ComponentCreator('/blog/cloud/kubernetes/kyaml-kubernetes-yaml', '7c8'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-cilium-cni',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-cilium-cni', 'b3d'),
+                path: '/blog/cloud/kubernetes/network-calico-cni',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-calico-cni', '559'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-cilium-components',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-cilium-components', '390'),
+                path: '/blog/cloud/kubernetes/network-cilium-cni',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-cilium-cni', '16b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-cilium-pod-to-pod',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-cilium-pod-to-pod', '619'),
+                path: '/blog/cloud/kubernetes/network-cilium-components',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-cilium-components', '471'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-coredns-multiple-dns',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-coredns-multiple-dns', '3a5'),
+                path: '/blog/cloud/kubernetes/network-cilium-pod-to-pod',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-cilium-pod-to-pod', '12f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-kernel-tuning',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-kernel-tuning', '090'),
+                path: '/blog/cloud/kubernetes/network-coredns-multiple-dns',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-coredns-multiple-dns', '394'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/network-router-vs-gateway',
-                component: ComponentCreator('/docs/cloud/kubernetes/network-router-vs-gateway', 'ef3'),
+                path: '/blog/cloud/kubernetes/network-kernel-tuning',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-kernel-tuning', 'bdd'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cloud/kubernetes/sealed-secrets-gitops',
-                component: ComponentCreator('/docs/cloud/kubernetes/sealed-secrets-gitops', '5b4'),
+                path: '/blog/cloud/kubernetes/network-router-vs-gateway',
+                component: ComponentCreator('/blog/cloud/kubernetes/network-router-vs-gateway', 'd26'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/container/containerd-shim',
-                component: ComponentCreator('/docs/container/containerd-shim', '728'),
+                path: '/blog/cloud/kubernetes/sealed-secrets-gitops',
+                component: ComponentCreator('/blog/cloud/kubernetes/sealed-secrets-gitops', 'f9f'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/container/docker-container-creation-flow',
-                component: ComponentCreator('/docs/container/docker-container-creation-flow', '922'),
+                path: '/blog/container/containerd-shim',
+                component: ComponentCreator('/blog/container/containerd-shim', '13b'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/container/docker-cri-oci-runc-stack',
-                component: ComponentCreator('/docs/container/docker-cri-oci-runc-stack', '7af'),
+                path: '/blog/container/docker-container-creation-flow',
+                component: ComponentCreator('/blog/container/docker-container-creation-flow', '2b6'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/container/docker-vs-containerd-daemon',
-                component: ComponentCreator('/docs/container/docker-vs-containerd-daemon', '575'),
+                path: '/blog/container/docker-cri-oci-runc-stack',
+                component: ComponentCreator('/blog/container/docker-cri-oci-runc-stack', 'a6a'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/container/oci-spec',
-                component: ComponentCreator('/docs/container/oci-spec', 'd61'),
+                path: '/blog/container/docker-vs-containerd-daemon',
+                component: ComponentCreator('/blog/container/docker-vs-containerd-daemon', 'cd7'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/container/runc',
-                component: ComponentCreator('/docs/container/runc', 'bfb'),
+                path: '/blog/container/oci-spec',
+                component: ComponentCreator('/blog/container/oci-spec', 'e3d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cs/http-cache-headers',
-                component: ComponentCreator('/docs/cs/http-cache-headers', 'edc'),
+                path: '/blog/container/runc',
+                component: ComponentCreator('/blog/container/runc', '418'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/cs/ssh-server-hardening',
-                component: ComponentCreator('/docs/cs/ssh-server-hardening', 'cab'),
+                path: '/blog/cs/http-cache-headers',
+                component: ComponentCreator('/blog/cs/http-cache-headers', '661'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/intro',
-                component: ComponentCreator('/docs/intro', '61d'),
+                path: '/blog/cs/ssh-server-hardening',
+                component: ComponentCreator('/blog/cs/ssh-server-hardening', '97c'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/jenkins-core-architecture',
-                component: ComponentCreator('/docs/opensource/jenkins-core-architecture', '18b'),
+                path: '/blog/opensource/jenkins-core-architecture',
+                component: ComponentCreator('/blog/opensource/jenkins-core-architecture', '457'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/loki-overview',
-                component: ComponentCreator('/docs/opensource/loki-overview', '312'),
+                path: '/blog/opensource/loki-overview',
+                component: ComponentCreator('/blog/opensource/loki-overview', 'e69'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/mimir-architecture',
-                component: ComponentCreator('/docs/opensource/mimir-architecture', '393'),
+                path: '/blog/opensource/mimir-architecture',
+                component: ComponentCreator('/blog/opensource/mimir-architecture', 'e03'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/opentelemetry-lgtm-architecture',
-                component: ComponentCreator('/docs/opensource/opentelemetry-lgtm-architecture', '115'),
+                path: '/blog/opensource/opentelemetry-lgtm-architecture',
+                component: ComponentCreator('/blog/opensource/opentelemetry-lgtm-architecture', '078'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/oss-documentation-template',
-                component: ComponentCreator('/docs/opensource/oss-documentation-template', 'b9f'),
+                path: '/blog/opensource/oss-documentation-template',
+                component: ComponentCreator('/blog/opensource/oss-documentation-template', '45e'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/tempo-architecture',
-                component: ComponentCreator('/docs/opensource/tempo-architecture', 'd2b'),
+                path: '/blog/opensource/tempo-architecture',
+                component: ComponentCreator('/blog/opensource/tempo-architecture', '4d2'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/docs/opensource/tempo-overview',
-                component: ComponentCreator('/docs/opensource/tempo-overview', '12f'),
+                path: '/blog/opensource/tempo-overview',
+                component: ComponentCreator('/blog/opensource/tempo-overview', '868'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               }

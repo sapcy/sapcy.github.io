@@ -5,7 +5,7 @@
   "source": "@site/docs/cs/http-cache-headers.md",
   "sourceDirName": "cs",
   "slug": "/cs/http-cache-headers",
-  "permalink": "/docs/cs/http-cache-headers",
+  "permalink": "/blog/cs/http-cache-headers",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cs/http-cache-headers.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "CS",
-      "permalink": "/docs/tags/cs",
+      "permalink": "/blog/tags/cs",
       "description": "컴퓨터 과학 기초"
     },
     {
       "inline": false,
       "label": "HTTP",
-      "permalink": "/docs/tags/http",
+      "permalink": "/blog/tags/http",
       "description": "HTTP·네트워크"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Envoy Cluster Manager·Subscription",
-    "permalink": "/docs/cloud-native/envoy/cluster-manager"
+    "permalink": "/blog/cloud-native/envoy/cluster-manager"
   },
   "next": {
     "title": "SSH 서버 하드닝 - 9가지 설정",
-    "permalink": "/docs/cs/ssh-server-hardening"
+    "permalink": "/blog/cs/ssh-server-hardening"
   }
 }

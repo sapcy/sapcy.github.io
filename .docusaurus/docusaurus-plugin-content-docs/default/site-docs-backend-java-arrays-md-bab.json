@@ -5,7 +5,7 @@
   "source": "@site/docs/backend/java/arrays.md",
   "sourceDirName": "backend/java",
   "slug": "/backend/java/arrays",
-  "permalink": "/docs/backend/java/arrays",
+  "permalink": "/blog/backend/java/arrays",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/arrays.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "백엔드",
-      "permalink": "/docs/tags/backend",
+      "permalink": "/blog/tags/backend",
       "description": "백엔드 개발"
     },
     {
       "inline": false,
       "label": "Java",
-      "permalink": "/docs/tags/java",
+      "permalink": "/blog/tags/java",
       "description": "Java 언어·JVM"
     }
   ],
@@ -36,10 +36,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "#1 - 외톨이 알파벳",
-    "permalink": "/docs/backend/coding/pccp-1-lonely-alphabet"
+    "permalink": "/blog/backend/coding/pccp-1-lonely-alphabet"
   },
   "next": {
     "title": "조건문과 반복문",
-    "permalink": "/docs/backend/java/conditionals-and-loops"
+    "permalink": "/blog/backend/java/conditionals-and-loops"
   }
 }

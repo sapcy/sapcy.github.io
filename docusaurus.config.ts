@@ -27,7 +27,7 @@ const config: Config = {
         hashed: true,
         highlightSearchTermsOnTargetPage: true,
         explicitSearchResultPath: true,
-        docsRouteBasePath: '/docs',
+        docsRouteBasePath: '/blog',
         indexBlog: false,
         searchBarShortcutHint: true,
         searchBarPosition: 'left',
@@ -68,6 +68,8 @@ const config: Config = {
       'classic',
       {
         docs: {
+          /** 기존 /docs/* → /blog/* (문서 플러그인 경로) */
+          routeBasePath: 'blog',
           sidebarPath: './sidebars.ts',
           // docs/tags.yml — 태그 라벨·설명
           tags: 'tags.yml',
@@ -76,21 +78,8 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        /** blog 폴더가 비어 있고 문서를 /blog 아래에 두기 위해 비활성화 */
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -99,6 +88,18 @@ const config: Config = {
   ],
 
   plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        /** 예전 북마크 /docs/* → /blog/* */
+        createRedirects(existingPath: string) {
+          if (existingPath === '/blog' || existingPath.startsWith('/blog/')) {
+            return [existingPath.replace(/^\/blog/, '/docs')];
+          }
+          return undefined;
+        },
+      },
+    ],
     [
       '@docusaurus/plugin-ideal-image',
       {
@@ -157,13 +158,12 @@ const config: Config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/blog',
             position: 'left',
-            label: '문서',
+            label: '블로그',
           },
           {to: '/project', label: '프로젝트', position: 'left'},
-          {to: '/docs/tags', label: '태그', position: 'left'},
+          {to: '/blog/tags', label: '태그', position: 'left'},
           {
             to: '/info',
             /* 화면에는 CSS로 아이콘만 표시; 빈 라벨은 Joi 거부 → zero-width space */
@@ -184,15 +184,15 @@ const config: Config = {
         style: 'dark',
         links: [
           {
-            title: '문서',
+            title: '블로그',
             items: [
               {
-                label: '시작하기',
-                to: '/docs/intro',
+                label: '글 목록',
+                to: '/blog',
               },
               {
-                label: '태그로 보기',
-                to: '/docs/tags',
+                label: '태그',
+                to: '/blog/tags',
               },
             ],
           },

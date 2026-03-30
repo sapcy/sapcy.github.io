@@ -5,7 +5,7 @@
   "source": "@site/docs/cloud/kubernetes/kyaml-kubernetes-yaml.md",
   "sourceDirName": "cloud/kubernetes",
   "slug": "/cloud/kubernetes/kyaml-kubernetes-yaml",
-  "permalink": "/docs/cloud/kubernetes/kyaml-kubernetes-yaml",
+  "permalink": "/blog/cloud/kubernetes/kyaml-kubernetes-yaml",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/kyaml-kubernetes-yaml.md",
@@ -13,25 +13,25 @@
     {
       "inline": false,
       "label": "클라우드",
-      "permalink": "/docs/tags/cloud",
+      "permalink": "/blog/tags/cloud",
       "description": "클라우드·인프라 일반"
     },
     {
       "inline": false,
       "label": "Kubernetes",
-      "permalink": "/docs/tags/kubernetes",
+      "permalink": "/blog/tags/kubernetes",
       "description": "쿠버네티스"
     },
     {
       "inline": false,
       "label": "YAML",
-      "permalink": "/docs/tags/yaml",
+      "permalink": "/blog/tags/yaml",
       "description": "YAML / KYAML"
     },
     {
       "inline": false,
       "label": "KYAML",
-      "permalink": "/docs/tags/kyaml",
+      "permalink": "/blog/tags/kyaml",
       "description": "Kubernetes YAML"
     }
   ],
@@ -50,10 +50,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Containerd와 CRI - 컨테이너 생성 과정",
-    "permalink": "/docs/cloud/kubernetes/concept-containerd-cri"
+    "permalink": "/blog/cloud/kubernetes/concept-containerd-cri"
   },
   "next": {
     "title": "외부 서버에서 k8s 클러스터로 API 요청시 인증서 문제 해결",
-    "permalink": "/docs/cloud/kubernetes/k8s-api-tls-external-request"
+    "permalink": "/blog/cloud/kubernetes/k8s-api-tls-external-request"
   }
 }

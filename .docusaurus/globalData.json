@@ -1,293 +1,293 @@
 {
   "docusaurus-plugin-content-docs": {
     "default": {
-      "path": "/docs",
+      "path": "/blog",
       "versions": [
         {
           "name": "current",
           "label": "Next",
           "isLast": true,
-          "path": "/docs",
+          "path": "/blog",
           "mainDocId": "intro",
           "docs": [
             {
               "id": "backend/coding/boj-13458-exam-supervisor",
-              "path": "/docs/backend/coding/boj-13458-exam-supervisor",
+              "path": "/blog/backend/coding/boj-13458-exam-supervisor",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/boj-14501-resignation",
-              "path": "/docs/backend/coding/boj-14501-resignation",
+              "path": "/blog/backend/coding/boj-14501-resignation",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/boj-14502-laboratory",
-              "path": "/docs/backend/coding/boj-14502-laboratory",
+              "path": "/blog/backend/coding/boj-14502-laboratory",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/boj-14888-insert-operators",
-              "path": "/docs/backend/coding/boj-14888-insert-operators",
+              "path": "/blog/backend/coding/boj-14888-insert-operators",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/pccp-1-lonely-alphabet",
-              "path": "/docs/backend/coding/pccp-1-lonely-alphabet",
+              "path": "/blog/backend/coding/pccp-1-lonely-alphabet",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/pccp-2-sports-day",
-              "path": "/docs/backend/coding/pccp-2-sports-day",
+              "path": "/blog/backend/coding/pccp-2-sports-day",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/pccp-3-genetics-law",
-              "path": "/docs/backend/coding/pccp-3-genetics-law",
+              "path": "/blog/backend/coding/pccp-3-genetics-law",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/coding/pccp-4-operating-system",
-              "path": "/docs/backend/coding/pccp-4-operating-system",
+              "path": "/blog/backend/coding/pccp-4-operating-system",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/arrays",
-              "path": "/docs/backend/java/arrays",
+              "path": "/blog/backend/java/arrays",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/conditionals-and-loops",
-              "path": "/docs/backend/java/conditionals-and-loops",
+              "path": "/blog/backend/java/conditionals-and-loops",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/java-introduction",
-              "path": "/docs/backend/java/java-introduction",
+              "path": "/blog/backend/java/java-introduction",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/jit-compiler",
-              "path": "/docs/backend/java/jit-compiler",
+              "path": "/blog/backend/java/jit-compiler",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/jvm",
-              "path": "/docs/backend/java/jvm",
+              "path": "/blog/backend/java/jvm",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/operators",
-              "path": "/docs/backend/java/operators",
+              "path": "/blog/backend/java/operators",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/java/variables",
-              "path": "/docs/backend/java/variables",
+              "path": "/blog/backend/java/variables",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "backend/spring/ioc-container-intro",
-              "path": "/docs/backend/spring/ioc-container-intro",
+              "path": "/blog/backend/spring/ioc-container-intro",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud-native/envoy/architecture-overview",
-              "path": "/docs/cloud-native/envoy/architecture-overview",
+              "path": "/blog/cloud-native/envoy/architecture-overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud-native/envoy/cluster-manager",
-              "path": "/docs/cloud-native/envoy/cluster-manager",
+              "path": "/blog/cloud-native/envoy/cluster-manager",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud-native/envoy/grpc-communication",
-              "path": "/docs/cloud-native/envoy/grpc-communication",
+              "path": "/blog/cloud-native/envoy/grpc-communication",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud-native/envoy/threading-model",
-              "path": "/docs/cloud-native/envoy/threading-model",
+              "path": "/blog/cloud-native/envoy/threading-model",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/aws/argocd-external-eks",
-              "path": "/docs/cloud/aws/argocd-external-eks",
+              "path": "/blog/cloud/aws/argocd-external-eks",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/aws/aws-cloud-concepts",
-              "path": "/docs/cloud/aws/aws-cloud-concepts",
+              "path": "/blog/cloud/aws/aws-cloud-concepts",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/aws/eks-cost-overview",
-              "path": "/docs/cloud/aws/eks-cost-overview",
+              "path": "/blog/cloud/aws/eks-cost-overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/concept-containerd-cri",
-              "path": "/docs/cloud/kubernetes/concept-containerd-cri",
+              "path": "/blog/cloud/kubernetes/concept-containerd-cri",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/concept-kube-controller-manager",
-              "path": "/docs/cloud/kubernetes/concept-kube-controller-manager",
+              "path": "/blog/cloud/kubernetes/concept-kube-controller-manager",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/concept-kube-scheduler",
-              "path": "/docs/cloud/kubernetes/concept-kube-scheduler",
+              "path": "/blog/cloud/kubernetes/concept-kube-scheduler",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/concept-kubernetes-overview",
-              "path": "/docs/cloud/kubernetes/concept-kubernetes-overview",
+              "path": "/blog/cloud/kubernetes/concept-kubernetes-overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/concept-pod",
-              "path": "/docs/cloud/kubernetes/concept-pod",
+              "path": "/blog/cloud/kubernetes/concept-pod",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/k3s-x86-orbstack-apple-silicon",
-              "path": "/docs/cloud/kubernetes/k3s-x86-orbstack-apple-silicon",
+              "path": "/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/k8s-api-tls-external-request",
-              "path": "/docs/cloud/kubernetes/k8s-api-tls-external-request",
+              "path": "/blog/cloud/kubernetes/k8s-api-tls-external-request",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/kubectl-top-vs-free-memory",
-              "path": "/docs/cloud/kubernetes/kubectl-top-vs-free-memory",
+              "path": "/blog/cloud/kubernetes/kubectl-top-vs-free-memory",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/kyaml-kubernetes-yaml",
-              "path": "/docs/cloud/kubernetes/kyaml-kubernetes-yaml",
+              "path": "/blog/cloud/kubernetes/kyaml-kubernetes-yaml",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-calico-cni",
-              "path": "/docs/cloud/kubernetes/network-calico-cni",
+              "path": "/blog/cloud/kubernetes/network-calico-cni",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-cilium-cni",
-              "path": "/docs/cloud/kubernetes/network-cilium-cni",
+              "path": "/blog/cloud/kubernetes/network-cilium-cni",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-cilium-components",
-              "path": "/docs/cloud/kubernetes/network-cilium-components",
+              "path": "/blog/cloud/kubernetes/network-cilium-components",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-cilium-pod-to-pod",
-              "path": "/docs/cloud/kubernetes/network-cilium-pod-to-pod",
+              "path": "/blog/cloud/kubernetes/network-cilium-pod-to-pod",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-coredns-multiple-dns",
-              "path": "/docs/cloud/kubernetes/network-coredns-multiple-dns",
+              "path": "/blog/cloud/kubernetes/network-coredns-multiple-dns",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-kernel-tuning",
-              "path": "/docs/cloud/kubernetes/network-kernel-tuning",
+              "path": "/blog/cloud/kubernetes/network-kernel-tuning",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/network-router-vs-gateway",
-              "path": "/docs/cloud/kubernetes/network-router-vs-gateway",
+              "path": "/blog/cloud/kubernetes/network-router-vs-gateway",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cloud/kubernetes/sealed-secrets-gitops",
-              "path": "/docs/cloud/kubernetes/sealed-secrets-gitops",
+              "path": "/blog/cloud/kubernetes/sealed-secrets-gitops",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "container/containerd-shim",
-              "path": "/docs/container/containerd-shim",
+              "path": "/blog/container/containerd-shim",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "container/docker-container-creation-flow",
-              "path": "/docs/container/docker-container-creation-flow",
+              "path": "/blog/container/docker-container-creation-flow",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "container/docker-cri-oci-runc-stack",
-              "path": "/docs/container/docker-cri-oci-runc-stack",
+              "path": "/blog/container/docker-cri-oci-runc-stack",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "container/docker-vs-containerd-daemon",
-              "path": "/docs/container/docker-vs-containerd-daemon",
+              "path": "/blog/container/docker-vs-containerd-daemon",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "container/oci-spec",
-              "path": "/docs/container/oci-spec",
+              "path": "/blog/container/oci-spec",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "container/runc",
-              "path": "/docs/container/runc",
+              "path": "/blog/container/runc",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cs/http-cache-headers",
-              "path": "/docs/cs/http-cache-headers",
+              "path": "/blog/cs/http-cache-headers",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "cs/ssh-server-hardening",
-              "path": "/docs/cs/ssh-server-hardening",
+              "path": "/blog/cs/ssh-server-hardening",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "intro",
-              "path": "/docs/intro",
+              "path": "/blog/",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/jenkins-core-architecture",
-              "path": "/docs/opensource/jenkins-core-architecture",
+              "path": "/blog/opensource/jenkins-core-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/loki-overview",
-              "path": "/docs/opensource/loki-overview",
+              "path": "/blog/opensource/loki-overview",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/mimir-architecture",
-              "path": "/docs/opensource/mimir-architecture",
+              "path": "/blog/opensource/mimir-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/opentelemetry-lgtm-architecture",
-              "path": "/docs/opensource/opentelemetry-lgtm-architecture",
+              "path": "/blog/opensource/opentelemetry-lgtm-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/oss-documentation-template",
-              "path": "/docs/opensource/oss-documentation-template",
+              "path": "/blog/opensource/oss-documentation-template",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/tempo-architecture",
-              "path": "/docs/opensource/tempo-architecture",
+              "path": "/blog/opensource/tempo-architecture",
               "sidebar": "tutorialSidebar"
             },
             {
               "id": "opensource/tempo-overview",
-              "path": "/docs/opensource/tempo-overview",
+              "path": "/blog/opensource/tempo-overview",
               "sidebar": "tutorialSidebar"
             }
           ],
@@ -295,7 +295,7 @@
           "sidebars": {
             "tutorialSidebar": {
               "link": {
-                "path": "/docs/intro",
+                "path": "/blog/",
                 "label": "시작하기"
               }
             }

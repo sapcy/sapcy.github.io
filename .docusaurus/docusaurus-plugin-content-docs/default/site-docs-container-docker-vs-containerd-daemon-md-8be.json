@@ -5,7 +5,7 @@
   "source": "@site/docs/container/docker-vs-containerd-daemon.md",
   "sourceDirName": "container",
   "slug": "/container/docker-vs-containerd-daemon",
-  "permalink": "/docs/container/docker-vs-containerd-daemon",
+  "permalink": "/blog/container/docker-vs-containerd-daemon",
   "draft": false,
   "unlisted": false,
   "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/container/docker-vs-containerd-daemon.md",
@@ -13,13 +13,13 @@
     {
       "inline": false,
       "label": "컨테이너",
-      "permalink": "/docs/tags/container",
+      "permalink": "/blog/tags/container",
       "description": "OCI·Docker·containerd·runc 런타임 스택"
     },
     {
       "inline": true,
       "label": "docker",
-      "permalink": "/docs/tags/docker"
+      "permalink": "/blog/tags/docker"
     }
   ],
   "version": "current",
@@ -35,10 +35,10 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "containerd-shim 역할",
-    "permalink": "/docs/container/containerd-shim"
+    "permalink": "/blog/container/containerd-shim"
   },
   "next": {
     "title": "CRI 한번에 보기",
-    "permalink": "/docs/container/docker-cri-oci-runc-stack"
+    "permalink": "/blog/container/docker-cri-oci-runc-stack"
   }
 }
