@@ -1,0 +1,38 @@
+{
+  "id": "opensource/opentelemetry-lgtm-architecture",
+  "title": "OpenTelemetry·LGTM 스택 실습 아키텍처 개요",
+  "description": "앱·OTel Agent·Collector·Loki·Tempo·Mimir·Grafana·(선택) Istio·Alloy 연결 - Excalidraw 노트를 텍스트로 재구성",
+  "source": "@site/docs/opensource/opentelemetry-lgtm-architecture.md",
+  "sourceDirName": "opensource",
+  "slug": "/opensource/opentelemetry-lgtm-architecture",
+  "permalink": "/docs/opensource/opentelemetry-lgtm-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/opentelemetry-lgtm-architecture.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "오픈소스",
+      "permalink": "/docs/tags/opensource",
+      "description": "관측성·CI 등 오픈소스 도구 정리"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "OpenTelemetry·LGTM 스택 실습 아키텍처 개요",
+    "description": "앱·OTel Agent·Collector·Loki·Tempo·Mimir·Grafana·(선택) Istio·Alloy 연결 - Excalidraw 노트를 텍스트로 재구성",
+    "tags": [
+      "opensource"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Grafana Mimir 아키텍처",
+    "permalink": "/docs/opensource/mimir-architecture"
+  },
+  "next": {
+    "title": "Jenkins - 코어·확장·인프라 구조 개요",
+    "permalink": "/docs/opensource/jenkins-core-architecture"
+  }
+}

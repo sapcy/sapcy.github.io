@@ -1,0 +1,38 @@
+{
+  "id": "opensource/tempo-architecture",
+  "title": "Grafana Tempo 아키텍처",
+  "description": "Distributor·Ingester·Query Frontend·Querier·Compactor·Metrics generator",
+  "source": "@site/docs/opensource/tempo-architecture.md",
+  "sourceDirName": "opensource",
+  "slug": "/opensource/tempo-architecture",
+  "permalink": "/docs/opensource/tempo-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/tempo-architecture.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "오픈소스",
+      "permalink": "/docs/tags/opensource",
+      "description": "관측성·CI 등 오픈소스 도구 정리"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Grafana Tempo 아키텍처",
+    "description": "Distributor·Ingester·Query Frontend·Querier·Compactor·Metrics generator",
+    "tags": [
+      "opensource"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Grafana Tempo 개요",
+    "permalink": "/docs/opensource/tempo-overview"
+  },
+  "next": {
+    "title": "Grafana Mimir 아키텍처",
+    "permalink": "/docs/opensource/mimir-architecture"
+  }
+}

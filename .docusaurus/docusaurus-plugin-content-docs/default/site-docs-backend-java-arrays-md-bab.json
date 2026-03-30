@@ -1,0 +1,45 @@
+{
+  "id": "backend/java/arrays",
+  "title": "배열",
+  "description": "▶ 배열이란? 배열은 같은 타입의 여러 변수를 하나의 묶음으로 다루는 것 여기서 중요한 것은 같은 타입이어야 한다는 것이다. 예를 들면, int 배열을 선언하려면 다음과 같이 사용할 수 있다. int[] score = new int[5]; // 5개의 int 값을 저장할 수 있는 배열 생성 위의 코드가 실행되면 아래의 그림과 같이 배열이 생성된다. (0x1",
+  "source": "@site/docs/backend/java/arrays.md",
+  "sourceDirName": "backend/java",
+  "slug": "/backend/java/arrays",
+  "permalink": "/docs/backend/java/arrays",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/arrays.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "Java",
+      "permalink": "/docs/tags/java",
+      "description": "Java 언어·JVM"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "배열",
+    "description": "▶ 배열이란? 배열은 같은 타입의 여러 변수를 하나의 묶음으로 다루는 것 여기서 중요한 것은 같은 타입이어야 한다는 것이다. 예를 들면, int 배열을 선언하려면 다음과 같이 사용할 수 있다. int[] score = new int[5]; // 5개의 int 값을 저장할 수 있는 배열 생성 위의 코드가 실행되면 아래의 그림과 같이 배열이 생성된다. (0x1",
+    "tags": [
+      "backend",
+      "java"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "#1 - 외톨이 알파벳",
+    "permalink": "/docs/backend/coding/pccp-1-lonely-alphabet"
+  },
+  "next": {
+    "title": "조건문과 반복문",
+    "permalink": "/docs/backend/java/conditionals-and-loops"
+  }
+}

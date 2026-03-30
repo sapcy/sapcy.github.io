@@ -1,0 +1,45 @@
+{
+  "id": "cloud-native/envoy/threading-model",
+  "title": "Envoy 쓰레딩 모델과 데이터 공유",
+  "description": "워커 스레드·메인 스레드·락 최소화·Eventually consistent — 원문 링크·공식 문서",
+  "source": "@site/docs/cloud-native/envoy/threading-model.md",
+  "sourceDirName": "cloud-native/envoy",
+  "slug": "/cloud-native/envoy/threading-model",
+  "permalink": "/docs/cloud-native/envoy/threading-model",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud-native/envoy/threading-model.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드 네이티브",
+      "permalink": "/docs/tags/cloud-native",
+      "description": "Envoy·서비스 메시·동적 설정"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Envoy 쓰레딩 모델과 데이터 공유",
+    "description": "워커 스레드·메인 스레드·락 최소화·Eventually consistent — 원문 링크·공식 문서",
+    "tags": [
+      "cloud-native",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "gRPC 통신 방식 (Unary·스트리밍)",
+    "permalink": "/docs/cloud-native/envoy/grpc-communication"
+  },
+  "next": {
+    "title": "Envoy Cluster Manager·Subscription",
+    "permalink": "/docs/cloud-native/envoy/cluster-manager"
+  }
+}

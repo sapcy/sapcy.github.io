@@ -1,0 +1,45 @@
+{
+  "id": "backend/java/variables",
+  "title": "변수 (Variable)",
+  "description": "▶ 들어가기 전에 우리가 프로그래밍을 할 때 변수는 필수적으로 사용되는 요소이다. 하지만 변수에 대해 자세하게 알지 못하고 사용하게 되면 메모리 누수, 스택 오버플로우 문제로 이어질 수 있는 위험도 존재한다. 그래서 변수에 대한 정리를 해야겠다는 생각이 들어 포스팅을 하게 되었다. ▶ 변수란? 변수란 다음과 같이 정의된다. 단 하나의 값을 저장할 수 있는 ",
+  "source": "@site/docs/backend/java/variables.md",
+  "sourceDirName": "backend/java",
+  "slug": "/backend/java/variables",
+  "permalink": "/docs/backend/java/variables",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/variables.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "Java",
+      "permalink": "/docs/tags/java",
+      "description": "Java 언어·JVM"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "변수 (Variable)",
+    "description": "▶ 들어가기 전에 우리가 프로그래밍을 할 때 변수는 필수적으로 사용되는 요소이다. 하지만 변수에 대해 자세하게 알지 못하고 사용하게 되면 메모리 누수, 스택 오버플로우 문제로 이어질 수 있는 위험도 존재한다. 그래서 변수에 대한 정리를 해야겠다는 생각이 들어 포스팅을 하게 되었다. ▶ 변수란? 변수란 다음과 같이 정의된다. 단 하나의 값을 저장할 수 있는 ",
+    "tags": [
+      "backend",
+      "java"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "연산자",
+    "permalink": "/docs/backend/java/operators"
+  },
+  "next": {
+    "title": "JIT 컴파일러 (Just-In-Time Compiler)",
+    "permalink": "/docs/backend/java/jit-compiler"
+  }
+}

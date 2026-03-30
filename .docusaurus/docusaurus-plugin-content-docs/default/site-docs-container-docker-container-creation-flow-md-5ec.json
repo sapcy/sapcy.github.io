@@ -1,0 +1,45 @@
+{
+  "id": "container/docker-container-creation-flow",
+  "title": "Docker 컨테이너 생성 흐름",
+  "description": "docker run 이후 클라이언트·데몬·이미지·runc·커널·네트워크·쓰기 레이어까지 단계별 정리",
+  "source": "@site/docs/container/docker-container-creation-flow.md",
+  "sourceDirName": "container",
+  "slug": "/container/docker-container-creation-flow",
+  "permalink": "/docs/container/docker-container-creation-flow",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/container/docker-container-creation-flow.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "컨테이너",
+      "permalink": "/docs/tags/container",
+      "description": "OCI·Docker·containerd·runc 런타임 스택"
+    },
+    {
+      "inline": false,
+      "label": "CS",
+      "permalink": "/docs/tags/cs",
+      "description": "컴퓨터 과학 기초"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Docker 컨테이너 생성 흐름",
+    "description": "docker run 이후 클라이언트·데몬·이미지·runc·커널·네트워크·쓰기 레이어까지 단계별 정리",
+    "tags": [
+      "container",
+      "cs"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CRI 한번에 보기",
+    "permalink": "/docs/container/docker-cri-oci-runc-stack"
+  },
+  "next": {
+    "title": "오픈소스 문서화 체크리스트",
+    "permalink": "/docs/opensource/oss-documentation-template"
+  }
+}

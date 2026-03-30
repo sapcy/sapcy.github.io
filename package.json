@@ -4,8 +4,11 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
+    "prestart": "node scripts/build-sapcy-packages.mjs",
     "start": "docusaurus start",
+    "prebuild": "node scripts/build-sapcy-packages.mjs",
     "build": "docusaurus build",
+    "postinstall": "node scripts/build-sapcy-packages.mjs",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",

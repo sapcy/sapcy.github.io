@@ -1,0 +1,44 @@
+{
+  "id": "container/runc",
+  "title": "runc - OCI 저수준 런타임",
+  "description": "containerd와 runc의 관계, cgroup·namespace·chroot 후 exec로 프로세스 기동",
+  "source": "@site/docs/container/runc.md",
+  "sourceDirName": "container",
+  "slug": "/container/runc",
+  "permalink": "/docs/container/runc",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/container/runc.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "컨테이너",
+      "permalink": "/docs/tags/container",
+      "description": "OCI·Docker·containerd·runc 런타임 스택"
+    },
+    {
+      "inline": true,
+      "label": "docker",
+      "permalink": "/docs/tags/docker"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "runc - OCI 저수준 런타임",
+    "description": "containerd와 runc의 관계, cgroup·namespace·chroot 후 exec로 프로세스 기동",
+    "tags": [
+      "container",
+      "docker"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "OCI(Open Container Initiative) 개요",
+    "permalink": "/docs/container/oci-spec"
+  },
+  "next": {
+    "title": "containerd-shim 역할",
+    "permalink": "/docs/container/containerd-shim"
+  }
+}

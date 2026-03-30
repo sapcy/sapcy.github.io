@@ -1,0 +1,45 @@
+{
+  "id": "backend/coding/pccp-2-sports-day",
+  "title": "#2 - 체육대회",
+  "description": "문제 접근 이 문제는 모든 케이스를 확인해서 결과를 도출해야하는 완전 탐색 문제이다. 테니스 탁구 수영 석환 40 10 10 영재 20 5 0 인용 30 30 30 정현 70 0 70 준모 100 100 100 재귀함수를 통해 DFS로 최대값을 비교해가며 마지막 케이스까지 검증 후 결과를 리턴한다. 코드 import java.lang.Math; class ",
+  "source": "@site/docs/backend/coding/pccp-2-sports-day.md",
+  "sourceDirName": "backend/coding",
+  "slug": "/backend/coding/pccp-2-sports-day",
+  "permalink": "/docs/backend/coding/pccp-2-sports-day",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/coding/pccp-2-sports-day.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "알고리즘",
+      "permalink": "/docs/tags/algorithm",
+      "description": "코딩 테스트·알고리즘"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "#2 - 체육대회",
+    "description": "문제 접근 이 문제는 모든 케이스를 확인해서 결과를 도출해야하는 완전 탐색 문제이다. 테니스 탁구 수영 석환 40 10 10 영재 20 5 0 인용 30 30 30 정현 70 0 70 준모 100 100 100 재귀함수를 통해 DFS로 최대값을 비교해가며 마지막 케이스까지 검증 후 결과를 리턴한다. 코드 import java.lang.Math; class ",
+    "tags": [
+      "backend",
+      "algorithm"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "#3 - 유전 법칙",
+    "permalink": "/docs/backend/coding/pccp-3-genetics-law"
+  },
+  "next": {
+    "title": "#1 - 외톨이 알파벳",
+    "permalink": "/docs/backend/coding/pccp-1-lonely-alphabet"
+  }
+}

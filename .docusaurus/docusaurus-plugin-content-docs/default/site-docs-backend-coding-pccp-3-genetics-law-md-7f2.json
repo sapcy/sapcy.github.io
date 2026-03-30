@@ -1,0 +1,45 @@
+{
+  "id": "backend/coding/pccp-3-genetics-law",
+  "title": "#3 - 유전 법칙",
+  "description": "문제 접근 코드 보완할 점 문제 링크 https://school.programmers.co.kr/learn/courses/15008/lessons/121685 프로그래머스 코드 중심의 개발자 채용. 스택 기반의 포지션 매칭. 프로그래머스의 개발자 맞춤형 프로필을 등록하고, 나와 기술 궁합이 잘 맞는 기업들을 매칭 받으세요. programmers.co.kr",
+  "source": "@site/docs/backend/coding/pccp-3-genetics-law.md",
+  "sourceDirName": "backend/coding",
+  "slug": "/backend/coding/pccp-3-genetics-law",
+  "permalink": "/docs/backend/coding/pccp-3-genetics-law",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/coding/pccp-3-genetics-law.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "알고리즘",
+      "permalink": "/docs/tags/algorithm",
+      "description": "코딩 테스트·알고리즘"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "#3 - 유전 법칙",
+    "description": "문제 접근 코드 보완할 점 문제 링크 https://school.programmers.co.kr/learn/courses/15008/lessons/121685 프로그래머스 코드 중심의 개발자 채용. 스택 기반의 포지션 매칭. 프로그래머스의 개발자 맞춤형 프로필을 등록하고, 나와 기술 궁합이 잘 맞는 기업들을 매칭 받으세요. programmers.co.kr",
+    "tags": [
+      "backend",
+      "algorithm"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "#4 - 운영체제",
+    "permalink": "/docs/backend/coding/pccp-4-operating-system"
+  },
+  "next": {
+    "title": "#2 - 체육대회",
+    "permalink": "/docs/backend/coding/pccp-2-sports-day"
+  }
+}

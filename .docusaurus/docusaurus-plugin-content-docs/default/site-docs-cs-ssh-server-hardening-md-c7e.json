@@ -1,0 +1,45 @@
+{
+  "id": "cs/ssh-server-hardening",
+  "title": "SSH 서버 하드닝 - 9가지 설정",
+  "description": "루트 로그인 금지·키 인증·포트 변경·속도 제한·화이트리스트·암호 스위트·로깅·fail2ban·2FA까지, 운영 서버에 적용할 때의 주의점과 함께 정리합니다.",
+  "source": "@site/docs/cs/ssh-server-hardening.md",
+  "sourceDirName": "cs",
+  "slug": "/cs/ssh-server-hardening",
+  "permalink": "/docs/cs/ssh-server-hardening",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cs/ssh-server-hardening.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "CS",
+      "permalink": "/docs/tags/cs",
+      "description": "컴퓨터 과학 기초"
+    },
+    {
+      "inline": false,
+      "label": "보안",
+      "permalink": "/docs/tags/security",
+      "description": "SSH·서버 하드닝·인증"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "SSH 서버 하드닝 - 9가지 설정",
+    "description": "루트 로그인 금지·키 인증·포트 변경·속도 제한·화이트리스트·암호 스위트·로깅·fail2ban·2FA까지, 운영 서버에 적용할 때의 주의점과 함께 정리합니다.",
+    "tags": [
+      "cs",
+      "security"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "HTTP Cache 뽀개기",
+    "permalink": "/docs/cs/http-cache-headers"
+  },
+  "next": {
+    "title": "OCI(Open Container Initiative) 개요",
+    "permalink": "/docs/container/oci-spec"
+  }
+}

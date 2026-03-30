@@ -1,0 +1,45 @@
+{
+  "id": "backend/coding/boj-13458-exam-supervisor",
+  "title": "13458. 시험감독 (Java)",
+  "description": "문제 접근 해당 문제는 총감독관이 감독하는 응시자를 제외하고 나머지 응시자 중에서 부감독관의 수로 나눴을 때 나머지 값에 따라 정답을 결정해주면 해결되는 문제이다. 그리고 최악의 케이스일 경우 정답이 int 범위를 벗어날 수 있으므로 long 타입을 써야한다. 코드 import java.io.*; import java.util.StringTokenizer;",
+  "source": "@site/docs/backend/coding/boj-13458-exam-supervisor.md",
+  "sourceDirName": "backend/coding",
+  "slug": "/backend/coding/boj-13458-exam-supervisor",
+  "permalink": "/docs/backend/coding/boj-13458-exam-supervisor",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/coding/boj-13458-exam-supervisor.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "알고리즘",
+      "permalink": "/docs/tags/algorithm",
+      "description": "코딩 테스트·알고리즘"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "13458. 시험감독 (Java)",
+    "description": "문제 접근 해당 문제는 총감독관이 감독하는 응시자를 제외하고 나머지 응시자 중에서 부감독관의 수로 나눴을 때 나머지 값에 따라 정답을 결정해주면 해결되는 문제이다. 그리고 최악의 케이스일 경우 정답이 int 범위를 벗어날 수 있으므로 long 타입을 써야한다. 코드 import java.io.*; import java.util.StringTokenizer;",
+    "tags": [
+      "backend",
+      "algorithm"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "14501. 퇴사 (Java)",
+    "permalink": "/docs/backend/coding/boj-14501-resignation"
+  },
+  "next": {
+    "title": "#4 - 운영체제",
+    "permalink": "/docs/backend/coding/pccp-4-operating-system"
+  }
+}

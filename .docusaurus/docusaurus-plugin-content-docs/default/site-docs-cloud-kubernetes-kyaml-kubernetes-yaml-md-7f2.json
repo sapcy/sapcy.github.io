@@ -1,0 +1,59 @@
+{
+  "id": "cloud/kubernetes/kyaml-kubernetes-yaml",
+  "title": "KYAML",
+  "description": "Kubernetes YAMLKubernetes에서는 리소스(Deployment, Service, ConfigMap 등)를 정의할 때 YAML을 사용합니다.YAML은 사람이 읽고 쓰기 쉬운 형식이지만, Kubernetes 환경에서는 다음과 같은 문제점이 자주 발생합니다: YAML의 대표적인 문제들여쓰기 민감 → 공백 하나만 틀려도 구조가 깨짐암묵적 타입 변환",
+  "source": "@site/docs/cloud/kubernetes/kyaml-kubernetes-yaml.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/kyaml-kubernetes-yaml",
+  "permalink": "/docs/cloud/kubernetes/kyaml-kubernetes-yaml",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/kyaml-kubernetes-yaml.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    },
+    {
+      "inline": false,
+      "label": "YAML",
+      "permalink": "/docs/tags/yaml",
+      "description": "YAML / KYAML"
+    },
+    {
+      "inline": false,
+      "label": "KYAML",
+      "permalink": "/docs/tags/kyaml",
+      "description": "Kubernetes YAML"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "KYAML",
+    "description": "Kubernetes YAMLKubernetes에서는 리소스(Deployment, Service, ConfigMap 등)를 정의할 때 YAML을 사용합니다.YAML은 사람이 읽고 쓰기 쉬운 형식이지만, Kubernetes 환경에서는 다음과 같은 문제점이 자주 발생합니다: YAML의 대표적인 문제들여쓰기 민감 → 공백 하나만 틀려도 구조가 깨짐암묵적 타입 변환",
+    "tags": [
+      "cloud",
+      "kubernetes",
+      "yaml",
+      "kyaml"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Containerd와 CRI - 컨테이너 생성 과정",
+    "permalink": "/docs/cloud/kubernetes/concept-containerd-cri"
+  },
+  "next": {
+    "title": "외부 서버에서 k8s 클러스터로 API 요청시 인증서 문제 해결",
+    "permalink": "/docs/cloud/kubernetes/k8s-api-tls-external-request"
+  }
+}

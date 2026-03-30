@@ -1,0 +1,38 @@
+{
+  "id": "opensource/loki-overview",
+  "title": "Grafana Loki 개요 - 읽기·쓰기 경로",
+  "description": "컴포넌트·레이블·Write/Read path - Grafana 공식 다이어그램 링크 포함",
+  "source": "@site/docs/opensource/loki-overview.md",
+  "sourceDirName": "opensource",
+  "slug": "/opensource/loki-overview",
+  "permalink": "/docs/opensource/loki-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/loki-overview.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "오픈소스",
+      "permalink": "/docs/tags/opensource",
+      "description": "관측성·CI 등 오픈소스 도구 정리"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Grafana Loki 개요 - 읽기·쓰기 경로",
+    "description": "컴포넌트·레이블·Write/Read path - Grafana 공식 다이어그램 링크 포함",
+    "tags": [
+      "opensource"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "오픈소스 문서화 체크리스트",
+    "permalink": "/docs/opensource/oss-documentation-template"
+  },
+  "next": {
+    "title": "Grafana Tempo 개요",
+    "permalink": "/docs/opensource/tempo-overview"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "id": "backend/coding/pccp-1-lonely-alphabet",
+  "title": "#1 - 외톨이 알파벳",
+  "description": "문제 접근 이 문제는 외톨이 알파벳을 찾는 기준을 생각하는 것이 핵심이다. 문자 배열을 순회하며 이전에 한번 나왔던 알파벳이 다른 알파벳 뒤에 한번 더 나올 때를 체크해서 외톨이 알파벳으로 등록해준다. 정리하자면 알파벳이 이전에 나온 적이 있다. 직전의 알파벳과 다른 알파벳이다. 외톨이 알파벳으로 등록된 적이 없는 알파벳이다. 이 3가지 요건을 충족하는 경",
+  "source": "@site/docs/backend/coding/pccp-1-lonely-alphabet.md",
+  "sourceDirName": "backend/coding",
+  "slug": "/backend/coding/pccp-1-lonely-alphabet",
+  "permalink": "/docs/backend/coding/pccp-1-lonely-alphabet",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/coding/pccp-1-lonely-alphabet.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "알고리즘",
+      "permalink": "/docs/tags/algorithm",
+      "description": "코딩 테스트·알고리즘"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "#1 - 외톨이 알파벳",
+    "description": "문제 접근 이 문제는 외톨이 알파벳을 찾는 기준을 생각하는 것이 핵심이다. 문자 배열을 순회하며 이전에 한번 나왔던 알파벳이 다른 알파벳 뒤에 한번 더 나올 때를 체크해서 외톨이 알파벳으로 등록해준다. 정리하자면 알파벳이 이전에 나온 적이 있다. 직전의 알파벳과 다른 알파벳이다. 외톨이 알파벳으로 등록된 적이 없는 알파벳이다. 이 3가지 요건을 충족하는 경",
+    "tags": [
+      "backend",
+      "algorithm"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "#2 - 체육대회",
+    "permalink": "/docs/backend/coding/pccp-2-sports-day"
+  },
+  "next": {
+    "title": "배열",
+    "permalink": "/docs/backend/java/arrays"
+  }
+}

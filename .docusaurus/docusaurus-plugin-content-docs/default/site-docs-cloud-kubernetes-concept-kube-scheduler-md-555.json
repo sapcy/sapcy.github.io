@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/concept-kube-scheduler",
+  "title": "Kubernetes Scheduler",
+  "description": "kube-scheduler의 역할, nodeName, 필터링·스코어링·바인딩, 스케줄링 확장 단계",
+  "source": "@site/docs/cloud/kubernetes/concept-kube-scheduler.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/concept-kube-scheduler",
+  "permalink": "/docs/cloud/kubernetes/concept-kube-scheduler",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/concept-kube-scheduler.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Kubernetes Scheduler",
+    "description": "kube-scheduler의 역할, nodeName, 필터링·스코어링·바인딩, 스케줄링 확장 단계",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pod와 컨테이너 격리",
+    "permalink": "/docs/cloud/kubernetes/concept-pod"
+  },
+  "next": {
+    "title": "Kube Controller Manager",
+    "permalink": "/docs/cloud/kubernetes/concept-kube-controller-manager"
+  }
+}

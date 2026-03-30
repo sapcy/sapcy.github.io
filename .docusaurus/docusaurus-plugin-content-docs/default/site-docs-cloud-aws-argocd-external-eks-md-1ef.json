@@ -1,0 +1,66 @@
+{
+  "id": "cloud/aws/argocd-external-eks",
+  "title": "ArgoCD에서 External EKS 클러스터 연동 방법",
+  "description": "더보기1. EKS 클러스터가 존재하여야 함.2. EKS에서 ClusterRole, Role 등의 권한을 생성, 부여할 Cluster-admin 계정이 존재해야 함. 1. 개요Argo CD는 여러 Kubernetes 클러스터를 GitOps 방식으로 관리할 수 있다.하지만 Amazon EKS는 일반적인 kubeconfig 인증 방식과 다르게 다음과 같은 특징을",
+  "source": "@site/docs/cloud/aws/argocd-external-eks.md",
+  "sourceDirName": "cloud/aws",
+  "slug": "/cloud/aws/argocd-external-eks",
+  "permalink": "/docs/cloud/aws/argocd-external-eks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/aws/argocd-external-eks.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "AWS",
+      "permalink": "/docs/tags/aws",
+      "description": "Amazon Web Services"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    },
+    {
+      "inline": false,
+      "label": "Argo CD",
+      "permalink": "/docs/tags/argocd",
+      "description": "Argo CD GitOps"
+    },
+    {
+      "inline": false,
+      "label": "EKS",
+      "permalink": "/docs/tags/eks",
+      "description": "Amazon EKS"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "ArgoCD에서 External EKS 클러스터 연동 방법",
+    "description": "더보기1. EKS 클러스터가 존재하여야 함.2. EKS에서 ClusterRole, Role 등의 권한을 생성, 부여할 Cluster-admin 계정이 존재해야 함. 1. 개요Argo CD는 여러 Kubernetes 클러스터를 GitOps 방식으로 관리할 수 있다.하지만 Amazon EKS는 일반적인 kubeconfig 인증 방식과 다르게 다음과 같은 특징을",
+    "tags": [
+      "cloud",
+      "aws",
+      "kubernetes",
+      "argocd",
+      "eks"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "EKS 비용 알아보기",
+    "permalink": "/docs/cloud/aws/eks-cost-overview"
+  },
+  "next": {
+    "title": "개념 정리",
+    "permalink": "/docs/cloud/aws/aws-cloud-concepts"
+  }
+}

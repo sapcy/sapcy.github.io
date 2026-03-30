@@ -1,0 +1,45 @@
+{
+  "id": "cs/http-cache-headers",
+  "title": "HTTP Cache 뽀개기",
+  "description": "Cache가 왜 필요한가? 네트워크 요청을 통해 리소스를 받는 것은 느리며 불필요한 요청은 비용을 증가시킵니다. 큰 리소스의 경우 비용은 그에 비례하게 됩니다. 이를 해결해줄 수 있는 방법 중 하나는 Cache를 구현하는 것입니다. Cache에 데이터를 미리 복사해놓으면 불필요한 요청 없이 바로 데이터에 접근할 수 있습니다. 그리고 HTTP Cache는 모",
+  "source": "@site/docs/cs/http-cache-headers.md",
+  "sourceDirName": "cs",
+  "slug": "/cs/http-cache-headers",
+  "permalink": "/docs/cs/http-cache-headers",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cs/http-cache-headers.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "CS",
+      "permalink": "/docs/tags/cs",
+      "description": "컴퓨터 과학 기초"
+    },
+    {
+      "inline": false,
+      "label": "HTTP",
+      "permalink": "/docs/tags/http",
+      "description": "HTTP·네트워크"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "HTTP Cache 뽀개기",
+    "description": "Cache가 왜 필요한가? 네트워크 요청을 통해 리소스를 받는 것은 느리며 불필요한 요청은 비용을 증가시킵니다. 큰 리소스의 경우 비용은 그에 비례하게 됩니다. 이를 해결해줄 수 있는 방법 중 하나는 Cache를 구현하는 것입니다. Cache에 데이터를 미리 복사해놓으면 불필요한 요청 없이 바로 데이터에 접근할 수 있습니다. 그리고 HTTP Cache는 모",
+    "tags": [
+      "cs",
+      "http"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Envoy Cluster Manager·Subscription",
+    "permalink": "/docs/cloud-native/envoy/cluster-manager"
+  },
+  "next": {
+    "title": "SSH 서버 하드닝 - 9가지 설정",
+    "permalink": "/docs/cs/ssh-server-hardening"
+  }
+}

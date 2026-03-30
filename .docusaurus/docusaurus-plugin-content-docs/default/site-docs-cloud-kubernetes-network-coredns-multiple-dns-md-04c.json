@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/network-coredns-multiple-dns",
+  "title": "CoreDNS - Multiple DNS server forwarding",
+  "description": "CoreDNS forward 정책, 도메인별 zone, 장애 시 동작 정리",
+  "source": "@site/docs/cloud/kubernetes/network-coredns-multiple-dns.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/network-coredns-multiple-dns",
+  "permalink": "/docs/cloud/kubernetes/network-coredns-multiple-dns",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/network-coredns-multiple-dns.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "CoreDNS - Multiple DNS server forwarding",
+    "description": "CoreDNS forward 정책, 도메인별 zone, 장애 시 동작 정리",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Pod to Pod 통신 (Cilium)",
+    "permalink": "/docs/cloud/kubernetes/network-cilium-pod-to-pod"
+  },
+  "next": {
+    "title": "커널 옵션 최적화 (Kubernetes 노드)",
+    "permalink": "/docs/cloud/kubernetes/network-kernel-tuning"
+  }
+}

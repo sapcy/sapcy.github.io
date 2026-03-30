@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/network-cilium-components",
+  "title": "Cilium 구성요소와 트래픽 플로우",
+  "description": "Cilium Agent·BPF Datapath·IPCache·Endpoint·K8s API 연동",
+  "source": "@site/docs/cloud/kubernetes/network-cilium-components.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/network-cilium-components",
+  "permalink": "/docs/cloud/kubernetes/network-cilium-components",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/network-cilium-components.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Cilium 구성요소와 트래픽 플로우",
+    "description": "Cilium Agent·BPF Datapath·IPCache·Endpoint·K8s API 연동",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cilium CNI",
+    "permalink": "/docs/cloud/kubernetes/network-cilium-cni"
+  },
+  "next": {
+    "title": "Pod to Pod 통신 (Cilium)",
+    "permalink": "/docs/cloud/kubernetes/network-cilium-pod-to-pod"
+  }
+}

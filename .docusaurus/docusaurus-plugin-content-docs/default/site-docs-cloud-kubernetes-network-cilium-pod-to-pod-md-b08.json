@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/network-cilium-pod-to-pod",
+  "title": "Pod to Pod 통신 (Cilium)",
+  "description": "Obsidian 원문이 비어 있음 - 패킷 경로·서비스 타입 정리 예정",
+  "source": "@site/docs/cloud/kubernetes/network-cilium-pod-to-pod.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/network-cilium-pod-to-pod",
+  "permalink": "/docs/cloud/kubernetes/network-cilium-pod-to-pod",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/network-cilium-pod-to-pod.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Pod to Pod 통신 (Cilium)",
+    "description": "Obsidian 원문이 비어 있음 - 패킷 경로·서비스 타입 정리 예정",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Cilium 구성요소와 트래픽 플로우",
+    "permalink": "/docs/cloud/kubernetes/network-cilium-components"
+  },
+  "next": {
+    "title": "CoreDNS - Multiple DNS server forwarding",
+    "permalink": "/docs/cloud/kubernetes/network-coredns-multiple-dns"
+  }
+}

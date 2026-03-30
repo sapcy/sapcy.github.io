@@ -1,0 +1,45 @@
+{
+  "id": "backend/coding/boj-14888-insert-operators",
+  "title": "14888. 연산자 끼워넣기 (Java)",
+  "description": "문제 N개의 수로 이루어진 수열 A1, A2, ..., AN이 주어진다. 또, 수와 수 사이에 끼워넣을 수 있는 N-1개의 연산자가 주어진다. 연산자는 덧셈(+), 뺄셈(-), 곱셈(×), 나눗셈(÷)으로만 이루어져 있다. 우리는 수와 수 사이에 연산자를 하나씩 넣어서, 수식을 하나 만들 수 있다. 이때, 주어진 수의 순서를 바꾸면 안 된다. 예를 들어, ",
+  "source": "@site/docs/backend/coding/boj-14888-insert-operators.md",
+  "sourceDirName": "backend/coding",
+  "slug": "/backend/coding/boj-14888-insert-operators",
+  "permalink": "/docs/backend/coding/boj-14888-insert-operators",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/coding/boj-14888-insert-operators.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "알고리즘",
+      "permalink": "/docs/tags/algorithm",
+      "description": "코딩 테스트·알고리즘"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "14888. 연산자 끼워넣기 (Java)",
+    "description": "문제 N개의 수로 이루어진 수열 A1, A2, ..., AN이 주어진다. 또, 수와 수 사이에 끼워넣을 수 있는 N-1개의 연산자가 주어진다. 연산자는 덧셈(+), 뺄셈(-), 곱셈(×), 나눗셈(÷)으로만 이루어져 있다. 우리는 수와 수 사이에 연산자를 하나씩 넣어서, 수식을 하나 만들 수 있다. 이때, 주어진 수의 순서를 바꾸면 안 된다. 예를 들어, ",
+    "tags": [
+      "backend",
+      "algorithm"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "14502. 연구소",
+    "permalink": "/docs/backend/coding/boj-14502-laboratory"
+  },
+  "next": {
+    "title": "14501. 퇴사 (Java)",
+    "permalink": "/docs/backend/coding/boj-14501-resignation"
+  }
+}

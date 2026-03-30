@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/concept-containerd-cri",
+  "title": "Containerd와 CRI - 컨테이너 생성 과정",
+  "description": "CRI 플러그인 아키텍처, kubelet·CRI·containerd 흐름, containerd shim Create 코드",
+  "source": "@site/docs/cloud/kubernetes/concept-containerd-cri.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/concept-containerd-cri",
+  "permalink": "/docs/cloud/kubernetes/concept-containerd-cri",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/concept-containerd-cri.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Containerd와 CRI - 컨테이너 생성 과정",
+    "description": "CRI 플러그인 아키텍처, kubelet·CRI·containerd 흐름, containerd shim Create 코드",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Kube Controller Manager",
+    "permalink": "/docs/cloud/kubernetes/concept-kube-controller-manager"
+  },
+  "next": {
+    "title": "KYAML",
+    "permalink": "/docs/cloud/kubernetes/kyaml-kubernetes-yaml"
+  }
+}

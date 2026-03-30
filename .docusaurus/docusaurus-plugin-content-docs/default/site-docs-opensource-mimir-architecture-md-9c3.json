@@ -1,0 +1,38 @@
+{
+  "id": "opensource/mimir-architecture",
+  "title": "Grafana Mimir 아키텍처",
+  "description": "쓰기·읽기 경로, Ingester·Querier, Prometheus 원격 쓰기, 장기 보관",
+  "source": "@site/docs/opensource/mimir-architecture.md",
+  "sourceDirName": "opensource",
+  "slug": "/opensource/mimir-architecture",
+  "permalink": "/docs/opensource/mimir-architecture",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/opensource/mimir-architecture.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "오픈소스",
+      "permalink": "/docs/tags/opensource",
+      "description": "관측성·CI 등 오픈소스 도구 정리"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Grafana Mimir 아키텍처",
+    "description": "쓰기·읽기 경로, Ingester·Querier, Prometheus 원격 쓰기, 장기 보관",
+    "tags": [
+      "opensource"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Grafana Tempo 아키텍처",
+    "permalink": "/docs/opensource/tempo-architecture"
+  },
+  "next": {
+    "title": "OpenTelemetry·LGTM 스택 실습 아키텍처 개요",
+    "permalink": "/docs/opensource/opentelemetry-lgtm-architecture"
+  }
+}

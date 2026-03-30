@@ -1,0 +1,45 @@
+{
+  "id": "backend/java/conditionals-and-loops",
+  "title": "조건문과 반복문",
+  "description": "▶ 조건문 (if, switch) 1. if문 만일(if) 조건식이 참(true)이면 괄호 { } 안의 문장들을 수행한다. if (조건식) { // 조건식이 참일 때 수행될 문장들을 적는다. } 2. 블럭 괄호 { }를 이용해 여러 문장을 하나의 단위로 묶을 수 있다. 이를 블럭(block) 이라 한다. 블럭 내의 문장들은 탭으로 들여쓰기를 해서 블럭 안에",
+  "source": "@site/docs/backend/java/conditionals-and-loops.md",
+  "sourceDirName": "backend/java",
+  "slug": "/backend/java/conditionals-and-loops",
+  "permalink": "/docs/backend/java/conditionals-and-loops",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/conditionals-and-loops.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "Java",
+      "permalink": "/docs/tags/java",
+      "description": "Java 언어·JVM"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "조건문과 반복문",
+    "description": "▶ 조건문 (if, switch) 1. if문 만일(if) 조건식이 참(true)이면 괄호 { } 안의 문장들을 수행한다. if (조건식) { // 조건식이 참일 때 수행될 문장들을 적는다. } 2. 블럭 괄호 { }를 이용해 여러 문장을 하나의 단위로 묶을 수 있다. 이를 블럭(block) 이라 한다. 블럭 내의 문장들은 탭으로 들여쓰기를 해서 블럭 안에",
+    "tags": [
+      "backend",
+      "java"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "배열",
+    "permalink": "/docs/backend/java/arrays"
+  },
+  "next": {
+    "title": "연산자",
+    "permalink": "/docs/backend/java/operators"
+  }
+}

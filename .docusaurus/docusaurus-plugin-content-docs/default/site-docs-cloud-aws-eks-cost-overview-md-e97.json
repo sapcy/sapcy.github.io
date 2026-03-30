@@ -1,0 +1,52 @@
+{
+  "id": "cloud/aws/eks-cost-overview",
+  "title": "EKS 비용 알아보기",
+  "description": "EKS 구성 정보Region: us-east-1EKS 자율 모드NodeGroup - t2.mediumStorage 20GB 서비스별 요금설명사용량 수량의 금액 USDElastic Compute Cloud USD 1.99└ US East └ Amazon Elastic Compute Cloud running Linux/UNIX USD 1.79 ┠ $0.023 ",
+  "source": "@site/docs/cloud/aws/eks-cost-overview.md",
+  "sourceDirName": "cloud/aws",
+  "slug": "/cloud/aws/eks-cost-overview",
+  "permalink": "/docs/cloud/aws/eks-cost-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/aws/eks-cost-overview.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "AWS",
+      "permalink": "/docs/tags/aws",
+      "description": "Amazon Web Services"
+    },
+    {
+      "inline": false,
+      "label": "EKS",
+      "permalink": "/docs/tags/eks",
+      "description": "Amazon EKS"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "EKS 비용 알아보기",
+    "description": "EKS 구성 정보Region: us-east-1EKS 자율 모드NodeGroup - t2.mediumStorage 20GB 서비스별 요금설명사용량 수량의 금액 USDElastic Compute Cloud USD 1.99└ US East └ Amazon Elastic Compute Cloud running Linux/UNIX USD 1.79 ┠ $0.023 ",
+    "tags": [
+      "cloud",
+      "aws",
+      "eks"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "시작하기",
+    "permalink": "/docs/intro"
+  },
+  "next": {
+    "title": "ArgoCD에서 External EKS 클러스터 연동 방법",
+    "permalink": "/docs/cloud/aws/argocd-external-eks"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "container/docker-vs-containerd-daemon",
+  "title": "Docker vs containerd - 데몬 종료 시 동작",
+  "description": "dockerd 종료 시와 containerd만 종료될 때 shim·컨테이너 수명 차이",
+  "source": "@site/docs/container/docker-vs-containerd-daemon.md",
+  "sourceDirName": "container",
+  "slug": "/container/docker-vs-containerd-daemon",
+  "permalink": "/docs/container/docker-vs-containerd-daemon",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/container/docker-vs-containerd-daemon.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "컨테이너",
+      "permalink": "/docs/tags/container",
+      "description": "OCI·Docker·containerd·runc 런타임 스택"
+    },
+    {
+      "inline": true,
+      "label": "docker",
+      "permalink": "/docs/tags/docker"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Docker vs containerd - 데몬 종료 시 동작",
+    "description": "dockerd 종료 시와 containerd만 종료될 때 shim·컨테이너 수명 차이",
+    "tags": [
+      "container",
+      "docker"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "containerd-shim 역할",
+    "permalink": "/docs/container/containerd-shim"
+  },
+  "next": {
+    "title": "CRI 한번에 보기",
+    "permalink": "/docs/container/docker-cri-oci-runc-stack"
+  }
+}

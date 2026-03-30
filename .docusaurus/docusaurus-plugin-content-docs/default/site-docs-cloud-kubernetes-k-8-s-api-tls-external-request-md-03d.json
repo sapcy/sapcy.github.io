@@ -1,0 +1,45 @@
+{
+  "id": "cloud/kubernetes/k8s-api-tls-external-request",
+  "title": "외부 서버에서 k8s 클러스터로 API 요청시 인증서 문제 해결",
+  "description": "클러스터 API 요청시 인증서 문제 해결 경험을 공유합니다. 문제 발생 클러스터 접근용 외부 서버에서 kube-config를 세팅해두고 context를 변경하여 2개의 k8s 클러스터 중 원하는 클러스터의 API 서버로 요청할 수 있게 설정하였습니다. kube-config 파일은 아래의 형태와 같습니다. apiVersion: v1 clusters: - cl",
+  "source": "@site/docs/cloud/kubernetes/k8s-api-tls-external-request.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/k8s-api-tls-external-request",
+  "permalink": "/docs/cloud/kubernetes/k8s-api-tls-external-request",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/k8s-api-tls-external-request.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "외부 서버에서 k8s 클러스터로 API 요청시 인증서 문제 해결",
+    "description": "클러스터 API 요청시 인증서 문제 해결 경험을 공유합니다. 문제 발생 클러스터 접근용 외부 서버에서 kube-config를 세팅해두고 context를 변경하여 2개의 k8s 클러스터 중 원하는 클러스터의 API 서버로 요청할 수 있게 설정하였습니다. kube-config 파일은 아래의 형태와 같습니다. apiVersion: v1 clusters: - cl",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "KYAML",
+    "permalink": "/docs/cloud/kubernetes/kyaml-kubernetes-yaml"
+  },
+  "next": {
+    "title": "왜 kubectl top node와 free -m의 결과가 다를까요?",
+    "permalink": "/docs/cloud/kubernetes/kubectl-top-vs-free-memory"
+  }
+}

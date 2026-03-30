@@ -1,0 +1,45 @@
+{
+  "id": "cloud/aws/aws-cloud-concepts",
+  "title": "개념 정리",
+  "description": "1. AWS란? AWS(Amazon Web Services)는 컴퓨팅 성능, 스토리지, 데이터베이스, 분석 및 머신러닝을 포함한 광범위한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다. 클라우드 컴퓨팅이란? 클라우드 컴퓨팅은 인터넷을 통해 서버, 스토리지, 데이터베이스, 네트워킹, 소프트웨어, 분석, 인텔리전스 등의 컴퓨팅 서비스를 활용하는 기술입니다. 이",
+  "source": "@site/docs/cloud/aws/aws-cloud-concepts.md",
+  "sourceDirName": "cloud/aws",
+  "slug": "/cloud/aws/aws-cloud-concepts",
+  "permalink": "/docs/cloud/aws/aws-cloud-concepts",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/aws/aws-cloud-concepts.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "AWS",
+      "permalink": "/docs/tags/aws",
+      "description": "Amazon Web Services"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "개념 정리",
+    "description": "1. AWS란? AWS(Amazon Web Services)는 컴퓨팅 성능, 스토리지, 데이터베이스, 분석 및 머신러닝을 포함한 광범위한 서비스를 제공하는 클라우드 컴퓨팅 플랫폼입니다. 클라우드 컴퓨팅이란? 클라우드 컴퓨팅은 인터넷을 통해 서버, 스토리지, 데이터베이스, 네트워킹, 소프트웨어, 분석, 인텔리전스 등의 컴퓨팅 서비스를 활용하는 기술입니다. 이",
+    "tags": [
+      "cloud",
+      "aws"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "ArgoCD에서 External EKS 클러스터 연동 방법",
+    "permalink": "/docs/cloud/aws/argocd-external-eks"
+  },
+  "next": {
+    "title": "쿠버네티스 작동 방식 정리",
+    "permalink": "/docs/cloud/kubernetes/concept-kubernetes-overview"
+  }
+}

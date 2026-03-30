@@ -1,0 +1,45 @@
+{
+  "id": "cloud-native/envoy/architecture-overview",
+  "title": "Envoy 아키텍처 Overview",
+  "description": "Listener·Cluster·Endpoint·필터 체인·HCM·Static/Dynamic·xDS·ADS·SotW/Delta — Obsidian 노트 이전",
+  "source": "@site/docs/cloud-native/envoy/architecture-overview.md",
+  "sourceDirName": "cloud-native/envoy",
+  "slug": "/cloud-native/envoy/architecture-overview",
+  "permalink": "/docs/cloud-native/envoy/architecture-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud-native/envoy/architecture-overview.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드 네이티브",
+      "permalink": "/docs/tags/cloud-native",
+      "description": "Envoy·서비스 메시·동적 설정"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Envoy 아키텍처 Overview",
+    "description": "Listener·Cluster·Endpoint·필터 체인·HCM·Static/Dynamic·xDS·ADS·SotW/Delta — Obsidian 노트 이전",
+    "tags": [
+      "cloud-native",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Router vs Gateway",
+    "permalink": "/docs/cloud/kubernetes/network-router-vs-gateway"
+  },
+  "next": {
+    "title": "gRPC 통신 방식 (Unary·스트리밍)",
+    "permalink": "/docs/cloud-native/envoy/grpc-communication"
+  }
+}

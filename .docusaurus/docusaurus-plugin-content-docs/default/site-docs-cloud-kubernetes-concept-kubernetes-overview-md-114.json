@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/concept-kubernetes-overview",
+  "title": "쿠버네티스 작동 방식 정리",
+  "description": "API 서버, 스케줄러, kubelet, containerd, CRI·Kata 등 쿠버네티스 전체 동작 흐름",
+  "source": "@site/docs/cloud/kubernetes/concept-kubernetes-overview.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/concept-kubernetes-overview",
+  "permalink": "/docs/cloud/kubernetes/concept-kubernetes-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/concept-kubernetes-overview.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "쿠버네티스 작동 방식 정리",
+    "description": "API 서버, 스케줄러, kubelet, containerd, CRI·Kata 등 쿠버네티스 전체 동작 흐름",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "개념 정리",
+    "permalink": "/docs/cloud/aws/aws-cloud-concepts"
+  },
+  "next": {
+    "title": "Pod와 컨테이너 격리",
+    "permalink": "/docs/cloud/kubernetes/concept-pod"
+  }
+}

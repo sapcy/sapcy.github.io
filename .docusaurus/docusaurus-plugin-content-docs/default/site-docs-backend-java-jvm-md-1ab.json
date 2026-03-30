@@ -1,0 +1,45 @@
+{
+  "id": "backend/java/jvm",
+  "title": "JVM",
+  "description": "들어가기 전에 Java로 프로그래밍을 함에 있어서 좋은 개발자가 되기 위해서는 고수준 영역뿐만 아니라 메모리가 관리되는 방식, 클래스 파일이 생성되는 방식, JVM의 내부 구조, 동작 원리 등을 알고 있어야 한다고 생각이 들었다. 그래서 오늘은 JVM에 대해서 공부해보겠다. JVM이란? JVM은 Java Virtual Machine의 약자이다. 말 그대로 ",
+  "source": "@site/docs/backend/java/jvm.md",
+  "sourceDirName": "backend/java",
+  "slug": "/backend/java/jvm",
+  "permalink": "/docs/backend/java/jvm",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/jvm.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "Java",
+      "permalink": "/docs/tags/java",
+      "description": "Java 언어·JVM"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "JVM",
+    "description": "들어가기 전에 Java로 프로그래밍을 함에 있어서 좋은 개발자가 되기 위해서는 고수준 영역뿐만 아니라 메모리가 관리되는 방식, 클래스 파일이 생성되는 방식, JVM의 내부 구조, 동작 원리 등을 알고 있어야 한다고 생각이 들었다. 그래서 오늘은 JVM에 대해서 공부해보겠다. JVM이란? JVM은 Java Virtual Machine의 약자이다. 말 그대로 ",
+    "tags": [
+      "backend",
+      "java"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "JIT 컴파일러 (Just-In-Time Compiler)",
+    "permalink": "/docs/backend/java/jit-compiler"
+  },
+  "next": {
+    "title": "Java란?",
+    "permalink": "/docs/backend/java/java-introduction"
+  }
+}

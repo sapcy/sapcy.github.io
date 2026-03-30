@@ -1,0 +1,44 @@
+{
+  "id": "cloud/kubernetes/network-router-vs-gateway",
+  "title": "Router vs Gateway",
+  "description": "라우터와 게이트웨이의 역할·OSI 계층 비교",
+  "source": "@site/docs/cloud/kubernetes/network-router-vs-gateway.md",
+  "sourceDirName": "cloud/kubernetes",
+  "slug": "/cloud/kubernetes/network-router-vs-gateway",
+  "permalink": "/docs/cloud/kubernetes/network-router-vs-gateway",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cloud/kubernetes/network-router-vs-gateway.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/docs/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/docs/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Router vs Gateway",
+    "description": "라우터와 게이트웨이의 역할·OSI 계층 비교",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "커널 옵션 최적화 (Kubernetes 노드)",
+    "permalink": "/docs/cloud/kubernetes/network-kernel-tuning"
+  },
+  "next": {
+    "title": "Envoy 아키텍처 Overview",
+    "permalink": "/docs/cloud-native/envoy/architecture-overview"
+  }
+}

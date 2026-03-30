@@ -1,0 +1,45 @@
+{
+  "id": "backend/java/java-introduction",
+  "title": "Java란?",
+  "description": "1. Java의 등장 썬 마이크로시스템즈(Sun Microsystems, Inc)에서 개발하여 1996년 1월에 발표한 객체지향 프로그래밍 언어이다. 자바의 역사는 1991년 제임스 고슬링, 아서 밴 호프를 포함한 썬 엔지니어들이 가전제품에 탑재될 소프트웨어를 만들고자 C++의 장점을 도입하고 단점을 보완한 오크(Oak)라는 언어를 개발한 것에서부터 시작되",
+  "source": "@site/docs/backend/java/java-introduction.md",
+  "sourceDirName": "backend/java",
+  "slug": "/backend/java/java-introduction",
+  "permalink": "/docs/backend/java/java-introduction",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/backend/java/java-introduction.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "백엔드",
+      "permalink": "/docs/tags/backend",
+      "description": "백엔드 개발"
+    },
+    {
+      "inline": false,
+      "label": "Java",
+      "permalink": "/docs/tags/java",
+      "description": "Java 언어·JVM"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Java란?",
+    "description": "1. Java의 등장 썬 마이크로시스템즈(Sun Microsystems, Inc)에서 개발하여 1996년 1월에 발표한 객체지향 프로그래밍 언어이다. 자바의 역사는 1991년 제임스 고슬링, 아서 밴 호프를 포함한 썬 엔지니어들이 가전제품에 탑재될 소프트웨어를 만들고자 C++의 장점을 도입하고 단점을 보완한 오크(Oak)라는 언어를 개발한 것에서부터 시작되",
+    "tags": [
+      "backend",
+      "java"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "JVM",
+    "permalink": "/docs/backend/java/jvm"
+  },
+  "next": {
+    "title": "Core - 1. IoC Container (Introduction ~ Container Overview)",
+    "permalink": "/docs/backend/spring/ioc-container-intro"
+  }
+}
