@@ -1,0 +1,162 @@
+# Link Checker — docs/**/*.md(x)의 http(s) 링크만 검사 (내부 문서 링크는 Docusaurus 빌드가 담당)
+#
+# 문서에 실제로 등장하는 주요 외부 도메인(2025 기준 스냅샷):
+#   blog.kakaocdn.net, grafana.com, github.com, kubernetes.io, envoyproxy.io,
+#   spring.io 계열, velog.io, cla9.tistory.com, medium.com, docker/docs, prometheus.io 등
+#
+# 아래 exclude는 “문서에 없는 옛날 도메인” 제거 + “예시 IP/플레이스홀더”만 제외합니다.
+
+name: Link Checker
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'docs/**'
+      - '*.md'
+      - '.github/workflows/link-check.yml'
+
+  pull_request:
+    branches:
+      - main
+
+  schedule:
+    - cron: '0 9 * * 1'
+
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    name: Check Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Restore lychee cache
+        uses: actions/cache@v4
+        with:
+          path: .lycheecache
+          key: cache-lychee-${{ github.sha }}
+          restore-keys: cache-lychee-
+
+      - name: Create lychee configuration
+        run: |
+          cat > .lychee.toml << 'EOF'
+          # docs 기준 외부 링크 점검 (lychee-action과 함께 사용)
+
+          max_concurrency = 10
+          timeout = 30
+          max_retries = 3
+          retry_wait_time = 2
+
+          accept = [200, 301, 302, 303, 307, 308]
+
+          scheme = ["https", "http"]
+
+          # 앵커(#fragment) 검증은 정적 문서·SPA에서 오탐이 많아 끔
+          include_fragments = false
+
+          max_redirects = 5
+
+          user_agent = "Mozilla/5.0 (compatible; sapcy-blog-link-check; +https://github.com/lycheeverse/lychee)"
+
+          [headers]
+          "Accept" = "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+
+          # 제외: 예시·로컬·템플릿 변수·사회 계정(봇 차단 흔함)
+          exclude = [
+            'https?://example\\.com.*',
+            'https?://.*\\.example\\.com.*',
+            'http://localhost.*',
+            'https?://127\\.0\\.0\\.1.*',
+
+            'https?://.*linkedin\\.com.*',
+            'https?://.*facebook\\.com.*',
+            'https?://.*twitter\\.com.*',
+            'https?://(?:www\\.)?x\\.com/.*',
+
+            # 문서 내 예시/사설망 IP (실서비스가 아님)
+            'https?://(?:10|127|169\\.254|192\\.168)(?:\\.\\d{1,3}){2}(?::\\d+)?(?:/.*)?',
+            'https?://172\\.(?:1[6-9]|2[0-9]|3[0-1])(?:\\.\\d{1,3}){2}(?::\\d+)?(?:/.*)?',
+            'https?://198\\.19\\.\\d+\\.\\d+(?::\\d+)?(?:/.*)?',
+            'https?://13\\.209\\.245\\.101(?::\\d+)?(?:/.*)?',
+
+            # k8s 문서 본문의 클러스터 내부 호스트명 예시 (DNS 불가)
+            'https?://kubernetes:\\d+.*',
+
+            # 플레이스홀더·문서용 더미 호스트
+            'https?://your-.*',
+            'https?://.*your-org.*',
+            'https?://.*yourdomain.*',
+            'https?://.*\\.local(?:/.*)?',
+
+            # CI/CD·문서 템플릿 변수가 URL에 섞인 경우
+            'https?://\\$\\{[^}]+\\}.*',
+            'https?://%[^%]+%.*',
+          ]
+
+          exclude_path = [
+            '.git',
+            'node_modules',
+            'vendor',
+            '.github/workflows',
+            'SUMMARY.md',
+          ]
+          EOF
+
+      - name: Run lychee link checker
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --config .lychee.toml
+            --verbose
+            --no-progress
+            --cache
+            --max-cache-age 1d
+            --root-dir '${{ github.workspace }}'
+            --include 'https?://.*'
+            --exclude-path './.github'
+            --exclude-path './node_modules'
+            --exclude-path './SUMMARY.md'
+            'docs/**/*.md'
+            'docs/**/*.mdx'
+
+          fail: false
+
+          format: markdown
+
+          output: ./lychee-report.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Upload link check report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lychee-report
+          path: lychee-report.md
+          retention-days: 30
+
+      - name: Comment PR with results
+        if: github.event_name == 'pull_request' && failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            let report = 'Link check failed. Please review the broken links.';
+
+            try {
+              report = fs.readFileSync('./lychee-report.md', 'utf8');
+            } catch (err) {
+              console.log('Could not read lychee report:', err.message);
+            }
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## Link Check Results\n\n${report}`
+            });
