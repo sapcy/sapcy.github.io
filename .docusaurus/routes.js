@@ -3,6 +3,41 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 
 export default [
   {
+    path: '/__docusaurus/debug',
+    component: ComponentCreator('/__docusaurus/debug', '5ff'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/config',
+    component: ComponentCreator('/__docusaurus/debug/config', '5ba'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/content',
+    component: ComponentCreator('/__docusaurus/debug/content', 'a2b'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/globalData',
+    component: ComponentCreator('/__docusaurus/debug/globalData', 'c3c'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/metadata',
+    component: ComponentCreator('/__docusaurus/debug/metadata', '156'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/registry',
+    component: ComponentCreator('/__docusaurus/debug/registry', '88c'),
+    exact: true
+  },
+  {
+    path: '/__docusaurus/debug/routes',
+    component: ComponentCreator('/__docusaurus/debug/routes', '000'),
+    exact: true
+  },
+  {
     path: '/info',
     component: ComponentCreator('/info', '6e1'),
     exact: true
@@ -129,11 +164,11 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', 'aab'),
+    component: ComponentCreator('/blog', 'cf8'),
     routes: [
       {
         path: '/blog',
-        component: ComponentCreator('/blog', 'd68'),
+        component: ComponentCreator('/blog', '65d'),
         routes: [
           {
             path: '/blog/tags',
@@ -216,6 +251,11 @@ export default [
             exact: true
           },
           {
+            path: '/blog/tags/logging',
+            component: ComponentCreator('/blog/tags/logging', '627'),
+            exact: true
+          },
+          {
             path: '/blog/tags/opensource',
             component: ComponentCreator('/blog/tags/opensource', '1de'),
             exact: true
@@ -237,7 +277,7 @@ export default [
           },
           {
             path: '/blog',
-            component: ComponentCreator('/blog', 'a1b'),
+            component: ComponentCreator('/blog', '12f'),
             routes: [
               {
                 path: '/blog',
@@ -384,108 +424,6 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
-                path: '/blog/cloud/kubernetes/concept-containerd-cri',
-                component: ComponentCreator('/blog/cloud/kubernetes/concept-containerd-cri', 'dfc'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/concept-kube-controller-manager',
-                component: ComponentCreator('/blog/cloud/kubernetes/concept-kube-controller-manager', '08b'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/concept-kube-scheduler',
-                component: ComponentCreator('/blog/cloud/kubernetes/concept-kube-scheduler', 'ed8'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/concept-kubernetes-overview',
-                component: ComponentCreator('/blog/cloud/kubernetes/concept-kubernetes-overview', '4ba'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/concept-pod',
-                component: ComponentCreator('/blog/cloud/kubernetes/concept-pod', 'ee7'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon',
-                component: ComponentCreator('/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon', 'fad'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/k8s-api-tls-external-request',
-                component: ComponentCreator('/blog/cloud/kubernetes/k8s-api-tls-external-request', '021'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/kubectl-top-vs-free-memory',
-                component: ComponentCreator('/blog/cloud/kubernetes/kubectl-top-vs-free-memory', 'f38'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/kyaml-kubernetes-yaml',
-                component: ComponentCreator('/blog/cloud/kubernetes/kyaml-kubernetes-yaml', '7c8'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-calico-cni',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-calico-cni', '559'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-cilium-cni',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-cilium-cni', '16b'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-cilium-components',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-cilium-components', '471'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-cilium-pod-to-pod',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-cilium-pod-to-pod', '12f'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-coredns-multiple-dns',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-coredns-multiple-dns', '394'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-kernel-tuning',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-kernel-tuning', 'bdd'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/network-router-vs-gateway',
-                component: ComponentCreator('/blog/cloud/kubernetes/network-router-vs-gateway', 'd26'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
-                path: '/blog/cloud/kubernetes/sealed-secrets-gitops',
-                component: ComponentCreator('/blog/cloud/kubernetes/sealed-secrets-gitops', 'f9f'),
-                exact: true,
-                sidebar: "tutorialSidebar"
-              },
-              {
                 path: '/blog/container/containerd-shim',
                 component: ComponentCreator('/blog/container/containerd-shim', '13b'),
                 exact: true,
@@ -530,6 +468,114 @@ export default [
               {
                 path: '/blog/cs/ssh-server-hardening',
                 component: ComponentCreator('/blog/cs/ssh-server-hardening', '97c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/concept-containerd-cri',
+                component: ComponentCreator('/blog/kubernetes/concept-containerd-cri', '73a'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/concept-kube-controller-manager',
+                component: ComponentCreator('/blog/kubernetes/concept-kube-controller-manager', 'df9'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/concept-kube-scheduler',
+                component: ComponentCreator('/blog/kubernetes/concept-kube-scheduler', 'cb0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/concept-kubernetes-overview',
+                component: ComponentCreator('/blog/kubernetes/concept-kubernetes-overview', '05b'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/concept-pod',
+                component: ComponentCreator('/blog/kubernetes/concept-pod', 'e5f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/k3s-x86-orbstack-apple-silicon',
+                component: ComponentCreator('/blog/kubernetes/k3s-x86-orbstack-apple-silicon', 'f9c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/k8s-api-tls-external-request',
+                component: ComponentCreator('/blog/kubernetes/k8s-api-tls-external-request', '2a6'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/kubectl-top-vs-free-memory',
+                component: ComponentCreator('/blog/kubernetes/kubectl-top-vs-free-memory', 'f5f'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/kubernetes-logging-architecture',
+                component: ComponentCreator('/blog/kubernetes/kubernetes-logging-architecture', 'f45'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/kyaml-kubernetes-yaml',
+                component: ComponentCreator('/blog/kubernetes/kyaml-kubernetes-yaml', 'a90'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-calico-cni',
+                component: ComponentCreator('/blog/kubernetes/network-calico-cni', '587'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-cilium-cni',
+                component: ComponentCreator('/blog/kubernetes/network-cilium-cni', 'e04'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-cilium-components',
+                component: ComponentCreator('/blog/kubernetes/network-cilium-components', '543'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-cilium-pod-to-pod',
+                component: ComponentCreator('/blog/kubernetes/network-cilium-pod-to-pod', '918'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-coredns-multiple-dns',
+                component: ComponentCreator('/blog/kubernetes/network-coredns-multiple-dns', '938'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-kernel-tuning',
+                component: ComponentCreator('/blog/kubernetes/network-kernel-tuning', '831'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/network-router-vs-gateway',
+                component: ComponentCreator('/blog/kubernetes/network-router-vs-gateway', 'efa'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/sealed-secrets-gitops',
+                component: ComponentCreator('/blog/kubernetes/sealed-secrets-gitops', 'f68'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

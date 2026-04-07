@@ -1,0 +1,45 @@
+{
+  "id": "kubernetes/k3s-x86-orbstack-apple-silicon",
+  "title": "Apple Silicon에서 OrbStack으로 x86 K3s 클러스터 올리기",
+  "description": "OrbStack으로 amd64 Ubuntu VM을 만든 뒤 Docker·K3s를 설치하고, 에이전트 조인·외부 kubeconfig 접근까지 정리한 실습 노트입니다.",
+  "source": "@site/docs/kubernetes/k3s-x86-orbstack-apple-silicon.md",
+  "sourceDirName": "kubernetes",
+  "slug": "/kubernetes/k3s-x86-orbstack-apple-silicon",
+  "permalink": "/blog/kubernetes/k3s-x86-orbstack-apple-silicon",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/k3s-x86-orbstack-apple-silicon.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/blog/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Apple Silicon에서 OrbStack으로 x86 K3s 클러스터 올리기",
+    "description": "OrbStack으로 amd64 Ubuntu VM을 만든 뒤 Docker·K3s를 설치하고, 에이전트 조인·외부 kubeconfig 접근까지 정리한 실습 노트입니다.",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "왜 kubectl top node와 free -m의 결과가 다를까요?",
+    "permalink": "/blog/kubernetes/kubectl-top-vs-free-memory"
+  },
+  "next": {
+    "title": "Sealed Secrets - GitOps로 Secret 안전하게 관리하기",
+    "permalink": "/blog/kubernetes/sealed-secrets-gitops"
+  }
+}

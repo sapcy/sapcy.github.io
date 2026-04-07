@@ -1,0 +1,44 @@
+{
+  "id": "kubernetes/concept-kube-controller-manager",
+  "title": "Kube Controller Manager",
+  "description": "컨트롤 루프, Informer, Reflector·Delta FIFO·Work Queue를 통한 상태 조정",
+  "source": "@site/docs/kubernetes/concept-kube-controller-manager.md",
+  "sourceDirName": "kubernetes",
+  "slug": "/kubernetes/concept-kube-controller-manager",
+  "permalink": "/blog/kubernetes/concept-kube-controller-manager",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/concept-kube-controller-manager.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/blog/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "Kube Controller Manager",
+    "description": "컨트롤 루프, Informer, Reflector·Delta FIFO·Work Queue를 통한 상태 조정",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Kubernetes Scheduler",
+    "permalink": "/blog/kubernetes/concept-kube-scheduler"
+  },
+  "next": {
+    "title": "Containerd와 CRI - 컨테이너 생성 과정",
+    "permalink": "/blog/kubernetes/concept-containerd-cri"
+  }
+}

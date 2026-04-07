@@ -126,91 +126,6 @@
               "sidebar": "tutorialSidebar"
             },
             {
-              "id": "cloud/kubernetes/concept-containerd-cri",
-              "path": "/blog/cloud/kubernetes/concept-containerd-cri",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/concept-kube-controller-manager",
-              "path": "/blog/cloud/kubernetes/concept-kube-controller-manager",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/concept-kube-scheduler",
-              "path": "/blog/cloud/kubernetes/concept-kube-scheduler",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/concept-kubernetes-overview",
-              "path": "/blog/cloud/kubernetes/concept-kubernetes-overview",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/concept-pod",
-              "path": "/blog/cloud/kubernetes/concept-pod",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/k3s-x86-orbstack-apple-silicon",
-              "path": "/blog/cloud/kubernetes/k3s-x86-orbstack-apple-silicon",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/k8s-api-tls-external-request",
-              "path": "/blog/cloud/kubernetes/k8s-api-tls-external-request",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/kubectl-top-vs-free-memory",
-              "path": "/blog/cloud/kubernetes/kubectl-top-vs-free-memory",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/kyaml-kubernetes-yaml",
-              "path": "/blog/cloud/kubernetes/kyaml-kubernetes-yaml",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-calico-cni",
-              "path": "/blog/cloud/kubernetes/network-calico-cni",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-cilium-cni",
-              "path": "/blog/cloud/kubernetes/network-cilium-cni",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-cilium-components",
-              "path": "/blog/cloud/kubernetes/network-cilium-components",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-cilium-pod-to-pod",
-              "path": "/blog/cloud/kubernetes/network-cilium-pod-to-pod",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-coredns-multiple-dns",
-              "path": "/blog/cloud/kubernetes/network-coredns-multiple-dns",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-kernel-tuning",
-              "path": "/blog/cloud/kubernetes/network-kernel-tuning",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/network-router-vs-gateway",
-              "path": "/blog/cloud/kubernetes/network-router-vs-gateway",
-              "sidebar": "tutorialSidebar"
-            },
-            {
-              "id": "cloud/kubernetes/sealed-secrets-gitops",
-              "path": "/blog/cloud/kubernetes/sealed-secrets-gitops",
-              "sidebar": "tutorialSidebar"
-            },
-            {
               "id": "container/containerd-shim",
               "path": "/blog/container/containerd-shim",
               "sidebar": "tutorialSidebar"
@@ -253,6 +168,96 @@
             {
               "id": "intro",
               "path": "/blog/",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/concept-containerd-cri",
+              "path": "/blog/kubernetes/concept-containerd-cri",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/concept-kube-controller-manager",
+              "path": "/blog/kubernetes/concept-kube-controller-manager",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/concept-kube-scheduler",
+              "path": "/blog/kubernetes/concept-kube-scheduler",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/concept-kubernetes-overview",
+              "path": "/blog/kubernetes/concept-kubernetes-overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/concept-pod",
+              "path": "/blog/kubernetes/concept-pod",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/k3s-x86-orbstack-apple-silicon",
+              "path": "/blog/kubernetes/k3s-x86-orbstack-apple-silicon",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/k8s-api-tls-external-request",
+              "path": "/blog/kubernetes/k8s-api-tls-external-request",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/kubectl-top-vs-free-memory",
+              "path": "/blog/kubernetes/kubectl-top-vs-free-memory",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/kubernetes-logging-architecture",
+              "path": "/blog/kubernetes/kubernetes-logging-architecture",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/kyaml-kubernetes-yaml",
+              "path": "/blog/kubernetes/kyaml-kubernetes-yaml",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-calico-cni",
+              "path": "/blog/kubernetes/network-calico-cni",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-cilium-cni",
+              "path": "/blog/kubernetes/network-cilium-cni",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-cilium-components",
+              "path": "/blog/kubernetes/network-cilium-components",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-cilium-pod-to-pod",
+              "path": "/blog/kubernetes/network-cilium-pod-to-pod",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-coredns-multiple-dns",
+              "path": "/blog/kubernetes/network-coredns-multiple-dns",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-kernel-tuning",
+              "path": "/blog/kubernetes/network-kernel-tuning",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/network-router-vs-gateway",
+              "path": "/blog/kubernetes/network-router-vs-gateway",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/sealed-secrets-gitops",
+              "path": "/blog/kubernetes/sealed-secrets-gitops",
               "sidebar": "tutorialSidebar"
             },
             {

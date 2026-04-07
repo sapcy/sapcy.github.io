@@ -36,7 +36,7 @@
   "sidebar": "tutorialSidebar",
   "previous": {
     "title": "Router vs Gateway",
-    "permalink": "/blog/cloud/kubernetes/network-router-vs-gateway"
+    "permalink": "/blog/kubernetes/network-router-vs-gateway"
   },
   "next": {
     "title": "gRPC 통신 방식 (Unary·스트리밍)",

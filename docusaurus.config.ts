@@ -78,7 +78,6 @@ const config: Config = {
           editUrl:
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
-        /** blog 폴더가 비어 있고 문서를 /blog 아래에 두기 위해 비활성화 */
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -93,10 +92,30 @@ const config: Config = {
       {
         /** 예전 북마크 /docs/* → /blog/* */
         createRedirects(existingPath: string) {
-          if (existingPath === '/blog' || existingPath.startsWith('/blog/')) {
-            return [existingPath.replace(/^\/blog/, '/docs')];
+          const extra: string[] = [];
+          if (existingPath === '/blog/kubernetes/kubernetes-logging-architecture') {
+            extra.push('/posts/kubernetes-logging-architecture');
           }
-          return undefined;
+          if (existingPath.startsWith('/blog/kubernetes/')) {
+            extra.push(
+              existingPath.replace(/^\/blog\/kubernetes\//, '/blog/cloud/kubernetes/'),
+            );
+          }
+          if (existingPath === '/blog') {
+            extra.push('/posts', '/posts/archive', '/posts/authors');
+          }
+          if (existingPath === '/blog/tags') {
+            extra.push('/posts/tags');
+          }
+          for (const tag of ['kubernetes', 'logging', 'container']) {
+            if (existingPath === `/blog/tags/${tag}`) {
+              extra.push(`/posts/tags/${tag}`);
+            }
+          }
+          if (existingPath === '/blog' || existingPath.startsWith('/blog/')) {
+            extra.push(existingPath.replace(/^\/blog/, '/docs'));
+          }
+          return extra.length > 0 ? extra : undefined;
         },
       },
     ],
@@ -187,7 +206,7 @@ const config: Config = {
             title: '블로그',
             items: [
               {
-                label: '글 목록',
+                label: '문서 허브',
                 to: '/blog',
               },
               {

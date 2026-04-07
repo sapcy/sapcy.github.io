@@ -1,7 +1,7 @@
 {
   "id": "container/docker-cri-oci-runc-stack",
   "title": "CRI 한번에 보기",
-  "description": "스택 계층, dockershim 제거, low-level 런타임 종류 - Obsidian 스크린샷은 생략",
+  "description": "스택 계층, dockershim 제거, low-level 런타임 종류",
   "source": "@site/docs/container/docker-cri-oci-runc-stack.md",
   "sourceDirName": "container",
   "slug": "/container/docker-cri-oci-runc-stack",
@@ -26,7 +26,7 @@
   "frontMatter": {
     "format": "md",
     "title": "CRI 한번에 보기",
-    "description": "스택 계층, dockershim 제거, low-level 런타임 종류 - Obsidian 스크린샷은 생략",
+    "description": "스택 계층, dockershim 제거, low-level 런타임 종류",
     "tags": [
       "container",
       "docker"

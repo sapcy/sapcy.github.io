@@ -1,0 +1,44 @@
+{
+  "id": "kubernetes/network-kernel-tuning",
+  "title": "커널 옵션 최적화 (Kubernetes 노드)",
+  "description": "TIME_WAIT·수신 버퍼 튜닝, 컨테이너와 커널, 노드 튜닝 개요",
+  "source": "@site/docs/kubernetes/network-kernel-tuning.md",
+  "sourceDirName": "kubernetes",
+  "slug": "/kubernetes/network-kernel-tuning",
+  "permalink": "/blog/kubernetes/network-kernel-tuning",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/network-kernel-tuning.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "클라우드",
+      "permalink": "/blog/tags/cloud",
+      "description": "클라우드·인프라 일반"
+    },
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "title": "커널 옵션 최적화 (Kubernetes 노드)",
+    "description": "TIME_WAIT·수신 버퍼 튜닝, 컨테이너와 커널, 노드 튜닝 개요",
+    "tags": [
+      "cloud",
+      "kubernetes"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "CoreDNS - Multiple DNS server forwarding",
+    "permalink": "/blog/kubernetes/network-coredns-multiple-dns"
+  },
+  "next": {
+    "title": "Router vs Gateway",
+    "permalink": "/blog/kubernetes/network-router-vs-gateway"
+  }
+}

@@ -35,8 +35,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Sealed Secrets - GitOps로 Secret 안전하게 관리하기",
-    "permalink": "/blog/cloud/kubernetes/sealed-secrets-gitops"
+    "title": "Kubernetes Logging Architecture",
+    "permalink": "/blog/cloud/kubernetes/kubernetes-logging-architecture"
   },
   "next": {
     "title": "Cilium CNI",

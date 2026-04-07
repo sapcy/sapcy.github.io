@@ -40,6 +40,6 @@
   },
   "next": {
     "title": "쿠버네티스 작동 방식 정리",
-    "permalink": "/blog/cloud/kubernetes/concept-kubernetes-overview"
+    "permalink": "/blog/kubernetes/concept-kubernetes-overview"
   }
 }

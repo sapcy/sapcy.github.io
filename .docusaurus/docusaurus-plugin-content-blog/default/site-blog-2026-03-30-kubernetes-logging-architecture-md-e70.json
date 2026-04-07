@@ -1,0 +1,54 @@
+{
+  "permalink": "/posts/kubernetes-logging-architecture",
+  "source": "@site/blog/2026-03-30-kubernetes-logging-architecture.md",
+  "title": "Kubernetes Logging Architecture",
+  "description": "컨테이너 로그가 출력·저장되는 원리를 커널, 런타임, kubelet, kubectl 관점에서 정리합니다.",
+  "date": "2026-03-30T00:00:00.000Z",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/posts/tags/kubernetes"
+    },
+    {
+      "inline": false,
+      "label": "Logging",
+      "permalink": "/posts/tags/logging"
+    },
+    {
+      "inline": false,
+      "label": "Container",
+      "permalink": "/posts/tags/container"
+    }
+  ],
+  "readingTime": 4.3,
+  "hasTruncateMarker": true,
+  "authors": [
+    {
+      "name": "Sapcy",
+      "title": "Devlog",
+      "url": "https://github.com/sapcy",
+      "socials": {
+        "github": "https://github.com/sapcy"
+      },
+      "imageURL": "https://github.com/sapcy.png",
+      "key": "sapcy",
+      "page": null
+    }
+  ],
+  "frontMatter": {
+    "slug": "kubernetes-logging-architecture",
+    "title": "Kubernetes Logging Architecture",
+    "description": "컨테이너 로그가 출력·저장되는 원리를 커널, 런타임, kubelet, kubectl 관점에서 정리합니다.",
+    "date": "2026-03-30T00:00:00.000Z",
+    "tags": [
+      "kubernetes",
+      "logging",
+      "container"
+    ],
+    "authors": [
+      "sapcy"
+    ]
+  },
+  "unlisted": false
+}

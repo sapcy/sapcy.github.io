@@ -17,6 +17,10 @@ kubernetes:
   label: Kubernetes
   description: 쿠버네티스
 
+logging:
+  label: Logging
+  description: 로그 수집·파이프라인
+
 yaml:
   label: YAML
   description: YAML / KYAML

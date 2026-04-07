@@ -193,7 +193,7 @@ export default {
           "title": "블로그",
           "items": [
             {
-              "label": "글 목록",
+              "label": "문서 허브",
               "to": "/blog"
             },
             {

@@ -1,4 +1,11 @@
 {
   "title": "Recent posts",
-  "items": []
+  "items": [
+    {
+      "title": "Kubernetes Logging Architecture",
+      "permalink": "/posts/kubernetes-logging-architecture",
+      "unlisted": false,
+      "date": "2026-03-30T00:00:00.000Z"
+    }
+  ]
 }

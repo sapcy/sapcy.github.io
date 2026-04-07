@@ -1,26 +1,25 @@
 ---
 format: md
 title: "CRI 한번에 보기"
-description: "스택 계층, dockershim 제거, low-level 런타임 종류 - Obsidian 스크린샷은 생략"
+description: "스택 계층, dockershim 제거, low-level 런타임 종류"
 tags:
   - container
   - docker
 ---
 
-:::info
-
-Obsidian 원본에 있던 다이어그램 이미지는 웹 문서에서는 생략했습니다. 필요 시 로컬에서 같은 노트를 열어 참고하세요.
-
-:::
+# Docker - containerd, CRI-O 및 runc 차이
 
 - **Open Container Initiative (OCI)**
   컨테이너 명세(이미지 포맷, 런타임, 배포)
 - **Container Runtime Interface (CRI)** in Kubernetes
   쿠버네티스에서 다른 컨테이너 런타임들을 사용할 수 있는 API
 
+![docker_containerd_oci_crio_runc](./assets/docker_containerd_oci_crio_runc.png)
+
 ## Docker stack 작업
 Docker를 이용하여 명령하면 Docker daemon을 통해 containerd를 호출하여 runc로 컨테이너를 실행한다.
 
+![docker_stack](./assets/docker_stack.png)
 
 ### Docker stack의 하위 레벨 도구 (low -> high 순)
 - **runc**: runc는 *low-level* 컨테이너 런타임. 이것은 Linux의 네이티브 기능을 이용하며 OCI를 준수하여 컨테이너를 실행. 컨테이너 생성에 필요한 Go 라이브러리인 `libcontainer`를 포함한다.
@@ -59,6 +58,7 @@ Kubernetes 프로젝트에서 만든 API.
 
 **CRI는 Kubernetes에서 컨테이너를 생성하고 관리하는 다양한 런타임들에 대한 제어를 위해 사용되는 인터페이스이다.**
 
+![kubernetes_cri](./assets/kubernetes_cri.png)
 
 ### low-level 런타임
 OCI 사양은 다른 도구들의 기능을 다른 방식으로 구현하도록 허용한다.
