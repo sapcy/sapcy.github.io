@@ -71,6 +71,32 @@
   padding: 0;
 }
 
+/* /info: 인쇄·PDF 저장 시 Docusaurus 크롬(네비·푸터 등) 제외 — html 클래스는 info.tsx에서 토글 */
+@media print {
+  html.resume-info-print-scope [role='region'][aria-label='본문으로 건너뛰기'],
+  html.resume-info-print-scope nav.theme-layout-navbar,
+  html.resume-info-print-scope nav.navbar,
+  html.resume-info-print-scope footer.theme-layout-footer,
+  html.resume-info-print-scope .navbar-sidebar__backdrop,
+  html.resume-info-print-scope .theme-back-to-top-button {
+    display: none !important;
+  }
+
+  html.resume-info-print-scope #__docusaurus {
+    background: #fff !important;
+  }
+
+  html.resume-info-print-scope .theme-layout-main.resume-page-wrapper {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  html.resume-info-print-scope #resume-document-root {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+
 /* /project - sapcy.github.io/projects 와 동일 도구 UI */
 .theme-layout-main.project-page-wrapper {
   max-width: 100%;

@@ -62,6 +62,77 @@
   width: 100%;
 }
 
+.pdfToolbar {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 0.75rem;
+}
+
+.pdfButton {
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.45rem 0.9rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--rp-gray-300);
+  background: var(--rp-card-bg);
+  color: var(--rp-gray-700);
+  cursor: pointer;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.pdfButton:hover {
+  border-color: var(--rp-blue-500);
+  color: var(--rp-blue-600);
+  background: var(--rp-gray-50);
+}
+
+:global(html[data-theme='dark']) .pdfButton {
+  border-color: var(--rp-gray-300);
+  background: var(--rp-card-bg);
+  color: var(--rp-gray-600);
+}
+
+:global(html[data-theme='dark']) .pdfButton:hover {
+  border-color: var(--rp-blue-500);
+  color: var(--rp-blue-500);
+}
+
+@media print {
+  .pdfToolbar {
+    display: none !important;
+  }
+
+  /* 다크 테마여도 PDF에 맞게 라이트 팔레트로 고정 */
+  .resumePage {
+    --rp-gray-50: #f9fafb;
+    --rp-gray-100: #f3f4f6;
+    --rp-gray-200: #e5e7eb;
+    --rp-gray-300: #d1d5db;
+    --rp-gray-400: #9ca3af;
+    --rp-gray-500: #6b7280;
+    --rp-gray-600: #4b5563;
+    --rp-gray-700: #374151;
+    --rp-gray-900: #111827;
+    --rp-blue-500: #3b82f6;
+    --rp-blue-600: #2563eb;
+    --rp-card-bg: #ffffff;
+    --rp-profile-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    color-scheme: light;
+    background: #fff !important;
+    color: var(--rp-gray-900) !important;
+    min-height: 0 !important;
+    padding: 0.5rem 0.25rem 1rem !important;
+  }
+}
+
 .resumeContainer {
   max-width: 56rem; /* max-w-4xl */
   margin-left: auto;

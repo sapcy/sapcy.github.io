@@ -1,3 +1,4 @@
+import {useEffect} from 'react';
 import Head from '@docusaurus/Head';
 import Layout from '@theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
@@ -56,12 +57,11 @@ const IconBlog = () => (
 );
 
 const techStack: {title: string; items: string[]}[] = [
-  {title: 'Programming Languages', items: ['Java', 'Shell Scripting']},
+  {title: 'Programming Languages', items: ['Java', 'Go']},
   {
     title: 'Frameworks & Libraries',
     items: [
       'Springboot',
-      'Spring Cloud Gateway',
       'Vue.js',
       'React.js',
       'Next.js',
@@ -73,22 +73,19 @@ const techStack: {title: string; items: string[]}[] = [
       'Kubernetes',
       'Docker',
       'MariaDB',
-      'Redis',
-      'Nginx',
       'Prometheus',
       'Grafana',
-      'Vault',
       'Harbor',
       'OpenStack',
     ],
   },
   {
     title: 'CI/CD Automation',
-    items: ['Jenkins', 'ArgoCD', 'GitLab CI', 'Ansible'],
+    items: ['Jenkins', 'ArgoCD', 'Ansible'],
   },
   {
     title: 'Tools & IDEs',
-    items: ['IDEA', 'VS Code', 'Jira', 'Slack', 'GitHub', 'GitLab', 'Bitbucket'],
+    items: ['Jira', 'Slack', 'GitHub', 'GitLab', 'Bitbucket', 'Cursor'],
   },
 ];
 
@@ -112,11 +109,21 @@ type Project = {
 
 const projects: Project[] = [
   {
+    title: '설치 자동화 도구 개발',
+    period: '2026-03 ~ 2026-04',
+    company: '오케스트로(주)',
+    bullets: [
+      'Golang Bubbletea로 구현하는 TUI 기반 OpenStack, K8s 설치 자동화 도구 개발 프로젝트를 주도',
+      '기반 지식이 부족하더라도 표준화 및 가이드 라인을 제시하여 쉽고 안정적인 설치 경험을 제공'
+    ],
+    techStack: 'Go, K8s, OpenStack, Ceph',
+  },
+  {
     title: '건강보험공단 클라우드 표준 플랫폼 구축',
     period: '2025-08 ~ 2025-12',
     company: '오케스트로(주)',
     bullets: [
-      '건강보험공단의 클라우드 표준 플랫폼을 구축하는 프로젝트이며, DevOps 엔지니어로 참여',
+      '건강보험공단의 클라우드 표준 플랫폼을 구축하는 프로젝트이며, 파이프라인 기술지원 엔지니어로 참여',
       '각각 다른 업무 시스템의 개발 소스를 SVN에서 Git으로 전환하여 플랫폼을 이용한 CI/CD 파이프라인 설계',
       'WEB, WAS, DB 상용/공개 솔루션별 Helm chart 템플릿 작성',
     ],
@@ -204,6 +211,12 @@ export default function InfoPage() {
   const profileSrc = useBaseUrl('/img/profile_main.jpeg');
   const lastUpdated = new Date().toISOString().slice(0, 10);
 
+  useEffect(() => {
+    const el = document.documentElement;
+    el.classList.add('resume-info-print-scope');
+    return () => el.classList.remove('resume-info-print-scope');
+  }, []);
+
   return (
     <Layout
       title="Devlog"
@@ -225,8 +238,16 @@ export default function InfoPage() {
         />
       </Head>
 
-      <div className={styles.resumePage}>
+      <div className={styles.resumePage} id="resume-document-root">
         <div className={styles.resumeInner}>
+          <div className={styles.pdfToolbar}>
+            <button
+              type="button"
+              className={styles.pdfButton}
+              onClick={() => window.print()}>
+              PDF 저장
+            </button>
+          </div>
           <div className={styles.resumeContainer}>
             {/* Hero */}
             <section className={styles.hero}>
