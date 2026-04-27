@@ -28,8 +28,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Docker 컨테이너 생성 흐름",
-    "permalink": "/blog/container/docker-container-creation-flow"
+    "title": "게임 클라이언트·서버 CI/CD와 빌드 배포 설계",
+    "permalink": "/blog/cicd/game-build-deploy-cicd-overview"
   },
   "next": {
     "title": "Grafana Loki 개요 - 읽기·쓰기 경로",

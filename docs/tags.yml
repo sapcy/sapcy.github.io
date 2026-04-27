@@ -73,6 +73,14 @@ opensource:
   label: 오픈소스
   description: 관측성·CI 등 오픈소스 도구 정리
 
+cicd:
+  label: CI | CD
+  description: Jenkins·파이프라인·게임 빌드·배포
+
+jenkins:
+  label: Jenkins
+  description: Jenkins 에이전트·Job·아키텍처
+
 cloud-native:
   label: 클라우드 네이티브
   description: Envoy·서비스 메시·동적 설정

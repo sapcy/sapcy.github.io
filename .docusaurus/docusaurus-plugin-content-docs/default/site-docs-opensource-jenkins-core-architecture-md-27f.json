@@ -12,6 +12,12 @@
   "tags": [
     {
       "inline": false,
+      "label": "CI | CD",
+      "permalink": "/blog/tags/cicd",
+      "description": "Jenkins·파이프라인·게임 빌드·배포"
+    },
+    {
+      "inline": false,
       "label": "오픈소스",
       "permalink": "/blog/tags/opensource",
       "description": "관측성·CI 등 오픈소스 도구 정리"
@@ -23,16 +29,17 @@
     "title": "Jenkins - 코어·확장·인프라 구조 개요",
     "description": "Core·Plugin·Agent·Storage·API - 다이어그램 요약",
     "tags": [
+      "cicd",
       "opensource"
     ]
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "OpenTelemetry·LGTM 스택 실습 아키텍처 개요",
-    "permalink": "/blog/opensource/opentelemetry-lgtm-architecture"
+    "title": "Docker 컨테이너 생성 흐름",
+    "permalink": "/blog/container/docker-container-creation-flow"
   },
   "next": {
-    "title": "14502. 연구소",
-    "permalink": "/blog/backend/coding/boj-14502-laboratory"
+    "title": "Jenkins Inbound Agent WebSocket 구성",
+    "permalink": "/blog/cicd/jenkins-inbound-agent-websocket"
   }
 }

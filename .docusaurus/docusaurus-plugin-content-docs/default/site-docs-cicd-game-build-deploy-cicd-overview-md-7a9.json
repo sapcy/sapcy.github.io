@@ -1,0 +1,45 @@
+{
+  "id": "cicd/game-build-deploy-cicd-overview",
+  "title": "게임 클라이언트·서버 CI/CD와 빌드 배포 설계",
+  "description": "UE3·C++·C# 파이프라인, 저장소·브랜치 전략, Jenkins·스크립트 예시와 운영 포인트",
+  "source": "@site/docs/cicd/game-build-deploy-cicd-overview.md",
+  "sourceDirName": "cicd",
+  "slug": "/cicd/game-build-deploy-cicd-overview",
+  "permalink": "/blog/cicd/game-build-deploy-cicd-overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cicd/game-build-deploy-cicd-overview.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "CI | CD",
+      "permalink": "/blog/tags/cicd",
+      "description": "Jenkins·파이프라인·게임 빌드·배포"
+    },
+    {
+      "inline": false,
+      "label": "Jenkins",
+      "permalink": "/blog/tags/jenkins",
+      "description": "Jenkins 에이전트·Job·아키텍처"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "게임 클라이언트·서버 CI/CD와 빌드 배포 설계",
+    "description": "UE3·C++·C# 파이프라인, 저장소·브랜치 전략, Jenkins·스크립트 예시와 운영 포인트",
+    "tags": [
+      "cicd",
+      "jenkins"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "게임 프로젝트 Jenkins Job 분리와 배포 설계",
+    "permalink": "/blog/cicd/game-jenkins-job-separation"
+  },
+  "next": {
+    "title": "오픈소스 문서화 체크리스트",
+    "permalink": "/blog/opensource/oss-documentation-template"
+  }
+}

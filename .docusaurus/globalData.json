@@ -91,6 +91,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "cicd/game-build-deploy-cicd-overview",
+              "path": "/blog/cicd/game-build-deploy-cicd-overview",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cicd/game-jenkins-job-separation",
+              "path": "/blog/cicd/game-jenkins-job-separation",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "cicd/jenkins-inbound-agent-websocket",
+              "path": "/blog/cicd/jenkins-inbound-agent-websocket",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "cloud-native/envoy/architecture-overview",
               "path": "/blog/cloud-native/envoy/architecture-overview",
               "sidebar": "tutorialSidebar"

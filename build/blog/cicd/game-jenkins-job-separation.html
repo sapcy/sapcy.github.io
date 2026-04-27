@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="ko" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-cicd/game-jenkins-job-separation" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.9.2">
+<title data-rh="true">게임 프로젝트 Jenkins Job 분리와 배포 설계 | Sapcy</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://sapcy.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://sapcy.github.io/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://sapcy.github.io/blog/cicd/game-jenkins-job-separation"><meta data-rh="true" property="og:locale" content="ko"><meta data-rh="true" name="docusaurus_locale" content="ko"><meta data-rh="true" name="docsearch:language" content="ko"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="게임 프로젝트 Jenkins Job 분리와 배포 설계 | Sapcy"><meta data-rh="true" name="description" content="역할별 Job 체인, 폴더 구조, Dev·QA·Live 흐름, 스크립트·롤백까지 정리"><meta data-rh="true" property="og:description" content="역할별 Job 체인, 폴더 구조, Dev·QA·Live 흐름, 스크립트·롤백까지 정리"><link data-rh="true" rel="icon" href="/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://sapcy.github.io/blog/cicd/game-jenkins-job-separation"><link data-rh="true" rel="alternate" href="https://sapcy.github.io/blog/cicd/game-jenkins-job-separation" hreflang="ko"><link data-rh="true" rel="alternate" href="https://sapcy.github.io/blog/cicd/game-jenkins-job-separation" hreflang="x-default"><script data-rh="true" type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"게임 프로젝트 Jenkins Job 분리와 배포 설계","item":"https://sapcy.github.io/blog/cicd/game-jenkins-job-separation"}]}</script><link rel="stylesheet" href="/assets/css/styles.aed7ee4c.css">
+<script src="/assets/js/runtime~main.536d490b.js" defer="defer"></script>
+<script src="/assets/js/main.3c1fed3d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<svg style="display: none;"><defs>
+<symbol id="theme-svg-external-link" viewBox="0 0 24 24"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"/></symbol>
+</defs></svg>
+<script>!function(){var t=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return window.localStorage.getItem("theme")}catch(t){}}();document.documentElement.setAttribute("data-theme",t||"light"),document.documentElement.setAttribute("data-theme-choice",t||"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><link rel="preload" as="image" href="/img/logo.svg"><link rel="preload" as="image" href="https://hits.sh/sapcy.github.io.svg?view=today-total&amp;color=116dcc&amp;logo=blogger"><div role="region" aria-label="본문으로 건너뛰기"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">본문으로 건너뛰기</a></div><nav aria-label="메인" class="theme-layout-navbar navbar navbar--fixed-top"><div class="navbar__inner"><div class="theme-layout-navbar-left navbar__items"><button aria-label="사이드바 펼치거나 접기" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/"><div class="navbar__logo"><img src="/img/logo.svg" alt="Playbook 로고" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/img/logo.svg" alt="Playbook 로고" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Devlog</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/blog">블로그</a><a class="navbar__item navbar__link" href="/project">프로젝트</a><a class="navbar__item navbar__link" href="/blog/tags">태그</a></div><div class="theme-layout-navbar-right navbar__items navbar__items--right"><a class="navbar__item navbar__link header-info-link" aria-label="정보" href="/info">​</a><a href="https://github.com/sapcy/sapcy.github.io" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link header-github-link" aria-label="GitHub repository"></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="system mode" aria-label="어두운 모드와 밝은 모드 전환하기 (현재 system mode)"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" class="toggleIcon_g3eP systemToggleIcon_QzmC"><path fill="currentColor" d="m12 21c4.971 0 9-4.029 9-9s-4.029-9-9-9-9 4.029-9 9 4.029 9 9 9zm4.95-13.95c1.313 1.313 2.05 3.093 2.05 4.95s-0.738 3.637-2.05 4.95c-1.313 1.313-3.093 2.05-4.95 2.05v-14c1.857 0 3.637 0.737 4.95 2.05z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"><div class="navbar__search searchBarContainer_NW3z" dir="ltr"><input placeholder="Search" aria-label="Search" class="navbar__search-input searchInput_YFbd" value=""><div class="loadingRing_RJI3 searchBarLoadingRing_YnHq"><div></div><div></div><div></div><div></div></div></div></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="theme-layout-main main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="맨 위로 스크롤하기" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_mhZE"><nav aria-label="문서 사이드바" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-1 menu__list-item"><a class="menu__link" href="/blog"><span title="시작하기" class="linkLabel_WmDU">시작하기</span></a></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/blog/cloud/aws/eks-cost-overview"><span title="클라우드" class="categoryLinkLabel_W154">클라우드</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/blog/kubernetes/concept-kubernetes-overview"><span title="쿠버네티스" class="categoryLinkLabel_W154">쿠버네티스</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/blog/cs/http-cache-headers"><span title="CS" class="categoryLinkLabel_W154">CS</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/blog/container/oci-spec"><span title="컨테이너" class="categoryLinkLabel_W154">컨테이너</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" role="button" aria-expanded="true" href="/blog/opensource/jenkins-core-architecture"><span title="CI | CD" class="categoryLinkLabel_W154">CI | CD</span></a></div><ul class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/blog/opensource/jenkins-core-architecture"><span title="Jenkins - 코어·확장·인프라 구조 개요" class="linkLabel_WmDU">Jenkins - 코어·확장·인프라 구조 개요</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/blog/cicd/jenkins-inbound-agent-websocket"><span title="Jenkins Inbound Agent WebSocket 구성" class="linkLabel_WmDU">Jenkins Inbound Agent WebSocket 구성</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/blog/cicd/game-jenkins-job-separation"><span title="게임 프로젝트 Jenkins Job 분리와 배포 설계" class="linkLabel_WmDU">게임 프로젝트 Jenkins Job 분리와 배포 설계</span></a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/blog/cicd/game-build-deploy-cicd-overview"><span title="게임 클라이언트·서버 CI/CD와 빌드 배포 설계" class="linkLabel_WmDU">게임 클라이언트·서버 CI/CD와 빌드 배포 설계</span></a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/blog/opensource/oss-documentation-template"><span title="오픈소스" class="categoryLinkLabel_W154">오픈소스</span></a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="categoryLink_byQd menu__link menu__link--sublist menu__link--sublist-caret" role="button" aria-expanded="false" href="/blog/backend/coding/boj-14502-laboratory"><span title="백엔드" class="categoryLinkLabel_W154">백엔드</span></a></div></li></ul></nav><div class="hitsWrap_Jrwm"><a href="https://hits.sh/sapcy.github.io/" target="_blank" rel="noopener noreferrer"><img alt="Hits" src="https://hits.sh/sapcy.github.io.svg?view=today-total&amp;color=116dcc&amp;logo=blogger"></a></div><button type="button" title="사이드바 숨기기" aria-label="사이드바 숨기기" class="button button--secondary button--outline collapseSidebarButton_PEFL"><svg width="20" height="20" aria-hidden="true" class="collapseSidebarButtonIcon_kv0_"><g fill="#7a7a7a"><path d="M9.992 10.023c0 .2-.062.399-.172.547l-4.996 7.492a.982.982 0 01-.828.454H1c-.55 0-1-.453-1-1 0-.2.059-.403.168-.551l4.629-6.942L.168 3.078A.939.939 0 010 2.528c0-.548.45-.997 1-.997h2.996c.352 0 .649.18.828.45L9.82 9.472c.11.148.172.347.172.55zm0 0"></path><path d="M19.98 10.023c0 .2-.058.399-.168.547l-4.996 7.492a.987.987 0 01-.828.454h-3c-.547 0-.996-.453-.996-1 0-.2.059-.403.168-.551l4.625-6.942-4.625-6.945a.939.939 0 01-.168-.55 1 1 0 01.996-.997h3c.348 0 .649.18.828.45l4.996 7.492c.11.148.168.347.168.55zm0 0"></path></g></svg></button></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="탐색 경로"><ul class="breadcrumbs"><li class="breadcrumbs__item"><a aria-label="홈" class="breadcrumbs__link" href="/"><svg viewBox="0 0 24 24" class="breadcrumbHomeIcon_YNFT"><path d="M10 19v-5h4v5c0 .55.45 1 1 1h3c.55 0 1-.45 1-1v-7h1.7c.46 0 .68-.57.33-.87L12.67 3.6c-.38-.34-.96-.34-1.34 0l-8.36 7.53c-.34.3-.13.87.33.87H5v7c0 .55.45 1 1 1h3c.55 0 1-.45 1-1z" fill="currentColor"></path></svg></a></li><li class="breadcrumbs__item"><span class="breadcrumbs__link">CI | CD</span></li><li class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link">게임 프로젝트 Jenkins Job 분리와 배포 설계</span></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">이 페이지에서</button></div><div class="theme-doc-markdown markdown"><header><h1>1. Jenkins Job 분리 방식</h1></header>
+<p>실무에서는 하나의 거대한 파이프라인으로 전부 처리하기보다, <strong>역할별 Job을 나누고 upstream/downstream 관계로 연결하는 방식</strong>이 운영하기 편하다.<br>
+이유는 다음과 같다.</p>
+<ul>
+<li class="">클라이언트 빌드 시간과 서버 빌드 시간이 크게 다름</li>
+<li class="">UE3 전용 Windows 노드가 따로 필요함</li>
+<li class="">서버만 재배포하거나 클라이언트만 재배포하는 경우가 많음</li>
+<li class="">운영 배포 승인 단계를 중간에 넣기 쉬움</li>
+<li class="">실패 지점을 빠르게 구분할 수 있음</li>
+</ul>
+<p>권장 Job 구조는 다음과 같다.</p>
+<!-- -->
+<hr>
+<h1>2. 권장 Job 목록</h1>
+<p>최소한 아래 정도로 쪼개는 것이 좋다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-1-공통-job">2-1. 공통 Job<a href="#2-1-공통-job" class="hash-link" aria-label="2-1. 공통 Job에 대한 직접 링크" title="2-1. 공통 Job에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class=""><code>validate-source</code></li>
+<li class=""><code>publish-artifact</code></li>
+<li class=""><code>notify-result</code></li>
+<li class=""><code>rollback-server</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-2-클라이언트-job">2-2. 클라이언트 Job<a href="#2-2-클라이언트-job" class="hash-link" aria-label="2-2. 클라이언트 Job에 대한 직접 링크" title="2-2. 클라이언트 Job에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class=""><code>build-ue3-client</code></li>
+<li class=""><code>package-client-patch</code></li>
+<li class=""><code>deploy-client-dev</code></li>
+<li class=""><code>deploy-client-qa</code></li>
+<li class=""><code>deploy-client-live</code></li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="2-3-서버-job">2-3. 서버 Job<a href="#2-3-서버-job" class="hash-link" aria-label="2-3. 서버 Job에 대한 직접 링크" title="2-3. 서버 Job에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class=""><code>build-cpp-server</code></li>
+<li class=""><code>build-csharp-server</code></li>
+<li class=""><code>deploy-server-dev</code></li>
+<li class=""><code>deploy-server-qa</code></li>
+<li class=""><code>deploy-server-live</code></li>
+</ul>
+<p>이렇게 나누면 예를 들어 서버만 긴급 패치가 필요할 때 클라이언트 파이프라인과 독립적으로 처리 가능하다.</p>
+<hr>
+<h1>3. 추천 Jenkins 폴더 구조</h1>
+<p>Jenkins 내부에서도 폴더를 분리하는 것이 좋다.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">Jenkins</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ GameProject</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ Common</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ validate-source</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ publish-artifact</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ notify-result</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┗ rollback-server</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ Client</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ build-ue3-client</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ package-client-patch</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ deploy-client-dev</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ deploy-client-qa</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┗ deploy-client-live</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ Server-CPP</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ build-cpp-server</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ deploy-server-dev</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┣ deploy-server-qa</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┃ ┗ deploy-server-live</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┗ Server-CS</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃    ┣ build-csharp-server</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃    ┣ deploy-server-dev</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃    ┣ deploy-server-qa</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃    ┗ deploy-server-live</span><br></span></code></pre></div></div>
+<p>이렇게 해두면 권한 분리도 쉽다.</p>
+<p>예:</p>
+<ul>
+<li class="">빌드 담당자 → Build Job만 실행 가능</li>
+<li class="">운영 담당자 → Live Deploy 권한만 보유</li>
+<li class="">QA 담당자 → QA Deploy 권한 보유</li>
+</ul>
+<hr>
+<h1>4. 환경별 실제 배포 흐름</h1>
+<p>게임 프로젝트에서는 환경별로 동작이 달라야 한다.</p>
+<hr>
+<h1>5. Dev 환경 배포 흐름</h1>
+<p>Dev는 가장 자동화 수준이 높아야 한다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="목적">목적<a href="#목적" class="hash-link" aria-label="목적에 대한 직접 링크" title="목적에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">개발자가 머지한 내용을 빠르게 검증</li>
+<li class="">서버 기동 여부와 기본 기능 확인</li>
+<li class="">클라이언트 내부 패치 테스트</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="흐름">흐름<a href="#흐름" class="hash-link" aria-label="흐름에 대한 직접 링크" title="흐름에 대한 직접 링크" translate="no">​</a></h2>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="특징">특징<a href="#특징" class="hash-link" aria-label="특징에 대한 직접 링크" title="특징에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">자동 트리거</li>
+<li class="">자동 배포</li>
+<li class="">실패 시 즉시 알림</li>
+<li class="">승인 단계 없음</li>
+</ul>
+<p>Dev는 속도가 중요하므로, 빌드 이후 가능한 빠르게 반영되도록 구성하는 편이 좋다.</p>
+<hr>
+<h1>6. QA 환경 배포 흐름</h1>
+<p>QA는 릴리스 검증 구간이다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="목적-1">목적<a href="#목적-1" class="hash-link" aria-label="목적에 대한 직접 링크" title="목적에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">테스트 대상 빌드 고정</li>
+<li class="">기능 테스트, 회귀 테스트 수행</li>
+<li class="">운영 배포 전 최종 검증</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="흐름-1">흐름<a href="#흐름-1" class="hash-link" aria-label="흐름에 대한 직접 링크" title="흐름에 대한 직접 링크" translate="no">​</a></h2>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="특징-1">특징<a href="#특징-1" class="hash-link" aria-label="특징에 대한 직접 링크" title="특징에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">Dev에서 성공한 동일 아티팩트를 재사용하는 것이 좋다</li>
+<li class="">QA용으로 다시 빌드하지 않는 편이 좋다</li>
+<li class="">QA 배포 전 승인 가능</li>
+<li class="">Smoke Test 후 본 테스트 진행</li>
+</ul>
+<p>즉 QA는 “재빌드”보다 “검증 대상 산출물 고정”이 더 중요하다.</p>
+<hr>
+<h1>7. Live 환경 배포 흐름</h1>
+<p>운영은 가장 보수적으로 가야 한다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="목적-2">목적<a href="#목적-2" class="hash-link" aria-label="목적에 대한 직접 링크" title="목적에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">서비스 중단 최소화</li>
+<li class="">세션 안정성 확보</li>
+<li class="">장애 발생 시 신속 롤백</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="흐름-2">흐름<a href="#흐름-2" class="hash-link" aria-label="흐름에 대한 직접 링크" title="흐름에 대한 직접 링크" translate="no">​</a></h2>
+<!-- -->
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="특징-2">특징<a href="#특징-2" class="hash-link" aria-label="특징에 대한 직접 링크" title="특징에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">반드시 승인 단계 포함</li>
+<li class="">사전 점검 포함</li>
+<li class="">로그인 서버/로비 서버/매치 서버 배포 순서 분리</li>
+<li class="">헬스체크 후 트래픽 점진 반영</li>
+<li class="">롤백 버튼 또는 Job 별도 준비</li>
+</ul>
+<hr>
+<h1>8. 게임 서버 배포 순서 설계</h1>
+<p>게임 서버는 보통 단일 서버가 아니라 역할별 서버가 나뉜다.
+예를 들어 아래와 같이 나뉠 수 있다.</p>
+<ul>
+<li class="">Auth/Login Server</li>
+<li class="">Lobby Server</li>
+<li class="">Channel Server</li>
+<li class="">Match Server</li>
+<li class="">Chat Server</li>
+<li class="">Game Logic Worker</li>
+<li class="">Gateway</li>
+</ul>
+<p>이 경우 운영 배포 순서를 잘 설계해야 한다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="권장-순서-예시">권장 순서 예시<a href="#권장-순서-예시" class="hash-link" aria-label="권장 순서 예시에 대한 직접 링크" title="권장 순서 예시에 대한 직접 링크" translate="no">​</a></h2>
+<ol>
+<li class="">내부 공통 서비스</li>
+<li class="">Gateway 또는 Edge 계층</li>
+<li class="">Login/Auth</li>
+<li class="">Lobby</li>
+<li class="">Match/Channel</li>
+<li class="">비동기 Worker</li>
+</ol>
+<p>하지만 실제로는 서비스 의존성에 따라 달라진다.<br>
+중요한 것은 <strong>사용자 유입 경로 앞단을 마지막에 바꾸거나, drain 후 교체하는 구조</strong>를 만드는 것이다.</p>
+<hr>
+<h1>9. Match Server 같은 세션형 서버 배포 전략</h1>
+<p>웹 서버처럼 그냥 재시작하면 안 된다.<br>
+세션이 살아 있는 동안 프로세스를 바꾸면 사용자 게임 세션이 끊어진다.</p>
+<p>권장 방식은 아래와 같다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="단계">단계<a href="#단계" class="hash-link" aria-label="단계에 대한 직접 링크" title="단계에 대한 직접 링크" translate="no">​</a></h2>
+<ol>
+<li class="">서버를 매치 할당 목록에서 제외</li>
+<li class="">신규 세션 유입 차단</li>
+<li class="">현재 세션 수 확인</li>
+<li class="">세션 종료까지 대기</li>
+<li class="">배포 수행</li>
+<li class="">재기동 후 등록</li>
+<li class="">헬스체크 후 다시 매치 할당 가능 상태로 전환</li>
+</ol>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="개념도">개념도<a href="#개념도" class="hash-link" aria-label="개념도에 대한 직접 링크" title="개념도에 대한 직접 링크" translate="no">​</a></h2>
+<!-- -->
+<p>이 구조가 없으면 운영 배포마다 게임방 강제 종료 문제가 생길 수 있다.</p>
+<hr>
+<h1>10. Windows 서비스형 게임 서버 배포 상세 시나리오</h1>
+<p>Windows 기반 게임 서버가 서비스로 등록되어 있다고 가정하면 다음 절차가 일반적이다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="절차">절차<a href="#절차" class="hash-link" aria-label="절차에 대한 직접 링크" title="절차에 대한 직접 링크" translate="no">​</a></h2>
+<ol>
+<li class="">배포 대상 서버 선택</li>
+<li class="">현재 active 버전 확인</li>
+<li class="">신규 zip 복사</li>
+<li class="">신규 release 디렉토리 생성</li>
+<li class="">압축 해제</li>
+<li class="">설정 파일 주입</li>
+<li class="">서비스 중지</li>
+<li class=""><code>active</code> 링크 전환</li>
+<li class="">서비스 시작</li>
+<li class="">포트/프로세스/로그인 헬스체크</li>
+<li class="">실패 시 이전 버전으로 롤백</li>
+</ol>
+<hr>
+<h1>11. 배포 서버 디렉토리 구조 예시</h1>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">D:\GameServers\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ releases\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ 20260420_150000\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ 20260420_173000\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┗ 20260421_090000\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ active -&gt; D:\GameServers\releases\20260421_090000</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ config\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ Dev\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┣ QA\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┃ ┗ Live\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ logs\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┗ scripts\</span><br></span></code></pre></div></div>
+<p>이 구조의 장점은 다음과 같다.</p>
+<ul>
+<li class="">release 디렉토리별 버전 보존</li>
+<li class="">active 링크만 바꿔 롤백 가능</li>
+<li class="">설정 파일과 바이너리 분리 가능</li>
+<li class="">로그 보존이 쉬움</li>
+</ul>
+<hr>
+<h1>12. 환경별 설정 관리 방식</h1>
+<p>설정 파일을 바이너리와 같이 묶어버리면 운영 중 수정이 어렵고 배포도 위험해진다.<br>
+권장 방식은 “바이너리와 설정 분리”이다.</p>
+<p>예를 들면 다음과 같다.</p>
+<div class="language-text codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-text codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">active\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ bin\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┣ data\</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"> ┗ config -&gt; D:\GameServers\config\Live</span><br></span></code></pre></div></div>
+<p>또는 배포 시점에 환경별 설정을 덮어쓰는 구조도 가능하다.</p>
+<p>예:</p>
+<ul>
+<li class=""><code>server.dev.json</code></li>
+<li class=""><code>server.qa.json</code></li>
+<li class=""><code>server.live.json</code></li>
+</ul>
+<p>배포 스크립트가 환경에 맞는 설정을 선택하여 주입하도록 만들면 된다.</p>
+<hr>
+<h1>13. 서버 배포 PowerShell 예시</h1>
+<p>아래는 좀 더 현실적인 형태의 예시이다.</p>
+<p><code>deploy-server-live.ps1</code></p>
+<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">param(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$ArtifactZip,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$TargetServer,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$ServiceName,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$BaseDir = &quot;D:\GameServers&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$EnvName = &quot;Live&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$ErrorActionPreference = &quot;Stop&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$releaseName = Get-Date -Format &quot;yyyyMMdd_HHmmss&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$releaseDir = &quot;$BaseDir\releases\$releaseName&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$configSource = &quot;$BaseDir\config\$EnvName&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Write-Host &quot;Deploying $ArtifactZip to $TargetServer&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$session = New-PSSession -ComputerName $TargetServer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Copy-Item $ArtifactZip -Destination &quot;C:\Temp\deploy.zip&quot; -ToSession $session -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Invoke-Command -Session $session -ScriptBlock {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    param($releaseDir, $configSource, $serviceName, $baseDir)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    New-Item -ItemType Directory -Force -Path $releaseDir | Out-Null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Expand-Archive -Path &quot;C:\Temp\deploy.zip&quot; -DestinationPath $releaseDir -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    $configTarget = Join-Path $releaseDir &quot;config&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if (Test-Path $configTarget) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        Remove-Item $configTarget -Recurse -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Copy-Item $configSource $configTarget -Recurse -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Stop-Service $serviceName -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    $active = Join-Path $baseDir &quot;active&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if (Test-Path $active) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        Remove-Item $active -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    New-Item -ItemType SymbolicLink -Path $active -Target $releaseDir | Out-Null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Start-Service $serviceName</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} -ArgumentList $releaseDir, $configSource, $ServiceName, $BaseDir</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Remove-PSSession $session</span><br></span></code></pre></div></div>
+<p>이 스크립트는 아주 중요한 두 가지를 보여준다.</p>
+<ul>
+<li class="">배포 대상 디렉토리를 새로 만들고 압축을 푼다</li>
+<li class="">설정을 별도로 주입한 후 active 링크만 바꾼다</li>
+</ul>
+<p>즉 덮어쓰기 방식보다 안전하다.</p>
+<hr>
+<h1>14. 헬스체크 스크립트 예시</h1>
+<p>운영 배포 후에는 프로세스 기동만 보지 말고 실제 서비스 확인을 해야 한다.
+<code>health-check.ps1</code></p>
+<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">param(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$Host = &quot;127.0.0.1&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [int]$Port = 7001</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$maxRetry = 10</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$intervalSec = 5</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$success = $false</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">for ($i = 1; $i -le $maxRetry; $i++) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    try {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        $client = New-Object System.Net.Sockets.TcpClient</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        $client.Connect($Host, $Port)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        if ($client.Connected) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            Write-Host &quot;Health check success on $Host:$Port&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            $client.Close()</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            $success = $true</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            break</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    catch {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        Write-Host &quot;Health check failed. retry=$i&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Start-Sleep -Seconds $intervalSec</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">if (-not $success) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    throw &quot;Health check failed after retries&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">}</span><br></span></code></pre></div></div>
+<p>실무에서는 여기에 더해 아래 항목도 검사하는 것이 좋다.</p>
+<ul>
+<li class="">DB Ping</li>
+<li class="">Redis or Cache 연결</li>
+<li class="">로그인 패킷 응답</li>
+<li class="">버전 확인 API</li>
+<li class="">매치 풀 등록 상태</li>
+</ul>
+<hr>
+<h1>15. 롤백 스크립트 예시</h1>
+<p>운영에서는 “배포 스크립트”만큼 “롤백 스크립트”가 중요하다.
+<code>rollback-server.ps1</code></p>
+<div class="language-powershell codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-powershell codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">param(</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$TargetServer,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$ServiceName,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$BaseDir = &quot;D:\GameServers&quot;,</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    [string]$PreviousRelease = &quot;D:\GameServers\releases\20260420_173000&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">$session = New-PSSession -ComputerName $TargetServer</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Invoke-Command -Session $session -ScriptBlock {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    param($serviceName, $baseDir, $previousRelease)</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Stop-Service $serviceName -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    $active = Join-Path $baseDir &quot;active&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    if (Test-Path $active) {</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        Remove-Item $active -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    }</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    New-Item -ItemType SymbolicLink -Path $active -Target $previousRelease | Out-Null</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    Start-Service $serviceName</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">} -ArgumentList $ServiceName, $BaseDir, $PreviousRelease</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">Remove-PSSession $session</span><br></span></code></pre></div></div>
+<p>즉 롤백은 “이전 바이너리 재복사”가 아니라 “이전 릴리스 포인터 복구” 형태가 가장 빠르고 안전하다.</p>
+<hr>
+<h1>16. UE3 클라이언트 Job 체인 상세 설계</h1>
+<p>클라이언트는 보통 아래 3단계로 나누는 것이 좋다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="16-1-job-1-build-ue3-client">16-1. Job 1: build-ue3-client<a href="#16-1-job-1-build-ue3-client" class="hash-link" aria-label="16-1. Job 1: build-ue3-client에 대한 직접 링크" title="16-1. Job 1: build-ue3-client에 대한 직접 링크" translate="no">​</a></h2>
+<p>역할:</p>
+<ul>
+<li class="">코드 체크아웃</li>
+<li class="">버전 정보 삽입</li>
+<li class="">스크립트/코드 빌드</li>
+<li class="">Cook/Package 수행</li>
+<li class="">원본 빌드 결과 생성</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="16-2-job-2-package-client-patch">16-2. Job 2: package-client-patch<a href="#16-2-job-2-package-client-patch" class="hash-link" aria-label="16-2. Job 2: package-client-patch에 대한 직접 링크" title="16-2. Job 2: package-client-patch에 대한 직접 링크" translate="no">​</a></h2>
+<p>역할:</p>
+<ul>
+<li class="">변경 파일 해시 계산</li>
+<li class="">manifest 생성</li>
+<li class="">패치 단위 분리</li>
+<li class="">zip 또는 patch chunk 생성</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="16-3-job-3-deploy-client-live">16-3. Job 3: deploy-client-live<a href="#16-3-job-3-deploy-client-live" class="hash-link" aria-label="16-3. Job 3: deploy-client-live에 대한 직접 링크" title="16-3. Job 3: deploy-client-live에 대한 직접 링크" translate="no">​</a></h2>
+<p>역할:</p>
+<ul>
+<li class="">패치 서버 업로드</li>
+<li class="">latest version 포인터 갱신</li>
+<li class="">CDN 캐시 무효화</li>
+<li class="">런처 배포 정보 갱신</li>
+</ul>
+<p>이렇게 분리하면 클라이언트 패치 생성 로직만 수정할 때, UE3 전체 빌드를 다시 만지지 않아도 된다.</p>
+<hr>
+<h1>17. 클라이언트 패치 버전 파일 예시</h1>
+<p>예를 들어 런처가 읽는 버전 파일은 아래처럼 둘 수 있다.
+<code>latest.json</code></p>
+<div class="language-json codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-json codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;version&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;1.2.0&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;build&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;152&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;manifestUrl&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;https://cdn.example.com/game/1.2.0/manifest.json&quot;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">  </span><span class="token property" style="color:#36acaa">&quot;baseUrl&quot;</span><span class="token operator" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&quot;https://cdn.example.com/game/1.2.0/files/&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<p>런처는 이 파일을 보고 최신 버전을 판단한다.</p>
+<hr>
+<h1>18. Jenkins Declarative Pipeline을 Job별로 나누는 예시</h1>
+<p>아래는 서버 Dev 배포 Job 예시이다.</p>
+<div class="language-groovy codeBlockContainer_Ckt0 theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_QJqH"><pre tabindex="0" class="prism-code language-groovy codeBlock_bY9V thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_e6Vv"><span class="token-line" style="color:#393A34"><span class="token plain">pipeline </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    agent </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"> label </span><span class="token string" style="color:#e3116c">&#x27;windows-deploy&#x27;</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    parameters </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">string</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;ARTIFACT_NAME&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> defaultValue</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;GameServerCpp.zip&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Artifact file&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">string</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;TARGET_SERVER&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> defaultValue</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;dev-game-01&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Deploy target&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">string</span><span class="token punctuation" style="color:#393A34">(</span><span class="token plain">name</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;SERVICE_NAME&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> defaultValue</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;GameServerCpp&#x27;</span><span class="token punctuation" style="color:#393A34">,</span><span class="token plain"> description</span><span class="token punctuation" style="color:#393A34">:</span><span class="token plain"> </span><span class="token string" style="color:#e3116c">&#x27;Windows service name&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    stages </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">stage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">&#x27;Fetch Artifact&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            steps </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                powershell </span><span class="token string" style="color:#e3116c">&#x27;&#x27;&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                Copy-Item &quot;D:\\artifact-repo\\${env:ARTIFACT_NAME}&quot; &quot;D:\\deploy\\${env:ARTIFACT_NAME}&quot; -Force</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                &#x27;&#x27;&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">stage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">&#x27;Deploy&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            steps </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                powershell </span><span class="token string" style="color:#e3116c">&#x27;&#x27;&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                .\\scripts\\deploy-server-live.ps1 `</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                  -ArtifactZip &quot;D:\\deploy\\${env:ARTIFACT_NAME}&quot; `</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                  -TargetServer &quot;${env:TARGET_SERVER}&quot; `</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                  -ServiceName &quot;${env:SERVICE_NAME}&quot; `</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                  -EnvName &quot;Dev&quot;</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                &#x27;&#x27;&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token function" style="color:#d73a49">stage</span><span class="token punctuation" style="color:#393A34">(</span><span class="token string" style="color:#e3116c">&#x27;Health Check&#x27;</span><span class="token punctuation" style="color:#393A34">)</span><span class="token plain"> </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            steps </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">                powershell </span><span class="token string" style="color:#e3116c">&#x27;&#x27;&#x27;</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                .\\scripts\\health-check.ps1 -Host &quot;${env:TARGET_SERVER}&quot; -Port 7001</span><br></span><span class="token-line" style="color:#393A34"><span class="token string" style="color:#e3116c">                &#x27;&#x27;&#x27;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain" style="display:inline-block"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    post </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        success </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            echo </span><span class="token interpolation-string string" style="color:#e3116c">&quot;Dev deploy success&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        failure </span><span class="token punctuation" style="color:#393A34">{</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">            echo </span><span class="token interpolation-string string" style="color:#e3116c">&quot;Dev deploy failed&quot;</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">        </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    </span><span class="token punctuation" style="color:#393A34">}</span><span class="token plain"></span><br></span><span class="token-line" style="color:#393A34"><span class="token plain"></span><span class="token punctuation" style="color:#393A34">}</span><br></span></code></pre></div></div>
+<hr>
+<h1><strong>19. 실제 운영에서 추가하면 좋은 것들</strong></h1>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="19-1-build-metadata-삽입"><strong>19-1. Build Metadata 삽입</strong><a href="#19-1-build-metadata-삽입" class="hash-link" aria-label="19-1-build-metadata-삽입에 대한 직접 링크" title="19-1-build-metadata-삽입에 대한 직접 링크" translate="no">​</a></h2>
+<p>각 바이너리 또는 설정에 다음 값을 남기는 것이 좋다.</p>
+<ul>
+<li class="">version</li>
+<li class="">build number</li>
+<li class="">commit hash</li>
+<li class="">built at</li>
+<li class="">built by pipeline</li>
+</ul>
+<p>클라이언트와 서버가 서로 버전이 맞는지 검증할 때 유용하다.</p>
+<p>예를 들어 로그인 시 클라이언트 버전과 서버 허용 버전을 비교하게 만들 수 있다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="19-2-심볼-파일-보관"><strong>19-2. 심볼 파일 보관</strong><a href="#19-2-심볼-파일-보관" class="hash-link" aria-label="19-2-심볼-파일-보관에 대한 직접 링크" title="19-2-심볼-파일-보관에 대한 직접 링크" translate="no">​</a></h2>
+<p>C++ 서버는 장애 분석을 위해 다음을 보관해야 한다.</p>
+<ul>
+<li class=""><code>.pdb</code></li>
+<li class="">map 파일</li>
+<li class="">심볼 전용 저장소</li>
+</ul>
+<p>운영 장애가 났을 때 crash dump 분석을 하려면 이 파일들이 반드시 필요하다.</p>
+<hr>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="19-3-db-migration-분리"><strong>19-3. DB Migration 분리</strong><a href="#19-3-db-migration-분리" class="hash-link" aria-label="19-3-db-migration-분리에 대한 직접 링크" title="19-3-db-migration-분리에 대한 직접 링크" translate="no">​</a></h2>
+<p>게임 서버 배포에 DB 스키마 변경이 포함된다면, 서버 배포와 DB Migration Job을 분리하는 것이 좋다.</p>
+<p>권장 순서:</p>
+<ol>
+<li class="">backward compatible schema 추가</li>
+<li class="">서버 배포</li>
+<li class="">기능 전환</li>
+<li class="">구 스키마 제거</li>
+</ol>
+<p>즉 DB 변경을 서버 재시작과 한 번에 묶어버리면 위험하다.</p>
+<hr>
+<h1><strong>20. 최종 추천 구조</strong></h1>
+<p>가장 현실적인 구조를 한 번에 정리하면 아래와 같다.</p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="클라이언트"><strong>클라이언트</strong><a href="#클라이언트" class="hash-link" aria-label="클라이언트에 대한 직접 링크" title="클라이언트에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">전용 Windows 노드</li>
+<li class="">UE3 Build Job</li>
+<li class="">Patch Packaging Job</li>
+<li class="">CDN/Patch Deploy Job</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="c-서버"><strong>C++ 서버</strong><a href="#c-서버" class="hash-link" aria-label="c-서버에 대한 직접 링크" title="c-서버에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">Windows Build Node</li>
+<li class="">Build Job</li>
+<li class="">Artifact Publish Job</li>
+<li class="">Dev/QA/Live Deploy Job</li>
+<li class="">Rollback Job</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="c-서버-1"><strong>C# 서버</strong><a href="#c-서버-1" class="hash-link" aria-label="c-서버-1에 대한 직접 링크" title="c-서버-1에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">dotnet Build Job</li>
+<li class="">Publish Job</li>
+<li class="">Dev/QA/Live Deploy Job</li>
+<li class="">Rollback Job</li>
+</ul>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="공통"><strong>공통</strong><a href="#공통" class="hash-link" aria-label="공통에 대한 직접 링크" title="공통에 대한 직접 링크" translate="no">​</a></h2>
+<ul>
+<li class="">아티팩트 저장소</li>
+<li class="">버전/빌드 메타데이터</li>
+<li class="">헬스체크</li>
+<li class="">승인 단계</li>
+<li class="">알림</li>
+<li class="">롤백</li>
+</ul>
+<hr>
+<h1><strong>21. 결론</strong></h1>
+<p>실무에서는 “게임 클라이언트와 게임 서버를 하나의 CI/CD로 묶는다”기보다,<br>
+<strong>공통 릴리스 체계 아래에서 서로 다른 빌드/배포 파이프라인을 운영한다</strong>고 보는 편이 맞다.</p>
+<p>정리하면 다음과 같다.</p>
+<ul>
+<li class="">UE3 클라이언트는 전용 빌드 머신과 패치 배포 체계가 필요하다.</li>
+<li class="">C++/C# 서버는 언어별 표준 빌드 체인을 따르되, 운영 배포는 세션 특성을 고려해야 한다.</li>
+<li class="">Jenkins는 하나의 거대한 Job보다 역할별 Job 체인으로 구성하는 것이 좋다.</li>
+<li class="">운영 배포는 반드시 헬스체크, 승인, 롤백을 포함해야 한다.</li>
+</ul>
+<p>원하면 다음에는 이어서<br>
+<strong>실제로 Jenkins에서 Multibranch/Parameterized Job을 어떻게 나누는지</strong>,<br>
+또는 <strong>Windows 서비스형 게임 서버를 여러 대에 순차 배포하는 스크립트</strong>를 더 구체적으로 작성하겠다.</p></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="row margin-top--sm theme-doc-footer-tags-row"><div class="col"><b>태그:</b><ul class="tags_jXut padding--none margin-left--sm"><li class="tag_QGVx"><a rel="tag" title="Jenkins·파이프라인·게임 빌드·배포" class="tag_zVej tagRegular_sFm0" href="/blog/tags/cicd">CI | CD</a></li><li class="tag_QGVx"><a rel="tag" title="Jenkins 에이전트·Job·아키텍처" class="tag_zVej tagRegular_sFm0" href="/blog/tags/jenkins">Jenkins</a></li></ul></div></div><div class="row margin-top--sm theme-doc-footer-edit-meta-row"><div class="col noPrint_WFHX"><a href="https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cicd/game-jenkins-job-separation.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>페이지 편집</a></div><div class="col lastUpdated_JAkA"></div></div></footer></article><nav class="docusaurus-mt-lg pagination-nav" aria-label="문서 페이지"><a class="pagination-nav__link pagination-nav__link--prev" href="/blog/cicd/jenkins-inbound-agent-websocket"><div class="pagination-nav__sublabel">이전</div><div class="pagination-nav__label">Jenkins Inbound Agent WebSocket 구성</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/blog/cicd/game-build-deploy-cicd-overview"><div class="pagination-nav__sublabel">다음</div><div class="pagination-nav__label">게임 클라이언트·서버 CI/CD와 빌드 배포 설계</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#2-1-공통-job" class="table-of-contents__link toc-highlight">2-1. 공통 Job</a></li><li><a href="#2-2-클라이언트-job" class="table-of-contents__link toc-highlight">2-2. 클라이언트 Job</a></li><li><a href="#2-3-서버-job" class="table-of-contents__link toc-highlight">2-3. 서버 Job</a></li><li><a href="#목적" class="table-of-contents__link toc-highlight">목적</a></li><li><a href="#흐름" class="table-of-contents__link toc-highlight">흐름</a></li><li><a href="#특징" class="table-of-contents__link toc-highlight">특징</a></li><li><a href="#목적-1" class="table-of-contents__link toc-highlight">목적</a></li><li><a href="#흐름-1" class="table-of-contents__link toc-highlight">흐름</a></li><li><a href="#특징-1" class="table-of-contents__link toc-highlight">특징</a></li><li><a href="#목적-2" class="table-of-contents__link toc-highlight">목적</a></li><li><a href="#흐름-2" class="table-of-contents__link toc-highlight">흐름</a></li><li><a href="#특징-2" class="table-of-contents__link toc-highlight">특징</a></li><li><a href="#권장-순서-예시" class="table-of-contents__link toc-highlight">권장 순서 예시</a></li><li><a href="#단계" class="table-of-contents__link toc-highlight">단계</a></li><li><a href="#개념도" class="table-of-contents__link toc-highlight">개념도</a></li><li><a href="#절차" class="table-of-contents__link toc-highlight">절차</a></li><li><a href="#16-1-job-1-build-ue3-client" class="table-of-contents__link toc-highlight">16-1. Job 1: build-ue3-client</a></li><li><a href="#16-2-job-2-package-client-patch" class="table-of-contents__link toc-highlight">16-2. Job 2: package-client-patch</a></li><li><a href="#16-3-job-3-deploy-client-live" class="table-of-contents__link toc-highlight">16-3. Job 3: deploy-client-live</a></li><li><a href="#19-1-build-metadata-삽입" class="table-of-contents__link toc-highlight"><strong>19-1. Build Metadata 삽입</strong></a></li><li><a href="#19-2-심볼-파일-보관" class="table-of-contents__link toc-highlight"><strong>19-2. 심볼 파일 보관</strong></a></li><li><a href="#19-3-db-migration-분리" class="table-of-contents__link toc-highlight"><strong>19-3. DB Migration 분리</strong></a></li><li><a href="#클라이언트" class="table-of-contents__link toc-highlight"><strong>클라이언트</strong></a></li><li><a href="#c-서버" class="table-of-contents__link toc-highlight"><strong>C++ 서버</strong></a></li><li><a href="#c-서버-1" class="table-of-contents__link toc-highlight"><strong>C# 서버</strong></a></li><li><a href="#공통" class="table-of-contents__link toc-highlight"><strong>공통</strong></a></li></ul></div></div></div></div></main></div></div></div><footer class="theme-layout-footer footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="theme-layout-footer-column col footer__col"><div class="footer__title">블로그</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/blog">문서 허브</a></li><li class="footer__item"><a class="footer__link-item" href="/blog/tags">태그</a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">커뮤니티</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/sapcy/sapcy.github.io" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-label="(opens in new tab)" class="iconExternalLink_nPIU"><use href="#theme-svg-external-link"></use></svg></a></li></ul></div><div class="theme-layout-footer-column col footer__col"><div class="footer__title">더보기</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/info">정보</a></li><li class="footer__item"><a class="footer__link-item" href="/project">프로젝트</a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2026 Playbook. Docusaurus로 제작되었습니다.</div></div></div></footer></div>
+</body>
+</html>

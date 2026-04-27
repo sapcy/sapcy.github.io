@@ -149,6 +149,21 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'CI | CD',
+      key: 'cicd',
+      items: [
+        {
+          type: 'doc',
+          id: 'opensource/jenkins-core-architecture',
+          label: 'Jenkins - 코어·확장·인프라 구조 개요',
+        },
+        'cicd/jenkins-inbound-agent-websocket',
+        'cicd/game-jenkins-job-separation',
+        'cicd/game-build-deploy-cicd-overview',
+      ],
+    },
+    {
+      type: 'category',
       label: '오픈소스',
       key: 'opensource',
       items: [
@@ -169,12 +184,6 @@ const sidebars: SidebarsConfig = {
             'opensource/mimir-architecture',
             'opensource/opentelemetry-lgtm-architecture',
           ],
-        },
-        {
-          type: 'category',
-          label: 'CI | CD',
-          key: 'oss-ci-docs',
-          items: ['opensource/jenkins-core-architecture'],
         },
       ],
     },

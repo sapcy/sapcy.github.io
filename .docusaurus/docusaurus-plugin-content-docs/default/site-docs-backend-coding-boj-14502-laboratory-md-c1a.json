@@ -35,8 +35,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Jenkins - 코어·확장·인프라 구조 개요",
-    "permalink": "/blog/opensource/jenkins-core-architecture"
+    "title": "OpenTelemetry·LGTM 스택 실습 아키텍처 개요",
+    "permalink": "/blog/opensource/opentelemetry-lgtm-architecture"
   },
   "next": {
     "title": "14888. 연산자 끼워넣기 (Java)",

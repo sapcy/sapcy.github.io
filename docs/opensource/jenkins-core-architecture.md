@@ -3,6 +3,7 @@ format: md
 title: "Jenkins - 코어·확장·인프라 구조 개요"
 description: "Core·Plugin·Agent·Storage·API - 다이어그램 요약"
 tags:
+  - cicd
   - opensource
 ---
 

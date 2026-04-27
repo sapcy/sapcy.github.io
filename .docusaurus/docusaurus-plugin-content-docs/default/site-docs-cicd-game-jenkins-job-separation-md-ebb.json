@@ -1,0 +1,45 @@
+{
+  "id": "cicd/game-jenkins-job-separation",
+  "title": "게임 프로젝트 Jenkins Job 분리와 배포 설계",
+  "description": "역할별 Job 체인, 폴더 구조, Dev·QA·Live 흐름, 스크립트·롤백까지 정리",
+  "source": "@site/docs/cicd/game-jenkins-job-separation.md",
+  "sourceDirName": "cicd",
+  "slug": "/cicd/game-jenkins-job-separation",
+  "permalink": "/blog/cicd/game-jenkins-job-separation",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cicd/game-jenkins-job-separation.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "CI | CD",
+      "permalink": "/blog/tags/cicd",
+      "description": "Jenkins·파이프라인·게임 빌드·배포"
+    },
+    {
+      "inline": false,
+      "label": "Jenkins",
+      "permalink": "/blog/tags/jenkins",
+      "description": "Jenkins 에이전트·Job·아키텍처"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "게임 프로젝트 Jenkins Job 분리와 배포 설계",
+    "description": "역할별 Job 체인, 폴더 구조, Dev·QA·Live 흐름, 스크립트·롤백까지 정리",
+    "tags": [
+      "cicd",
+      "jenkins"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Jenkins Inbound Agent WebSocket 구성",
+    "permalink": "/blog/cicd/jenkins-inbound-agent-websocket"
+  },
+  "next": {
+    "title": "게임 클라이언트·서버 CI/CD와 빌드 배포 설계",
+    "permalink": "/blog/cicd/game-build-deploy-cicd-overview"
+  }
+}

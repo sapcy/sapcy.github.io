@@ -1,0 +1,45 @@
+{
+  "id": "cicd/jenkins-inbound-agent-websocket",
+  "title": "Jenkins Inbound Agent WebSocket 구성",
+  "description": "Inbound Agent와 WebSocket, agent.jar·truststore·systemd까지 VM 에이전트 연결 정리",
+  "source": "@site/docs/cicd/jenkins-inbound-agent-websocket.md",
+  "sourceDirName": "cicd",
+  "slug": "/cicd/jenkins-inbound-agent-websocket",
+  "permalink": "/blog/cicd/jenkins-inbound-agent-websocket",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/cicd/jenkins-inbound-agent-websocket.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "CI | CD",
+      "permalink": "/blog/tags/cicd",
+      "description": "Jenkins·파이프라인·게임 빌드·배포"
+    },
+    {
+      "inline": false,
+      "label": "Jenkins",
+      "permalink": "/blog/tags/jenkins",
+      "description": "Jenkins 에이전트·Job·아키텍처"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Jenkins Inbound Agent WebSocket 구성",
+    "description": "Inbound Agent와 WebSocket, agent.jar·truststore·systemd까지 VM 에이전트 연결 정리",
+    "tags": [
+      "cicd",
+      "jenkins"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Jenkins - 코어·확장·인프라 구조 개요",
+    "permalink": "/blog/opensource/jenkins-core-architecture"
+  },
+  "next": {
+    "title": "게임 프로젝트 Jenkins Job 분리와 배포 설계",
+    "permalink": "/blog/cicd/game-jenkins-job-separation"
+  }
+}
