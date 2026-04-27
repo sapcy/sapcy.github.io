@@ -42,9 +42,11 @@ tags:
 - **[프로젝트](/project)** - WebSeal, Sealed Secret 등 실험용 도구 UI
 - **[정보](/info)** - 소개·이력 등
 
-## 팁
+:::tip 사이트 쓰기 팁
 
 - 코드 블록은 언어별로 구문 강조가 적용됩니다.
 - 다크 모드는 우측 상단(또는 하단) 테마 전환으로 바꿀 수 있습니다.
+
+:::
 
 궁금한 점이나 오류는 [GitHub 저장소](https://github.com/sapcy/sapcy.github.io) 이슈로 알려 주세요.

@@ -44,7 +44,7 @@ gRPC는 HTTP 2.0 기반이므로 Multiplexing 연결 구성이 가능함.
 |10,000|4,109 ms|2,132 ms|468 ms|
 |100,000|41,491 ms|13,768 ms|2,880 ms|
 
-:::info
+:::tip gRPC 스트리밍 참고
 
 gRPC는 **Server streaming**, **Client streaming**, **Bidirectional streaming** RPC도 지원합니다. Envoy xDS는 주로 **양방향 스트리밍**을 사용합니다. 자세한 설명은 [gRPC.io — Core concepts](https://grpc.io/docs/what-is-grpc/core-concepts/) 를 참고하세요.
 

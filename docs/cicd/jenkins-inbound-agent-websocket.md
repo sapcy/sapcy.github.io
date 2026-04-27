@@ -23,13 +23,18 @@ Jenkins Controller → Agent VM
 Agent VM → Jenkins Controller
 ```
 
+![jnkins-ssh-agent](assets/jenkins-ssh-agent.png)
+*SSH Agent 구성도*
+
+![jnkins-inbound-agent](assets/jenkins-inbound-agent.png)
+*Inbound Agent 구성도*
+
 Inbound Agent 방식은 방화벽이나 폐쇄망 환경에서 유리하다. Jenkins Controller에서 Agent VM으로 SSH 접근이 불가능하더라도, Agent VM에서 Jenkins Controller로 HTTPS 접근만 가능하면 연결할 수 있기 때문이다.
 
 
 ## Inbound Agent와 WebSocket
 
 Inbound Agent는 예전에는 JNLP Agent라고도 불렸다. 현재는 보통 Inbound Agent라고 부르는 것이 더 적절하다. Inbound Agent는 Agent 프로세스가 Jenkins Controller로 먼저 연결을 생성한다.
-
 WebSocket을 사용하지 않는 일반 Inbound Agent는 Jenkins의 Web URL에 먼저 접근한 뒤, 별도의 TCP Agent Port를 통해 Jenkins Remoting 통신을 수행한다.
 
 ```text
@@ -50,6 +55,7 @@ Agent VM
 즉 WebSocket 방식에서는 Agent VM에서 Jenkins Controller의 `443` 또는 `8080` 포트로만 접근 가능하면 된다. Jenkins 공식 블로그에서도 WebSocket은 HTTP(S) port를 통해 bidirectional streaming communication을 제공한다고 설명한다.  
 
 이 구조는 Reverse Proxy, Ingress, Load Balancer 뒤에 Jenkins가 있는 환경에서 특히 편하다. Jenkins Kubernetes Plugin 문서에서도 WebSocket을 사용하면 Agent가 Jenkins Service TCP Port가 아니라 HTTP(S)를 통해 연결되므로, Controller가 Ingress나 Reverse Proxy 뒤에 있을 때 구성이 단순해진다고 설명한다.  
+
 
 ## 전체 구성 흐름
 

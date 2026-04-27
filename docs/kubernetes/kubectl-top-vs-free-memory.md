@@ -29,8 +29,12 @@ metrics-server **FAQ**에도, **메트릭 숫자 자체를 metrics-server가 “
 
 Kubernetes 문서는 Metrics API의 **메모리**를 다음과 같이 정의합니다.
 
-> Memory is reported as the **working set**, measured in bytes, at the instant the metric was collected.  
-> In an ideal world, the "working set" is the amount of memory **in-use that cannot be freed under memory pressure**. However, **calculation of the working set varies by host OS**, and generally makes heavy use of **heuristics** to produce an estimate.
+:::tip Working set (공식 문서 정의)
+
+Memory is reported as the **working set**, measured in bytes, at the instant the metric was collected.  
+In an ideal world, the "working set" is the amount of memory **in-use that cannot be freed under memory pressure**. However, **calculation of the working set varies by host OS**, and generally makes heavy use of **heuristics** to produce an estimate.
+
+:::
 
 즉,
 

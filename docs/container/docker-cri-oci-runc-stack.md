@@ -40,9 +40,12 @@ Kubernetes 1.24버전부터는 dockershim 구성요소에서 완전히 제거됐
 
 Kubernetes에서는 Docker의 논리적 후속 모델을 containerd로 한다. 아니면 CRI-O로도 대체 가능함.
 
-> **Docker는 CRI를 따르지 않아서, Kubernetes가 직접 다룰 수 없었고, 그 사이를 dockershim이라는 어댑터가 억지로 중계해줬다.**
-> 하지만 내부적으로는 결국 Docker도 containerd → runc를 사용하니 **굳이 Docker를 끼고 쓸 이유가 없어져서 dockershim과 함께 제거된 것.**
+:::tip 핵심 인사이트
 
+**Docker는 CRI를 따르지 않아서, Kubernetes가 직접 다룰 수 없었고, 그 사이를 dockershim이라는 어댑터가 억지로 중계해줬다.**  
+하지만 내부적으로는 결국 Docker도 containerd → runc를 사용하니 **굳이 Docker를 끼고 쓸 이유가 없어져서 dockershim과 함께 제거된 것.**
+
+:::
 
 ### OCI 사양
 OCI는 컨테이너 세상에서 표준화를 위한 첫번째 노력이다.

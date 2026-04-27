@@ -80,5 +80,10 @@ Docker는
 ***
 
 ## 정리
-> **Client → Daemon → Image → Runtime → Kernel → Network → Filesystem → Execute → Output**
+
+:::tip 한 줄로 보는 흐름
+
+**Client → Daemon → Image → Runtime → Kernel → Network → Filesystem → Execute → Output**
+
+:::
 

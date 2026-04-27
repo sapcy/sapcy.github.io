@@ -76,7 +76,7 @@ curl -sfL https://get.k3s.io | sh -s - \
   --docker
 ```
 
-:::info
+:::tip K3s 런타임 참고
 
 K3s 최신 버전에서는 **containerd** 사용이 기본이며, `--docker`는 점진적으로 제거·비권장되는 방향입니다. 재현이 필요하면 문서 작성 시점의 K3s 릴리스 노트를 확인하세요.
 

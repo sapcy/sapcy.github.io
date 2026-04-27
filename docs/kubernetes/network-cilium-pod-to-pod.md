@@ -8,7 +8,7 @@ tags:
 
 # Pod to Pod 통신
 
-:::info
+:::tip 문서 보강 예정
 
 Obsidian 노트 `Cilium/Pod to pod.md`에는 아직 본문이 없습니다.  
 Cilium·kube-proxy·서비스 타입(ClusterIP, NodePort 등)별 Pod 간 통신을 정리한 뒤 이 문서를 채우면 됩니다.
