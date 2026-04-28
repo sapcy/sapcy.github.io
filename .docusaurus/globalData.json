@@ -226,6 +226,11 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "kubernetes/kubelet-pleg",
+              "path": "/blog/kubernetes/kubelet-pleg",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "kubernetes/kubernetes-logging-architecture",
               "path": "/blog/kubernetes/kubernetes-logging-architecture",
               "sidebar": "tutorialSidebar"
@@ -268,6 +273,11 @@
             {
               "id": "kubernetes/network-router-vs-gateway",
               "path": "/blog/kubernetes/network-router-vs-gateway",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/pod-container-status-unknown",
+              "path": "/blog/kubernetes/pod-container-status-unknown",
               "sidebar": "tutorialSidebar"
             },
             {

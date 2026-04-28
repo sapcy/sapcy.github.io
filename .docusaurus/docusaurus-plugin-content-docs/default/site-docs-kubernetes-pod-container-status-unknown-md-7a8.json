@@ -1,0 +1,45 @@
+{
+  "id": "kubernetes/pod-container-status-unknown",
+  "title": "노드 장애 시 ContainerStatusUnknown·NodeStatusUnknown — kubectl 증상과 소스 코드",
+  "description": "kubelet·노드 라이프사이클 컨트롤러가 갱신하는 API 필드와 upstream 코드 위치",
+  "source": "@site/docs/kubernetes/pod-container-status-unknown.md",
+  "sourceDirName": "kubernetes",
+  "slug": "/kubernetes/pod-container-status-unknown",
+  "permalink": "/blog/kubernetes/pod-container-status-unknown",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/pod-container-status-unknown.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    },
+    {
+      "inline": false,
+      "label": "Kubelet",
+      "permalink": "/blog/tags/kubelet",
+      "description": "kubelet·PLEG·Pod 상태"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "노드 장애 시 ContainerStatusUnknown·NodeStatusUnknown — kubectl 증상과 소스 코드",
+    "description": "kubelet·노드 라이프사이클 컨트롤러가 갱신하는 API 필드와 upstream 코드 위치",
+    "tags": [
+      "kubernetes",
+      "kubelet"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Sealed Secrets - GitOps로 Secret 안전하게 관리하기",
+    "permalink": "/blog/kubernetes/sealed-secrets-gitops"
+  },
+  "next": {
+    "title": "Calico CNI 동작 원리",
+    "permalink": "/blog/kubernetes/network-calico-cni"
+  }
+}

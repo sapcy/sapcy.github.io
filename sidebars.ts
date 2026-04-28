@@ -55,6 +55,7 @@ const sidebars: SidebarsConfig = {
             'kubernetes/concept-kube-scheduler',
             'kubernetes/concept-kube-controller-manager',
             'kubernetes/concept-containerd-cri',
+            'kubernetes/kubelet-pleg',
             {
               type: 'doc',
               id: 'kubernetes/kubernetes-logging-architecture',
@@ -72,6 +73,7 @@ const sidebars: SidebarsConfig = {
             'kubernetes/kubectl-top-vs-free-memory',
             'kubernetes/k3s-x86-orbstack-apple-silicon',
             'kubernetes/sealed-secrets-gitops',
+            'kubernetes/pod-container-status-unknown',
           ],
         },
         {

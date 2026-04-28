@@ -38,7 +38,7 @@
     "permalink": "/blog/kubernetes/concept-kube-controller-manager"
   },
   "next": {
-    "title": "Kubernetes 로깅 아키텍처",
-    "permalink": "/blog/kubernetes/kubernetes-logging-architecture"
+    "title": "Kubelet PLEG (Pod Lifecycle Event Generator)",
+    "permalink": "/blog/kubernetes/kubelet-pleg"
   }
 }

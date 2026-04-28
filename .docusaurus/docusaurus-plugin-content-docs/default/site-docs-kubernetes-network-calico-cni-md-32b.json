@@ -35,8 +35,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Sealed Secrets - GitOps로 Secret 안전하게 관리하기",
-    "permalink": "/blog/kubernetes/sealed-secrets-gitops"
+    "title": "노드 장애 시 ContainerStatusUnknown·NodeStatusUnknown — kubectl 증상과 소스 코드",
+    "permalink": "/blog/kubernetes/pod-container-status-unknown"
   },
   "next": {
     "title": "Cilium CNI",

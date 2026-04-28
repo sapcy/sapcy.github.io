@@ -49,8 +49,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Containerd와 CRI - 컨테이너 생성 과정",
-    "permalink": "/blog/kubernetes/concept-containerd-cri"
+    "title": "Kubelet PLEG (Pod Lifecycle Event Generator)",
+    "permalink": "/blog/kubernetes/kubelet-pleg"
   },
   "next": {
     "title": "KYAML",

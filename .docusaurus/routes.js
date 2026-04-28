@@ -129,11 +129,11 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '4d1'),
+    component: ComponentCreator('/blog', '45b'),
     routes: [
       {
         path: '/blog',
-        component: ComponentCreator('/blog', '88c'),
+        component: ComponentCreator('/blog', 'e3b'),
         routes: [
           {
             path: '/blog/tags',
@@ -216,6 +216,11 @@ export default [
             exact: true
           },
           {
+            path: '/blog/tags/kubelet',
+            component: ComponentCreator('/blog/tags/kubelet', '046'),
+            exact: true
+          },
+          {
             path: '/blog/tags/kubernetes',
             component: ComponentCreator('/blog/tags/kubernetes', 'efc'),
             exact: true
@@ -252,7 +257,7 @@ export default [
           },
           {
             path: '/blog',
-            component: ComponentCreator('/blog', '134'),
+            component: ComponentCreator('/blog', '485'),
             routes: [
               {
                 path: '/blog',
@@ -513,6 +518,12 @@ export default [
                 sidebar: "tutorialSidebar"
               },
               {
+                path: '/blog/kubernetes/kubelet-pleg',
+                component: ComponentCreator('/blog/kubernetes/kubelet-pleg', '4e0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
                 path: '/blog/kubernetes/kubernetes-logging-architecture',
                 component: ComponentCreator('/blog/kubernetes/kubernetes-logging-architecture', 'f45'),
                 exact: true,
@@ -563,6 +574,12 @@ export default [
               {
                 path: '/blog/kubernetes/network-router-vs-gateway',
                 component: ComponentCreator('/blog/kubernetes/network-router-vs-gateway', 'efa'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/pod-container-status-unknown',
+                component: ComponentCreator('/blog/kubernetes/pod-container-status-unknown', 'e44'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

@@ -1,0 +1,45 @@
+{
+  "id": "kubernetes/kubelet-pleg",
+  "title": "Kubelet PLEG (Pod Lifecycle Event Generator)",
+  "description": "PLEG 동작·relist·sync loop 관계, PLEG is not healthy 원인과 운영 점검",
+  "source": "@site/docs/kubernetes/kubelet-pleg.md",
+  "sourceDirName": "kubernetes",
+  "slug": "/kubernetes/kubelet-pleg",
+  "permalink": "/blog/kubernetes/kubelet-pleg",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/kubelet-pleg.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    },
+    {
+      "inline": false,
+      "label": "Kubelet",
+      "permalink": "/blog/tags/kubelet",
+      "description": "kubelet·PLEG·Pod 상태"
+    }
+  ],
+  "version": "current",
+  "frontMatter": {
+    "format": "md",
+    "title": "Kubelet PLEG (Pod Lifecycle Event Generator)",
+    "description": "PLEG 동작·relist·sync loop 관계, PLEG is not healthy 원인과 운영 점검",
+    "tags": [
+      "kubernetes",
+      "kubelet"
+    ]
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Containerd와 CRI - 컨테이너 생성 과정",
+    "permalink": "/blog/kubernetes/concept-containerd-cri"
+  },
+  "next": {
+    "title": "Kubernetes 로깅 아키텍처",
+    "permalink": "/blog/kubernetes/kubernetes-logging-architecture"
+  }
+}
