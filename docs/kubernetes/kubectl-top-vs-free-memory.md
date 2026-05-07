@@ -47,15 +47,15 @@ In an ideal world, the "working set" is the amount of memory **in-use that canno
 - [Resource metrics pipeline - Memory](https://kubernetes.io/docs/tasks/debug/debug-cluster/resource-metrics-pipeline/#memory)  
 - [Resource Management for Pods and Containers - meaning of memory](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/#meaning-of-memory)
 
-정리하면, **`kubectl top node`에 나오는 메모리는 “free가 말하는 사용량”이 아니라, 스케줄링·오토스케일링에 쓰기 위한 **working set 추정**입니다.
+정리하면, <strong><code>kubectl top node</code></strong>에 나오는 메모리는 “free가 말하는 사용량”이 아니라, 스케줄링·오토스케일링에 쓰기 위한 <strong>working set 추정</strong>입니다.
 
 ---
 
 ### free -m은 무엇을 볼까?
 
-`free`는 **`/proc/meminfo`**에 있는 커널이 보고하는 전역 메모리 통계를 사람이 읽기 쉽게 보여 줍니다. `free -m`의 **used** 계열은 버전/옵션에 따라 다르지만, 공통적으로 **페이지 캐시·슬랩 등 “필요하면 줄일 수 있는” 메모리**를 “완전히 다른 앱이 쓰는 RAM”과 구분해서 표현하려는 경향이 있습니다.
+`free`는 <strong><code>/proc/meminfo</code></strong>에 있는 커널이 보고하는 전역 메모리 통계를 사람이 읽기 쉽게 보여 줍니다. `free -m`의 **used** 계열은 버전/옵션에 따라 다르지만, 공통적으로 **페이지 캐시·슬랩 등 “필요하면 줄일 수 있는” 메모리**를 “완전히 다른 앱이 쓰는 RAM”과 구분해서 표현하려는 경향이 있습니다.
 
-리눅스 커널 문서에서는 **`MemAvailable`**이 “새 할당을 위해 대략 얼마나 쓸 수 있는지”를 추정한 값이라고 설명합니다(실제 환경에서는 `free` 출력의 **available** 열과 연관).
+리눅스 커널 문서에서는 <strong><code>MemAvailable</code></strong>이 “새 할당을 위해 대략 얼마나 쓸 수 있는지”를 추정한 값이라고 설명합니다(실제 환경에서는 `free` 출력의 **available** 열과 연관).
 
 - [/proc/meminfo - MemAvailable](https://docs.kernel.org/filesystems/proc.html#memavailable) (커널 문서)
 

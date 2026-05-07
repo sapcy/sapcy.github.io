@@ -129,11 +129,11 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '45b'),
+    component: ComponentCreator('/blog', '7c8'),
     routes: [
       {
         path: '/blog',
-        component: ComponentCreator('/blog', 'e3b'),
+        component: ComponentCreator('/blog', 'c6a'),
         routes: [
           {
             path: '/blog/tags',
@@ -257,7 +257,7 @@ export default [
           },
           {
             path: '/blog',
-            component: ComponentCreator('/blog', '485'),
+            component: ComponentCreator('/blog', 'e1f'),
             routes: [
               {
                 path: '/blog',
@@ -574,6 +574,24 @@ export default [
               {
                 path: '/blog/kubernetes/network-router-vs-gateway',
                 component: ComponentCreator('/blog/kubernetes/network-router-vs-gateway', 'efa'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/play-builder-ch-01-kubernetes-why-linux',
+                component: ComponentCreator('/blog/kubernetes/play-builder-ch-01-kubernetes-why-linux', '3bf'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/play-builder-ch-02-linux-kernel-for-kubernetes',
+                component: ComponentCreator('/blog/kubernetes/play-builder-ch-02-linux-kernel-for-kubernetes', '1ab'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/play-builder-ch-03-linux-namespaces',
+                component: ComponentCreator('/blog/kubernetes/play-builder-ch-03-linux-namespaces', 'd0d'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

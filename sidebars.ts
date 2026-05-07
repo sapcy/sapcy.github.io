@@ -47,6 +47,16 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'category',
+          label: '플레이 빌더',
+          key: 'play-builder',
+          items: [
+            'kubernetes/play-builder-ch-01-kubernetes-why-linux',
+            'kubernetes/play-builder-ch-02-linux-kernel-for-kubernetes',
+            'kubernetes/play-builder-ch-03-linux-namespaces',
+          ],
+        },
+        {
+          type: 'category',
           label: '개념',
           key: 'k8s-concepts',
           items: [

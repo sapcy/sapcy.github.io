@@ -39,7 +39,7 @@
     "permalink": "/blog/cloud/aws/argocd-external-eks"
   },
   "next": {
-    "title": "쿠버네티스 작동 방식 정리",
-    "permalink": "/blog/kubernetes/concept-kubernetes-overview"
+    "title": "[Ch-01] Kubernetes 왜 필요한가? 결국 Linux까지 내려가야 이해된다!",
+    "permalink": "/blog/kubernetes/play-builder-ch-01-kubernetes-why-linux"
   }
 }

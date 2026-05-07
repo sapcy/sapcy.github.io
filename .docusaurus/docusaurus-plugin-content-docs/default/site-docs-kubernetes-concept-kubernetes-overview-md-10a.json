@@ -34,8 +34,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "개념 정리",
-    "permalink": "/blog/cloud/aws/aws-cloud-concepts"
+    "title": "[Ch-03] Linux Namespace 완전 정복 — 컨테이너 격리의 핵심 기술",
+    "permalink": "/blog/kubernetes/play-builder-ch-03-linux-namespaces"
   },
   "next": {
     "title": "Pod와 컨테이너 격리",

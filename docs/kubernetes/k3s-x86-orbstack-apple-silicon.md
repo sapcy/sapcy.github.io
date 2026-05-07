@@ -133,7 +133,7 @@ curl -sfL https://get.k3s.io | \
 
 ### 5. 클러스터 API를 밖에서 쓰기 (advertise-address / TLS SAN)
 
-예를 들어 제어 플레인이 **공인 IP `13.209.245.101`**로 보이게 하고 싶다면, 서버 노드에서 **`/etc/systemd/system/k3s.service`**의 `ExecStart`에 **광고 주소**와 **TLS SAN**을 넣습니다.
+예를 들어 제어 플레인이 <strong>공인 IP <code>13.209.245.101</code></strong>로 보이게 하고 싶다면, 서버 노드에서 <strong><code>/etc/systemd/system/k3s.service</code></strong>의 `ExecStart`에 **광고 주소**와 **TLS SAN**을 넣습니다.
 
 ```bash
 # /etc/systemd/system/k3s.service (예시)
@@ -155,7 +155,7 @@ sudo systemctl daemon-reload
 sudo systemctl restart k3s
 ```
 
-갱신된 kubeconfig는 보통 **`/etc/rancher/k3s/k3s.yaml`**에 있습니다. 이 내용을 로컬로 복사해 `server`를 공인 IP로 맞추면, **노드 밖에서 API 서버**에 접속할 수 있습니다.
+갱신된 kubeconfig는 보통 <strong><code>/etc/rancher/k3s/k3s.yaml</code></strong>에 있습니다. 이 내용을 로컬로 복사해 `server`를 공인 IP로 맞추면, **노드 밖에서 API 서버**에 접속할 수 있습니다.
 
 ```yaml
 # 예시 kubeconfig (일부)

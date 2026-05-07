@@ -276,6 +276,21 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "kubernetes/play-builder-ch-01-kubernetes-why-linux",
+              "path": "/blog/kubernetes/play-builder-ch-01-kubernetes-why-linux",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/play-builder-ch-02-linux-kernel-for-kubernetes",
+              "path": "/blog/kubernetes/play-builder-ch-02-linux-kernel-for-kubernetes",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/play-builder-ch-03-linux-namespaces",
+              "path": "/blog/kubernetes/play-builder-ch-03-linux-namespaces",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "kubernetes/pod-container-status-unknown",
               "path": "/blog/kubernetes/pod-container-status-unknown",
               "sidebar": "tutorialSidebar"

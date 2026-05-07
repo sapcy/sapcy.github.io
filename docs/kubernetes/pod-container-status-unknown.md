@@ -134,7 +134,7 @@ case cs.State == kubecontainer.ContainerStateUnknown &&
 
 ### 3.3 Pod 삭제 등으로 “기본 Waiting”만 남는 경우의 보정 (`LastTerminationState`)
 
-이전에 Running이었는데 지금 쓰려는 status가 기본 `ContainerCreating` / `PodInitializing` Waiting에 가려지면 Pod phase가 Pending 쪽으로 잘못 보일 수 있어, **`LastTerminationState`**에 동일 reason을 넣는 경로가 있습니다.
+이전에 Running이었는데 지금 쓰려는 status가 기본 `ContainerCreating` / `PodInitializing` Waiting에 가려지면 Pod phase가 Pending 쪽으로 잘못 보일 수 있어, <strong><code>LastTerminationState</code></strong>에 동일 reason을 넣는 경로가 있습니다.
 
 *`kubernetes/kubernetes/pkg/kubelet/kubelet_pods.go` (대략 2618–2630행)*
 

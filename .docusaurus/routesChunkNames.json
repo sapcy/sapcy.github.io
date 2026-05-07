@@ -173,13 +173,13 @@
     },
     "config": "5e9f5e1a"
   },
-  "/blog-45b": {
+  "/blog-7c8": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/blog-e3b": {
+  "/blog-c6a": {
     "__comp": "a7bd4aaa",
     "__props": "2d850da0"
   },
@@ -279,7 +279,7 @@
     "__comp": "df203c0f",
     "__props": "028f0b30"
   },
-  "/blog-485": {
+  "/blog-e1f": {
     "__comp": "a94703ab"
   },
   "/blog-a08": {
@@ -493,6 +493,18 @@
   "/blog/kubernetes/network-router-vs-gateway-efa": {
     "__comp": "17896441",
     "content": "3216217f"
+  },
+  "/blog/kubernetes/play-builder-ch-01-kubernetes-why-linux-3bf": {
+    "__comp": "17896441",
+    "content": "2972d322"
+  },
+  "/blog/kubernetes/play-builder-ch-02-linux-kernel-for-kubernetes-1ab": {
+    "__comp": "17896441",
+    "content": "42b99eaf"
+  },
+  "/blog/kubernetes/play-builder-ch-03-linux-namespaces-d0d": {
+    "__comp": "17896441",
+    "content": "7a7770ce"
   },
   "/blog/kubernetes/pod-container-status-unknown-e44": {
     "__comp": "17896441",
