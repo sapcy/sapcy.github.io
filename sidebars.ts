@@ -111,6 +111,21 @@ const sidebars: SidebarsConfig = {
             },
           ],
         },
+        {
+          type: 'category',
+          label: 'CKS',
+          key: 'cks',
+          items: [
+            'kubernetes/cks/cks-introduction',
+            'kubernetes/cks/cluster-setup',
+            'kubernetes/cks/cluster-hardening',
+            'kubernetes/cks/system-hardening',
+            'kubernetes/cks/microservice-vulnerabilities',
+            'kubernetes/cks/supply-chain-security',
+            'kubernetes/cks/monitoring-logging-runtime',
+            'kubernetes/cks/exam-tips',
+          ],
+        },
       ],
     },
     {

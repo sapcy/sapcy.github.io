@@ -129,11 +129,11 @@ export default [
   },
   {
     path: '/blog',
-    component: ComponentCreator('/blog', '7c8'),
+    component: ComponentCreator('/blog', '643'),
     routes: [
       {
         path: '/blog',
-        component: ComponentCreator('/blog', 'c6a'),
+        component: ComponentCreator('/blog', 'e03'),
         routes: [
           {
             path: '/blog/tags',
@@ -146,8 +146,18 @@ export default [
             exact: true
           },
           {
+            path: '/blog/tags/apparmor',
+            component: ComponentCreator('/blog/tags/apparmor', '45d'),
+            exact: true
+          },
+          {
             path: '/blog/tags/argocd',
             component: ComponentCreator('/blog/tags/argocd', 'f6a'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/audit',
+            component: ComponentCreator('/blog/tags/audit', '4f3'),
             exact: true
           },
           {
@@ -163,6 +173,16 @@ export default [
           {
             path: '/blog/tags/cicd',
             component: ComponentCreator('/blog/tags/cicd', 'be8'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/cilium',
+            component: ComponentCreator('/blog/tags/cilium', 'a8d'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/cks',
+            component: ComponentCreator('/blog/tags/cks', '82b'),
             exact: true
           },
           {
@@ -196,6 +216,21 @@ export default [
             exact: true
           },
           {
+            path: '/blog/tags/etcd',
+            component: ComponentCreator('/blog/tags/etcd', 'cc4'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/exam',
+            component: ComponentCreator('/blog/tags/exam', 'bb9'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/falco',
+            component: ComponentCreator('/blog/tags/falco', '7e9'),
+            exact: true
+          },
+          {
             path: '/blog/tags/http',
             component: ComponentCreator('/blog/tags/http', '6b7'),
             exact: true
@@ -203,6 +238,11 @@ export default [
           {
             path: '/blog/tags/intro',
             component: ComponentCreator('/blog/tags/intro', '727'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/istio',
+            component: ComponentCreator('/blog/tags/istio', '3f5'),
             exact: true
           },
           {
@@ -231,13 +271,38 @@ export default [
             exact: true
           },
           {
+            path: '/blog/tags/linux',
+            component: ComponentCreator('/blog/tags/linux', '80d'),
+            exact: true
+          },
+          {
             path: '/blog/tags/logging',
             component: ComponentCreator('/blog/tags/logging', '627'),
             exact: true
           },
           {
+            path: '/blog/tags/network-policy',
+            component: ComponentCreator('/blog/tags/network-policy', '28a'),
+            exact: true
+          },
+          {
             path: '/blog/tags/opensource',
             component: ComponentCreator('/blog/tags/opensource', '1de'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/pod-security',
+            component: ComponentCreator('/blog/tags/pod-security', 'dd9'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/rbac',
+            component: ComponentCreator('/blog/tags/rbac', 'fb5'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/sbom',
+            component: ComponentCreator('/blog/tags/sbom', 'a17'),
             exact: true
           },
           {
@@ -251,13 +316,23 @@ export default [
             exact: true
           },
           {
+            path: '/blog/tags/sysdig',
+            component: ComponentCreator('/blog/tags/sysdig', '375'),
+            exact: true
+          },
+          {
+            path: '/blog/tags/trivy',
+            component: ComponentCreator('/blog/tags/trivy', '5de'),
+            exact: true
+          },
+          {
             path: '/blog/tags/yaml',
             component: ComponentCreator('/blog/tags/yaml', 'b87'),
             exact: true
           },
           {
             path: '/blog',
-            component: ComponentCreator('/blog', 'e1f'),
+            component: ComponentCreator('/blog', '658'),
             routes: [
               {
                 path: '/blog',
@@ -466,6 +541,54 @@ export default [
               {
                 path: '/blog/cs/ssh-server-hardening',
                 component: ComponentCreator('/blog/cs/ssh-server-hardening', '97c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/cks-introduction',
+                component: ComponentCreator('/blog/kubernetes/cks/cks-introduction', '20c'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/cluster-hardening',
+                component: ComponentCreator('/blog/kubernetes/cks/cluster-hardening', '2ce'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/cluster-setup',
+                component: ComponentCreator('/blog/kubernetes/cks/cluster-setup', '899'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/exam-tips',
+                component: ComponentCreator('/blog/kubernetes/cks/exam-tips', '935'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/microservice-vulnerabilities',
+                component: ComponentCreator('/blog/kubernetes/cks/microservice-vulnerabilities', '53e'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/monitoring-logging-runtime',
+                component: ComponentCreator('/blog/kubernetes/cks/monitoring-logging-runtime', '6f0'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/supply-chain-security',
+                component: ComponentCreator('/blog/kubernetes/cks/supply-chain-security', '623'),
+                exact: true,
+                sidebar: "tutorialSidebar"
+              },
+              {
+                path: '/blog/kubernetes/cks/system-hardening',
+                component: ComponentCreator('/blog/kubernetes/cks/system-hardening', '759'),
                 exact: true,
                 sidebar: "tutorialSidebar"
               },

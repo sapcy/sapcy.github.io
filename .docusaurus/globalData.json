@@ -186,6 +186,46 @@
               "sidebar": "tutorialSidebar"
             },
             {
+              "id": "kubernetes/cks/cks-introduction",
+              "path": "/blog/kubernetes/cks/cks-introduction",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/cluster-hardening",
+              "path": "/blog/kubernetes/cks/cluster-hardening",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/cluster-setup",
+              "path": "/blog/kubernetes/cks/cluster-setup",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/exam-tips",
+              "path": "/blog/kubernetes/cks/exam-tips",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/microservice-vulnerabilities",
+              "path": "/blog/kubernetes/cks/microservice-vulnerabilities",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/monitoring-logging-runtime",
+              "path": "/blog/kubernetes/cks/monitoring-logging-runtime",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/supply-chain-security",
+              "path": "/blog/kubernetes/cks/supply-chain-security",
+              "sidebar": "tutorialSidebar"
+            },
+            {
+              "id": "kubernetes/cks/system-hardening",
+              "path": "/blog/kubernetes/cks/system-hardening",
+              "sidebar": "tutorialSidebar"
+            },
+            {
               "id": "kubernetes/concept-containerd-cri",
               "path": "/blog/kubernetes/concept-containerd-cri",
               "sidebar": "tutorialSidebar"

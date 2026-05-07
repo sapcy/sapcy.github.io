@@ -39,7 +39,7 @@
     "permalink": "/blog/cloud-native/envoy/threading-model"
   },
   "next": {
-    "title": "HTTP Cache 뽀개기",
-    "permalink": "/blog/cs/http-cache-headers"
+    "title": "[CKS] 00. 개요 - 시험 소개, CIS Benchmarks, 접근 제어",
+    "permalink": "/blog/kubernetes/cks/cks-introduction"
   }
 }

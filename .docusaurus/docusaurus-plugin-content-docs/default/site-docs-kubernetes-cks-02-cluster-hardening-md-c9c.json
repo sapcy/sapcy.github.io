@@ -1,0 +1,67 @@
+{
+  "id": "kubernetes/cks/cluster-hardening",
+  "title": "[CKS] 02. Cluster Hardening",
+  "description": "X509 인증, Static Token, RBAC Role/RoleBinding/ClusterRole, Service Account 보안, Kubelet 보안 설정, Version Skew, kubeadm 클러스터 업그레이드 정리",
+  "source": "@site/docs/kubernetes/cks/02-cluster-hardening.md",
+  "sourceDirName": "kubernetes/cks",
+  "slug": "/kubernetes/cks/cluster-hardening",
+  "permalink": "/blog/kubernetes/cks/cluster-hardening",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/cks/02-cluster-hardening.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    },
+    {
+      "inline": false,
+      "label": "CKS",
+      "permalink": "/blog/tags/cks",
+      "description": "Certified Kubernetes Security Specialist 시험 준비"
+    },
+    {
+      "inline": false,
+      "label": "보안",
+      "permalink": "/blog/tags/security",
+      "description": "SSH·서버 하드닝·인증"
+    },
+    {
+      "inline": false,
+      "label": "RBAC",
+      "permalink": "/blog/tags/rbac",
+      "description": "Role-Based Access Control·권한 관리"
+    },
+    {
+      "inline": false,
+      "label": "Kubelet",
+      "permalink": "/blog/tags/kubelet",
+      "description": "kubelet·PLEG·Pod 상태"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 3,
+  "frontMatter": {
+    "title": "[CKS] 02. Cluster Hardening",
+    "description": "X509 인증, Static Token, RBAC Role/RoleBinding/ClusterRole, Service Account 보안, Kubelet 보안 설정, Version Skew, kubeadm 클러스터 업그레이드 정리",
+    "tags": [
+      "kubernetes",
+      "cks",
+      "security",
+      "rbac",
+      "kubelet"
+    ],
+    "sidebar_position": 3
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "[CKS] 01. Cluster Setup",
+    "permalink": "/blog/kubernetes/cks/cluster-setup"
+  },
+  "next": {
+    "title": "[CKS] 03. System Hardening",
+    "permalink": "/blog/kubernetes/cks/system-hardening"
+  }
+}

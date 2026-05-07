@@ -17,9 +17,10 @@
       "description": "OCI·Docker·containerd·runc 런타임 스택"
     },
     {
-      "inline": true,
-      "label": "docker",
-      "permalink": "/blog/tags/docker"
+      "inline": false,
+      "label": "Docker",
+      "permalink": "/blog/tags/docker",
+      "description": "Docker 데몬 보안·Dockerfile 모범사례"
     }
   ],
   "version": "current",

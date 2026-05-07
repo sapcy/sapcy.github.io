@@ -35,8 +35,8 @@
   },
   "sidebar": "tutorialSidebar",
   "previous": {
-    "title": "Envoy Cluster Manager·Subscription",
-    "permalink": "/blog/cloud-native/envoy/cluster-manager"
+    "title": "[CKS] 07. 시험 핵심 포인트 및 빠른 참조",
+    "permalink": "/blog/kubernetes/cks/exam-tips"
   },
   "next": {
     "title": "SSH 서버 하드닝 - 9가지 설정",

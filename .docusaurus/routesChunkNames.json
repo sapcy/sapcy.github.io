@@ -173,13 +173,13 @@
     },
     "config": "5e9f5e1a"
   },
-  "/blog-7c8": {
+  "/blog-643": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/blog-c6a": {
+  "/blog-e03": {
     "__comp": "a7bd4aaa",
     "__props": "2d850da0"
   },
@@ -191,9 +191,17 @@
     "__comp": "df203c0f",
     "__props": "068688fc"
   },
+  "/blog/tags/apparmor-45d": {
+    "__comp": "df203c0f",
+    "__props": "cc459a32"
+  },
   "/blog/tags/argocd-f6a": {
     "__comp": "df203c0f",
     "__props": "7d1f68fe"
+  },
+  "/blog/tags/audit-4f3": {
+    "__comp": "df203c0f",
+    "__props": "0ec9b93a"
   },
   "/blog/tags/aws-fd3": {
     "__comp": "df203c0f",
@@ -206,6 +214,14 @@
   "/blog/tags/cicd-be8": {
     "__comp": "df203c0f",
     "__props": "ff391401"
+  },
+  "/blog/tags/cilium-a8d": {
+    "__comp": "df203c0f",
+    "__props": "551f80cc"
+  },
+  "/blog/tags/cks-82b": {
+    "__comp": "df203c0f",
+    "__props": "be12f517"
   },
   "/blog/tags/cloud-b13": {
     "__comp": "df203c0f",
@@ -231,6 +247,18 @@
     "__comp": "df203c0f",
     "__props": "2b25efdf"
   },
+  "/blog/tags/etcd-cc4": {
+    "__comp": "df203c0f",
+    "__props": "ecec8836"
+  },
+  "/blog/tags/exam-bb9": {
+    "__comp": "df203c0f",
+    "__props": "b60bedad"
+  },
+  "/blog/tags/falco-7e9": {
+    "__comp": "df203c0f",
+    "__props": "6c07241f"
+  },
   "/blog/tags/http-6b7": {
     "__comp": "df203c0f",
     "__props": "401a0ecb"
@@ -238,6 +266,10 @@
   "/blog/tags/intro-727": {
     "__comp": "df203c0f",
     "__props": "2b45bdfe"
+  },
+  "/blog/tags/istio-3f5": {
+    "__comp": "df203c0f",
+    "__props": "0902006f"
   },
   "/blog/tags/java-673": {
     "__comp": "df203c0f",
@@ -259,13 +291,33 @@
     "__comp": "df203c0f",
     "__props": "34a3dae3"
   },
+  "/blog/tags/linux-80d": {
+    "__comp": "df203c0f",
+    "__props": "d8fe8ef3"
+  },
   "/blog/tags/logging-627": {
     "__comp": "df203c0f",
     "__props": "5ad77ace"
   },
+  "/blog/tags/network-policy-28a": {
+    "__comp": "df203c0f",
+    "__props": "3bee5621"
+  },
   "/blog/tags/opensource-1de": {
     "__comp": "df203c0f",
     "__props": "6c374edd"
+  },
+  "/blog/tags/pod-security-dd9": {
+    "__comp": "df203c0f",
+    "__props": "551292c3"
+  },
+  "/blog/tags/rbac-fb5": {
+    "__comp": "df203c0f",
+    "__props": "1e136a70"
+  },
+  "/blog/tags/sbom-a17": {
+    "__comp": "df203c0f",
+    "__props": "8f86e979"
   },
   "/blog/tags/security-71d": {
     "__comp": "df203c0f",
@@ -275,11 +327,19 @@
     "__comp": "df203c0f",
     "__props": "b653f775"
   },
+  "/blog/tags/sysdig-375": {
+    "__comp": "df203c0f",
+    "__props": "c52f9356"
+  },
+  "/blog/tags/trivy-5de": {
+    "__comp": "df203c0f",
+    "__props": "3dff2378"
+  },
   "/blog/tags/yaml-b87": {
     "__comp": "df203c0f",
     "__props": "028f0b30"
   },
-  "/blog-e1f": {
+  "/blog-658": {
     "__comp": "a94703ab"
   },
   "/blog-a08": {
@@ -421,6 +481,38 @@
   "/blog/cs/ssh-server-hardening-97c": {
     "__comp": "17896441",
     "content": "c7eac26a"
+  },
+  "/blog/kubernetes/cks/cks-introduction-20c": {
+    "__comp": "17896441",
+    "content": "66d8d16b"
+  },
+  "/blog/kubernetes/cks/cluster-hardening-2ce": {
+    "__comp": "17896441",
+    "content": "c9ca16f4"
+  },
+  "/blog/kubernetes/cks/cluster-setup-899": {
+    "__comp": "17896441",
+    "content": "93048a1a"
+  },
+  "/blog/kubernetes/cks/exam-tips-935": {
+    "__comp": "17896441",
+    "content": "f37ae6d2"
+  },
+  "/blog/kubernetes/cks/microservice-vulnerabilities-53e": {
+    "__comp": "17896441",
+    "content": "09652e36"
+  },
+  "/blog/kubernetes/cks/monitoring-logging-runtime-6f0": {
+    "__comp": "17896441",
+    "content": "0b711856"
+  },
+  "/blog/kubernetes/cks/supply-chain-security-623": {
+    "__comp": "17896441",
+    "content": "86d5f23d"
+  },
+  "/blog/kubernetes/cks/system-hardening-759": {
+    "__comp": "17896441",
+    "content": "34f85c50"
   },
   "/blog/kubernetes/concept-containerd-cri-73a": {
     "__comp": "17896441",

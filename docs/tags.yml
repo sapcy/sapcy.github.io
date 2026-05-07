@@ -88,3 +88,68 @@ jenkins:
 cloud-native:
   label: 클라우드 네이티브
   description: Envoy·서비스 메시·동적 설정
+
+# CKS 관련 태그
+cks:
+  label: CKS
+  description: Certified Kubernetes Security Specialist 시험 준비
+
+etcd:
+  label: etcd
+  description: etcd 분산 키-값 저장소·보안 설정
+
+network-policy:
+  label: Network Policy
+  description: Kubernetes NetworkPolicy·Cilium 네트워크 정책
+
+rbac:
+  label: RBAC
+  description: Role-Based Access Control·권한 관리
+
+linux:
+  label: Linux
+  description: Linux Capabilities·AppArmor·Seccomp
+
+apparmor:
+  label: AppArmor
+  description: AppArmor MAC 프로파일
+
+cilium:
+  label: Cilium
+  description: Cilium CNI·eBPF 네트워크 정책
+
+istio:
+  label: Istio
+  description: Istio 서비스 메시·mTLS
+
+pod-security:
+  label: Pod Security
+  description: Pod Security Standards·Admission Controller
+
+docker:
+  label: Docker
+  description: Docker 데몬 보안·Dockerfile 모범사례
+
+trivy:
+  label: Trivy
+  description: Trivy 컨테이너 취약점 스캐너
+
+sbom:
+  label: SBOM
+  description: Software Bill of Materials·SPDX·CycloneDX
+
+falco:
+  label: Falco
+  description: Falco 런타임 보안 규칙
+
+sysdig:
+  label: Sysdig
+  description: Sysdig 시스템 호출 모니터링
+
+audit:
+  label: Audit
+  description: Kubernetes Audit Logging·감사 정책
+
+exam:
+  label: 시험 준비
+  description: CKS 시험 핵심 포인트·빠른 참조

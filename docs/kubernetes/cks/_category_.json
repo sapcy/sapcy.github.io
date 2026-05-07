@@ -1,0 +1,10 @@
+{
+  "label": "CKS",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "title": "CKS (Certified Kubernetes Security Specialist)",
+    "description": "KPLABS CKS PPT (2025년 11월 기준) 기반으로 정리한 CKS 시험 준비 문서. 클러스터 보안부터 런타임 보안까지 6개 도메인을 한눈에 파악할 수 있도록 주제별로 정리했습니다.",
+    "slug": "/kubernetes/cks"
+  }
+}

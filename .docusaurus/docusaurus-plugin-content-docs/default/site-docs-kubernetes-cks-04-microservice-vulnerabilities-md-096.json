@@ -1,0 +1,74 @@
+{
+  "id": "kubernetes/cks/microservice-vulnerabilities",
+  "title": "[CKS] 04. Minimize Microservice Vulnerabilities",
+  "description": "Security Context, Pod Security Standards 3단계, Admission Controllers, Kubernetes Secrets, Cilium Network Policy, Service Mesh·Istio mTLS 정리",
+  "source": "@site/docs/kubernetes/cks/04-microservice-vulnerabilities.md",
+  "sourceDirName": "kubernetes/cks",
+  "slug": "/kubernetes/cks/microservice-vulnerabilities",
+  "permalink": "/blog/kubernetes/cks/microservice-vulnerabilities",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/docs/kubernetes/cks/04-microservice-vulnerabilities.md",
+  "tags": [
+    {
+      "inline": false,
+      "label": "Kubernetes",
+      "permalink": "/blog/tags/kubernetes",
+      "description": "쿠버네티스"
+    },
+    {
+      "inline": false,
+      "label": "CKS",
+      "permalink": "/blog/tags/cks",
+      "description": "Certified Kubernetes Security Specialist 시험 준비"
+    },
+    {
+      "inline": false,
+      "label": "보안",
+      "permalink": "/blog/tags/security",
+      "description": "SSH·서버 하드닝·인증"
+    },
+    {
+      "inline": false,
+      "label": "Cilium",
+      "permalink": "/blog/tags/cilium",
+      "description": "Cilium CNI·eBPF 네트워크 정책"
+    },
+    {
+      "inline": false,
+      "label": "Istio",
+      "permalink": "/blog/tags/istio",
+      "description": "Istio 서비스 메시·mTLS"
+    },
+    {
+      "inline": false,
+      "label": "Pod Security",
+      "permalink": "/blog/tags/pod-security",
+      "description": "Pod Security Standards·Admission Controller"
+    }
+  ],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "title": "[CKS] 04. Minimize Microservice Vulnerabilities",
+    "description": "Security Context, Pod Security Standards 3단계, Admission Controllers, Kubernetes Secrets, Cilium Network Policy, Service Mesh·Istio mTLS 정리",
+    "tags": [
+      "kubernetes",
+      "cks",
+      "security",
+      "cilium",
+      "istio",
+      "pod-security"
+    ],
+    "sidebar_position": 5
+  },
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "[CKS] 03. System Hardening",
+    "permalink": "/blog/kubernetes/cks/system-hardening"
+  },
+  "next": {
+    "title": "[CKS] 05. Supply Chain Security",
+    "permalink": "/blog/kubernetes/cks/supply-chain-security"
+  }
+}
