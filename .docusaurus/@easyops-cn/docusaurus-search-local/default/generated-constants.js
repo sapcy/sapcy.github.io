@@ -1,6 +1,6 @@
 import lunr from "/Users/sychoi/git/cursor/sapcy.github.io-update/sapcy.github.io/node_modules/lunr/lunr.js";
 export const removeDefaultStopWordFilter = [];
 export const language = ["en"];
-export const searchIndexUrl = "search-index{dir}.json?_=ae30a43e";
+export const searchIndexUrl = "search-index{dir}.json?_=40a86c72";
 export const searchResultLimits = 8;
 export const fuzzyMatchingDistance = 1;

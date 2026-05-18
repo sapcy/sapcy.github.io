@@ -21,6 +21,10 @@ const PACKAGES = [
     name: '@sapcy/web-sealedsecret',
     fallbackTsConfig: null,
   },
+  {
+    name: '@sapcy/web-static-iac',
+    fallbackTsConfig: path.join(__dirname, 'tsconfig.sapcy-web-static-iac.json'),
+  },
 ];
 
 function distReady(pkgDir) {

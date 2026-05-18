@@ -9,6 +9,15 @@ const config: Config = {
   tagline: '',
   favicon: 'img/favicon.ico',
 
+  customFields: {
+    /**
+     * StaticIac Checkov API base URL (trailing slash 없음).
+     * GitHub Pages는 HTTPS이므로 API도 https:// 여야 합니다 (http:// IP 는 mixed-content로 차단됨).
+     * terraform output -raw api_url (api_domain 설정 시 https)
+     */
+    staticIacApiUrl: process.env.STATIC_IAC_API_URL ?? 'http://52.79.133.73:8080',
+  },
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4

@@ -7,7 +7,7 @@ export default function ProjectPage() {
   return (
     <Layout
       title="프로젝트"
-      description="개인 프로젝트 및 데모 - WebSeal, Kube Cert"
+      description="개인 프로젝트 및 데모 - WebSeal, Kube Cert, StaticIac"
       wrapperClassName="project-page-wrapper">
       <div className={styles.page}>
         <div className={styles.inner}>

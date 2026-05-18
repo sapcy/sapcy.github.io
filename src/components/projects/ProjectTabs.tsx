@@ -2,11 +2,13 @@ import React, {useState} from 'react';
 import clsx from 'clsx';
 import {WebSealProject} from './WebSealProject';
 import {KubeCertProject} from './KubeCertProject';
+import {StaticIacProject} from './StaticIacProject';
 import styles from '../../pages/project.module.css';
 
 const tabs = [
   {id: 'webseal' as const, label: 'WebSeal', Component: WebSealProject},
   {id: 'kubecert' as const, label: 'Kube Cert', Component: KubeCertProject},
+  {id: 'staticiac' as const, label: 'StaticIac', Component: StaticIacProject},
 ];
 
 export function ProjectTabs() {

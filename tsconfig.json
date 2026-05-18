@@ -5,7 +5,8 @@
     "baseUrl": ".",
     "paths": {
       "@sapcy/web-kube-cert": ["node_modules/@sapcy/web-kube-cert/dist/index.d.ts"],
-      "@sapcy/web-sealedsecret": ["node_modules/@sapcy/web-sealedsecret/dist/index.d.ts"]
+      "@sapcy/web-sealedsecret": ["node_modules/@sapcy/web-sealedsecret/dist/index.d.ts"],
+      "@sapcy/web-static-iac": ["node_modules/@sapcy/web-static-iac/dist/index.d.ts"]
     }
   },
   "exclude": [".docusaurus", "build"]

@@ -35,6 +35,7 @@
     "@mdx-js/react": "^3.0.0",
     "@sapcy/web-kube-cert": "github:sapcy/web-kube-cert",
     "@sapcy/web-sealedsecret": "github:sapcy/web-sealedsecret",
+    "@sapcy/web-static-iac": "github:sapcy/web-static-iac",
     "buffer": "^6.0.3",
     "clsx": "^2.0.0",
     "crypto-browserify": "^3.12.1",

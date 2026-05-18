@@ -7,6 +7,9 @@ export default {
   "title": "Sapcy",
   "tagline": "",
   "favicon": "img/favicon.ico",
+  "customFields": {
+    "staticIacApiUrl": "http://52.79.133.73:8080"
+  },
   "future": {
     "v4": {
       "removeLegacyPostBuildHeadAttribute": true,
@@ -461,7 +464,6 @@ export default {
   "staticDirectories": [
     "static"
   ],
-  "customFields": {},
   "scripts": [],
   "headTags": [],
   "stylesheets": [],
