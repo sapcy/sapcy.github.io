@@ -20,6 +20,8 @@ sidebar_position: 6
 
 ## 1. Open Container Initiative (OCI)
 
+![oci-concepts](../assets/oci-concepts.png)
+
 ### 표준화의 중요성
 
 - 이미지 표준화가 없으면 개발자마다 다른 이미지 사용 → 트러블슈팅 및 보안 취약점
@@ -65,6 +67,8 @@ kubelet → CRI → containerd → OCI → runc → Container
 kubelet → CRI → cri-o     → OCI → runc → Container
 kubelet → CRI → containerd → OCI → runsc(gVisor) → Container
 ```
+
+![container-creation-flow](../assets/container-creation-flow.png)
 
 ---
 
