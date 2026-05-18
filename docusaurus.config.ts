@@ -11,11 +11,18 @@ const config: Config = {
 
   customFields: {
     /**
-     * StaticIac Checkov API base URL (trailing slash 없음).
-     * GitHub Pages는 HTTPS이므로 API도 https:// 여야 합니다 (http:// IP 는 mixed-content로 차단됨).
-     * terraform output -raw api_url (api_domain 설정 시 https)
+     * StaticIac API base URL (trailing slash 없음).
+     * - 로컬 npm start: 기본 `/static-iac-proxy` (dev 프록시, secure:false)
+     * - 배포: STATIC_IAC_API_URL=https://IP:8443 (terraform output -raw api_url)
      */
-    staticIacApiUrl: process.env.STATIC_IAC_API_URL ?? 'http://52.79.133.73:8080',
+    staticIacApiUrl:
+      process.env.STATIC_IAC_API_URL ??
+      (process.env.NODE_ENV === 'production'
+        ? ''
+        : '/static-iac-proxy'),
+    /** dev 프록시 대상 (자체 서명 TLS, secure:false) */
+    staticIacApiProxyTarget:
+      process.env.STATIC_IAC_API_PROXY_TARGET ?? 'https://52.79.133.73:8443',
   },
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -136,6 +143,13 @@ const config: Config = {
         min: 640,
         steps: 2,
         disableInDev: false,
+      },
+    ],
+    [
+      './plugins/static-iac-dev-proxy.js',
+      {
+        proxyTarget:
+          process.env.STATIC_IAC_API_PROXY_TARGET ?? 'https://52.79.133.73:8443',
       },
     ],
     // 마지막에 두어 resolve.fallback(crypto 등)이 다른 플러그인에 덮이지 않게 함

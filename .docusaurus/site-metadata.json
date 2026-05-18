@@ -42,6 +42,9 @@
       "name": "@docusaurus/plugin-ideal-image",
       "version": "3.9.2"
     },
+    "static-iac-dev-proxy": {
+      "type": "project"
+    },
     "transpile-sapcy-packages": {
       "type": "project"
     },

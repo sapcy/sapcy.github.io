@@ -8,7 +8,8 @@ export default {
   "tagline": "",
   "favicon": "img/favicon.ico",
   "customFields": {
-    "staticIacApiUrl": "http://52.79.133.73:8080"
+    "staticIacApiUrl": "/static-iac-proxy",
+    "staticIacApiProxyTarget": "https://52.79.133.73:8443"
   },
   "future": {
     "v4": {
@@ -114,6 +115,12 @@ export default {
         "min": 640,
         "steps": 2,
         "disableInDev": false
+      }
+    ],
+    [
+      "./plugins/static-iac-dev-proxy.js",
+      {
+        "proxyTarget": "https://52.79.133.73:8443"
       }
     ],
     "./plugins/transpile-sapcy-packages.js"
